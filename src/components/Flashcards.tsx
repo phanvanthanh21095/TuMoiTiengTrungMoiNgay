@@ -335,6 +335,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
                   </span>
                 </div>
 
+
                 {/* Bottom Back - Sentence Suggestion */}
                 {activeWord.exampleChinese ? (
                   <div className="w-full bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-left flex flex-col gap-1 select-text" onClick={(e) => e.stopPropagation()}>
