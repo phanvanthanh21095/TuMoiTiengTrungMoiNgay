@@ -1,0 +1,6 @@
+{
+  "name": "Học Tiếng Trung - Flashcards & Trợ lý AI",
+  "description": "Ứng dụng giúp học thuộc từ vựng, phiên âm pinyin và nghĩa tiếng Trung thông qua thẻ flashcard, trắc nghiệm, tập viết bằng canvas và tích hợp trợ lý AI phân tích văn bản để học tập tự chủ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
