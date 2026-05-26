@@ -210,10 +210,11 @@ export default function Quiz({ words, onUpdateWordStatus }: QuizProps) {
   const handleSelectMultipleChoiceOpt = (option: string) => {
     if (isSubmitted) return;
     setSelectedOption(option);
+    handleSubmitAnswer(option);
   };
 
   // Submit Answer evaluation
-  const handleSubmitAnswer = () => {
+  const handleSubmitAnswer = (optionOverride?: string) => {
     if (isSubmitted) return;
 
     const activeQ = questions[currentIdx];
@@ -233,7 +234,8 @@ export default function Quiz({ words, onUpdateWordStatus }: QuizProps) {
       isCorrect = checkDefinitionCorrect(userTypedInput, activeQ.correctAnswer);
     } else {
       // Multiple choice exact match
-      isCorrect = selectedOption === activeQ.correctAnswer;
+      const finalOption = optionOverride !== undefined ? optionOverride : selectedOption;
+      isCorrect = finalOption === activeQ.correctAnswer;
     }
 
     setIsCorrectResult(isCorrect);
@@ -761,22 +763,20 @@ export default function Quiz({ words, onUpdateWordStatus }: QuizProps) {
 
               <div className="flex gap-2">
                 {!isSubmitted ? (
-                  <button
-                    id="quiz-submit-button"
-                    disabled={
-                      quizMode === 'multiple-choice'
-                        ? !selectedOption
-                        : !userTypedInput.trim()
-                    }
-                    onClick={handleSubmitAnswer}
-                    className={`px-6 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow cursor-pointer ${(quizMode === 'multiple-choice' ? selectedOption : userTypedInput.trim())
-                      ? 'bg-slate-900 text-white hover:bg-slate-800 active:scale-95'
-                      : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
-                      }`}
-                  >
-                    <span>Kiểm tra đáp án</span>
-                    <ChevronRight size={14} />
-                  </button>
+                  quizMode !== 'multiple-choice' && (
+                    <button
+                      id="quiz-submit-button"
+                      disabled={!userTypedInput.trim()}
+                      onClick={() => handleSubmitAnswer()}
+                      className={`px-6 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-1 shadow cursor-pointer ${userTypedInput.trim()
+                        ? 'bg-slate-900 text-white hover:bg-slate-800 active:scale-95'
+                        : 'bg-slate-100 text-slate-400 cursor-not-allowed border border-slate-200'
+                        }`}
+                    >
+                      <span>Kiểm tra đáp án</span>
+                      <ChevronRight size={14} />
+                    </button>
+                  )
                 ) : (
                   <button
                     id="quiz-next-button"

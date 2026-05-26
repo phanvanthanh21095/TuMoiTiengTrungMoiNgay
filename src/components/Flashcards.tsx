@@ -39,16 +39,16 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
       alert("Trình duyệt này không hỗ trợ phát âm (TTS)!");
       return;
     }
-    
+
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'zh-CN';
     utterance.rate = 0.85; // slightly slower for clearer listening
-    
+
     utterance.onstart = () => setIsSpeaking(true);
     utterance.onend = () => setIsSpeaking(false);
     utterance.onerror = () => setIsSpeaking(false);
-    
+
     window.speechSynthesis.speak(utterance);
   };
 
@@ -83,10 +83,10 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
 
   const handleResponse = (isCorrect: boolean) => {
     if (!activeWord) return;
-    
+
     // Play correct/incorrect sound or visual reaction
     onUpdateWordStatus(activeWord.id, isCorrect);
-    
+
     // Advance to next word
     if (filteredWords.length > 1) {
       handleNext();
@@ -127,55 +127,50 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
           <button
             id="filter-all"
             onClick={() => setFilter('all')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${
-              filter === 'all'
-                ? 'bg-slate-900 text-white shadow-sm'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${filter === 'all'
+              ? 'bg-slate-900 text-white shadow-sm'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
           >
             Tất cả ({words.length})
           </button>
           <button
             id="filter-new"
             onClick={() => setFilter('new')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${
-              filter === 'new'
-                ? 'bg-blue-50 text-blue-700 border border-blue-200'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${filter === 'new'
+              ? 'bg-blue-50 text-blue-700 border border-blue-200'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
           >
             Chưa thuộc ({words.filter(w => w.status === 'new').length})
           </button>
           <button
             id="filter-learning"
             onClick={() => setFilter('learning')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${
-              filter === 'learning'
-                ? 'bg-amber-50 text-amber-700 border border-amber-200'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${filter === 'learning'
+              ? 'bg-amber-50 text-amber-700 border border-amber-200'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
           >
             Đang học ({words.filter(w => w.status === 'learning').length})
           </button>
           <button
             id="filter-mastered"
             onClick={() => setFilter('mastered')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${
-              filter === 'mastered'
-                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-200 ${filter === 'mastered'
+              ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+              }`}
           >
             Đã thuộc ({words.filter(w => w.status === 'mastered').length})
           </button>
           <button
             id="filter-fav"
             onClick={() => setFilter('favorite')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-150 flex items-center gap-1 ${
-              filter === 'favorite'
-                ? 'bg-rose-50 text-rose-700 border border-rose-200'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-rose-50'
-            }`}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium cursor-pointer transition-all duration-150 flex items-center gap-1 ${filter === 'favorite'
+              ? 'bg-rose-50 text-rose-700 border border-rose-200'
+              : 'text-slate-600 hover:text-slate-900 hover:bg-rose-50'
+              }`}
           >
             <Star size={12} className={filter === 'favorite' ? 'fill-rose-500' : ''} />
             Đã thích ({words.filter(w => w.favorite).length})
@@ -187,11 +182,10 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
           <button
             id="dir-char"
             onClick={() => { setDirection('character-first'); setIsFlipped(false); }}
-            className={`p-1.5 rounded-lg text-xs font-medium cursor-pointer border ${
-              direction === 'character-first'
-                ? 'bg-slate-900 text-white border-slate-800'
-                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50 border-transparent'
-            }`}
+            className={`p-1.5 rounded-lg text-xs font-medium cursor-pointer border ${direction === 'character-first'
+              ? 'bg-slate-900 text-white border-slate-800'
+              : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50 border-transparent'
+              }`}
             title="Xem chữ Hán trước"
           >
             字 → Nghĩa
@@ -199,11 +193,10 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
           <button
             id="dir-mean"
             onClick={() => { setDirection('meaning-first'); setIsFlipped(false); }}
-            className={`p-1.5 rounded-lg text-xs font-medium cursor-pointer border ${
-              direction === 'meaning-first'
-                ? 'bg-slate-900 text-white border-slate-800'
-                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50 border-transparent'
-            }`}
+            className={`p-1.5 rounded-lg text-xs font-medium cursor-pointer border ${direction === 'meaning-first'
+              ? 'bg-slate-900 text-white border-slate-800'
+              : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50 border-transparent'
+              }`}
             title="Xem nghĩa trước"
           >
             Nghĩa → 字
@@ -240,13 +233,12 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
               Thẻ: <strong className="text-slate-800">{currentIndex + 1}</strong> / {filteredWords.length}
             </span>
             <span className="flex items-center gap-2">
-              <span className={`px-2 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider ${
-                activeWord.status === 'mastered'
-                  ? 'bg-emerald-50 text-emerald-600 border border-emerald-200'
-                  : activeWord.status === 'learning'
+              <span className={`px-2 py-0.5 rounded-full text-[10px] uppercase font-bold tracking-wider ${activeWord.status === 'mastered'
+                ? 'bg-emerald-50 text-emerald-600 border border-emerald-200'
+                : activeWord.status === 'learning'
                   ? 'bg-amber-50 text-amber-600 border border-amber-200'
                   : 'bg-slate-100 text-slate-500 border border-slate-200'
-              }`}>
+                }`}>
                 {activeWord.status === 'mastered' ? 'Đã thuộc' : activeWord.status === 'learning' ? 'Đang học' : 'Từ mới'}
               </span>
               <span className="text-slate-300">|</span>
@@ -255,7 +247,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
           </div>
 
           {/* Card Component with Flip Animation */}
-          <div className="relative h-[340px] w-full perspective-1000 select-none cursor-pointer" onClick={handleFlip} id="card-touch-area">
+          <div className="relative h-[360px] w-full perspective-1000 select-none cursor-pointer" onClick={handleFlip} id="card-touch-area">
             <div className="absolute top-4 right-4 z-10 flex gap-2">
               <button
                 id="btn-fav"
@@ -263,11 +255,10 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
                   e.stopPropagation();
                   onToggleFavorite(activeWord.id);
                 }}
-                className={`p-2 rounded-full cursor-pointer transition-all duration-200 ${
-                  activeWord.favorite
-                    ? 'text-rose-500 hover:text-rose-600'
-                    : 'text-slate-400 hover:text-slate-600 bg-slate-100/50 hover:bg-slate-100'
-                }`}
+                className={`p-2 rounded-full cursor-pointer transition-all duration-200 ${activeWord.favorite
+                  ? 'text-rose-500 hover:text-rose-600'
+                  : 'text-slate-400 hover:text-slate-600 bg-slate-100/50 hover:bg-slate-100'
+                  }`}
                 title={activeWord.favorite ? "Bỏ yêu thích" : "Yêu thích"}
               >
                 <Star size={18} className={activeWord.favorite ? 'fill-rose-500' : ''} />
@@ -275,9 +266,8 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
               <button
                 id="btn-audio"
                 onClick={speakActiveWord}
-                className={`p-2 rounded-full cursor-pointer transition-all duration-200 bg-slate-100/50 hover:bg-slate-100 ${
-                  isSpeaking ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700'
-                }`}
+                className={`p-2 rounded-full cursor-pointer transition-all duration-200 bg-slate-100/50 hover:bg-slate-100 ${isSpeaking ? 'text-amber-500' : 'text-slate-500 hover:text-slate-700'
+                  }`}
                 title="Nghe phát âm"
               >
                 <Volume2 size={18} className={isSpeaking ? 'animate-pulse' : ''} />
@@ -293,7 +283,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
               className="relative w-full h-full"
             >
               {/* Card Front Side */}
-              <div 
+              <div
                 className="absolute w-full h-full backface-hidden flex flex-col items-center justify-center p-8 bg-white rounded-3xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
                 style={{ backfaceVisibility: 'hidden' }}
               >
@@ -320,9 +310,9 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
               </div>
 
               {/* Card Back Side */}
-              <div 
+              <div
                 className="absolute w-full h-full flex flex-col items-center justify-between p-7 bg-white rounded-3xl border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
-                style={{ 
+                style={{
                   backfaceVisibility: 'hidden',
                   transform: 'rotateY(180deg)',
                 }}
@@ -335,11 +325,11 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
                   <span className="text-6xl font-semibold text-slate-800 tracking-wide mb-1">
                     {activeWord.character}
                   </span>
-                  
+
                   <span className="text-xl font-medium tracking-wide font-mono text-amber-600 bg-amber-50 px-4 py-1.5 rounded-xl border border-amber-200">
                     {activeWord.pinyin}
                   </span>
-                  
+
                   <span className="text-2xl font-semibold text-emerald-600 max-w-sm mt-1">
                     {activeWord.definition}
                   </span>
@@ -350,7 +340,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
                   <div className="w-full bg-slate-50 p-3.5 rounded-2xl border border-slate-200 text-left flex flex-col gap-1 select-text" onClick={(e) => e.stopPropagation()}>
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">Ví dụ thực tế</span>
-                      <button 
+                      <button
                         id="btn-synth-example"
                         onClick={() => handleSpeak(activeWord.exampleChinese || '')}
                         className="p-1 rounded bg-white border border-slate-200 text-slate-500 hover:text-slate-800 transition shadow-sm"
@@ -412,7 +402,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
               >
                 ← Thẻ trước
               </button>
-              
+
               <div className="flex items-center gap-1.5 text-slate-500 text-[10px]">
                 <kbd className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200 font-mono shadow-sm">Space</kbd> Lật mặt
                 <span className="text-slate-300">|</span>
