@@ -27,7 +27,8 @@ import {
   Sparkles,
   Palette,
   Eye,
-  X
+  X,
+  MessageSquare
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -35,11 +36,12 @@ import { INITIAL_VOCABULARY } from './data';
 import Flashcards from './components/Flashcards';
 import Quiz from './components/Quiz';
 import WritingPad from './components/WritingPad';
+import Dialogue from './components/Dialogue';
 import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dictionary'>('flashcards');
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dialogue' | 'dictionary'>('flashcards');
 
   // Search & Filter Dictionary State
   const [searchQuery, setSearchQuery] = useState('');
@@ -70,7 +72,7 @@ export default function App() {
       try {
         const parsed: VocabularyWord[] = JSON.parse(saved);
         let hasChanges = false;
-        
+
         // 1. Migrate old 'Bài 4' to 'Bài 1: Giới thiệu bản thân'
         let migrated = parsed.map(w => {
           if (w.category.toLowerCase().includes('bài 4') || w.category.trim() === 'Bài 4') {
@@ -414,6 +416,18 @@ export default function App() {
             </button>
 
             <button
+              id="tab-dialogue"
+              onClick={() => setActiveTab('dialogue')}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'dialogue'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+            >
+              <MessageSquare size={14} />
+              <span>Đối thoại / Hội thoại</span>
+            </button>
+
+            <button
               id="tab-dictionary"
               onClick={() => setActiveTab('dictionary')}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'dictionary'
@@ -485,6 +499,12 @@ export default function App() {
                 words={words}
                 onUpdateWordStatus={handleUpdateWordStatus}
               />
+            </div>
+          )}
+
+          {activeTab === 'dialogue' && (
+            <div className="py-4" id="dialogue-tab-container">
+              <Dialogue />
             </div>
           )}
 
