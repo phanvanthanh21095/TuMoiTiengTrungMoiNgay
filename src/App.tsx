@@ -621,17 +621,19 @@ export default function App() {
                             />
                           </div>
 
-                          {/* Category input */}
+                          {/* Category select dropdown */}
                           <div className="flex flex-col gap-1.5">
                             <label htmlFor="form-category" className="text-xs font-semibold text-slate-600">Phân Loại / Chương Học:</label>
-                            <input
+                            <select
                               id="form-category"
-                              type="text"
                               value={formCategory}
                               onChange={(e) => setFormCategory(e.target.value)}
-                              placeholder="Ví dụ: Bài 2: Thời gian"
-                              className="bg-slate-50 text-xs text-slate-900 p-3 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-500"
-                            />
+                              className="bg-slate-50 text-xs text-slate-900 p-3 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-500 cursor-pointer"
+                            >
+                              {categoriesList.map((cat, i) => (
+                                <option key={i} value={cat}>{cat}</option>
+                              ))}
+                            </select>
                           </div>
 
                         </div>
