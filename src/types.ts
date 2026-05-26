@@ -6,6 +6,7 @@ export interface VocabularyWord {
   category: string;       // Nhãn phân loại / tên bài (e.g., "Bài 1: Giới thiệu bản thân", "Bài 2: Thời gian")
   notes?: string;         // Ghi chú thêm (khắc họa chi tiết)
   exampleChinese?: string; // Ví dụ câu tiếng Trung
+  examplePinyin?: string;  // Phiên âm câu ví dụ tiếng Trung
   exampleVietnamese?: string; // Dịch câu ví dụ tiếng Việt
   
   // Các chỉ số học tập (tiện cho Spaced Repetition / LocalStorage)

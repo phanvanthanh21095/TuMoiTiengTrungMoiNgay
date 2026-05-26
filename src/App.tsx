@@ -56,6 +56,7 @@ export default function App() {
   const [formDefinition, setFormDefinition] = useState('');
   const [formCategory, setFormCategory] = useState('Bài 1: Giới thiệu bản thân');
   const [formExampleChinese, setFormExampleChinese] = useState('');
+  const [formExamplePinyin, setFormExamplePinyin] = useState('');
   const [formExampleVietnamese, setFormExampleVietnamese] = useState('');
   const [showAddForm, setShowAddForm] = useState(false);
 
@@ -79,12 +80,23 @@ export default function App() {
           return w;
         });
 
-        // 2. Merge missing words from INITIAL_VOCABULARY (e.g. newly added Bài 2 words)
+        // 2. Merge missing words and update example sentence properties (e.g. examplePinyin) for existing default words
         INITIAL_VOCABULARY.forEach(defaultWord => {
-          const exists = migrated.some(w => w.character === defaultWord.character && w.category === defaultWord.category);
-          if (!exists) {
+          const existingIndex = migrated.findIndex(w => w.character === defaultWord.character && w.category === defaultWord.category);
+          if (existingIndex === -1) {
             migrated.push(defaultWord);
             hasChanges = true;
+          } else {
+            const existing = migrated[existingIndex];
+            if (existing.examplePinyin !== defaultWord.examplePinyin) {
+              migrated[existingIndex] = {
+                ...existing,
+                examplePinyin: defaultWord.examplePinyin,
+                exampleChinese: defaultWord.exampleChinese,
+                exampleVietnamese: defaultWord.exampleVietnamese
+              };
+              hasChanges = true;
+            }
           }
         });
 
@@ -176,6 +188,7 @@ export default function App() {
             definition: formDefinition.trim(),
             category: formCategory.trim() || 'Bài 1: Giới thiệu bản thân',
             exampleChinese: formExampleChinese.trim() || undefined,
+            examplePinyin: formExamplePinyin.trim() || undefined,
             exampleVietnamese: formExampleVietnamese.trim() || undefined
           };
         }
@@ -193,6 +206,7 @@ export default function App() {
         definition: formDefinition.trim(),
         category: formCategory.trim() || 'Bài 1: Giới thiệu bản thân',
         exampleChinese: formExampleChinese.trim() || undefined,
+        examplePinyin: formExamplePinyin.trim() || undefined,
         exampleVietnamese: formExampleVietnamese.trim() || undefined,
         correctCount: 0,
         incorrectCount: 0,
@@ -206,6 +220,7 @@ export default function App() {
     setFormPinyin('');
     setFormDefinition('');
     setFormExampleChinese('');
+    setFormExamplePinyin('');
     setFormExampleVietnamese('');
     setShowAddForm(false);
   };
@@ -217,6 +232,7 @@ export default function App() {
     setFormDefinition(word.definition);
     setFormCategory(word.category);
     setFormExampleChinese(word.exampleChinese || '');
+    setFormExamplePinyin(word.examplePinyin || '');
     setFormExampleVietnamese(word.exampleVietnamese || '');
     setEditingWordId(word.id);
     setIsFormEditing(true);
@@ -250,13 +266,26 @@ export default function App() {
   // Category values extractor
   const categoriesList = Array.from(new Set(words.map(w => w.category)));
 
+  // Accent/Diacritic remover helper for Vietnamese search
+  const removeVietnameseTones = (str: string): string => {
+    return str
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .toLowerCase();
+  };
+
   // Search filter implementation
   const filteredDictionary = words.filter((word) => {
-    const matchesKeyword =
-      word.character.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      word.pinyin.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      word.definition.toLowerCase().includes(searchQuery.toLowerCase());
+    const queryLower = searchQuery.toLowerCase();
+    const normalizedQuery = removeVietnameseTones(searchQuery);
 
+    const matchesCharacter = word.character.toLowerCase().includes(queryLower);
+    const matchesPinyin = word.pinyin.toLowerCase().includes(queryLower);
+    const matchesDefinition = removeVietnameseTones(word.definition).includes(normalizedQuery);
+
+    const matchesKeyword = matchesCharacter || matchesPinyin || matchesDefinition;
     const matchesCategory = categoryFilter === 'all' || word.category === categoryFilter;
 
     return matchesKeyword && matchesCategory;
@@ -611,7 +640,7 @@ export default function App() {
                         <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 flex flex-col gap-3">
                           <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Mẫu câu ví dụ thực tế (Không bắt buộc)</span>
 
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                             <div className="flex flex-col gap-1">
                               <span className="text-[10px] text-slate-500">Câu tiếng Trung:</span>
                               <input
@@ -621,6 +650,22 @@ export default function App() {
                                 onChange={(e) => setFormExampleChinese(e.target.value)}
                                 placeholder="Ví dụ: 请慢一点说。"
                                 className="bg-white text-xs text-slate-900 p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-500"
+                              />
+                            </div>
+
+                            <div className="flex flex-col gap-1">
+                              <span className="text-[10px] text-slate-500">Phiên âm Pinyin:</span>
+                              <input
+                                id="form-ex-py"
+                                type="text"
+                                value={formExamplePinyin}
+                                onChange={(e) => {
+                                  const val = e.target.value;
+                                  const converted = convertNumberedPinyin(val);
+                                  setFormExamplePinyin(converted);
+                                }}
+                                placeholder="Ví dụ: Qǐng màn yìdiǎn shuō."
+                                className="bg-white text-xs text-slate-900 p-2.5 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-500 font-mono"
                               />
                             </div>
 
@@ -648,6 +693,7 @@ export default function App() {
                               setFormPinyin('');
                               setFormDefinition('');
                               setFormExampleChinese('');
+                              setFormExamplePinyin('');
                               setFormExampleVietnamese('');
                             }}
                             className="px-4 py-2 text-xs font-semibold text-slate-500 hover:text-slate-800 cursor-pointer"
