@@ -247,7 +247,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
           </div>
 
           {/* Card Component with Flip Animation */}
-          <div className="relative h-[360px] w-full perspective-1000 select-none cursor-pointer" onClick={handleFlip} id="card-touch-area">
+          <div className="relative h-[400px] w-full perspective-1000 select-none cursor-pointer" onClick={handleFlip} id="card-touch-area">
             <div className="absolute top-4 right-4 z-10 flex gap-2">
               <button
                 id="btn-fav"
@@ -330,7 +330,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
                     {activeWord.pinyin}
                   </span>
 
-                  <span className="text-2xl font-semibold text-emerald-600 max-w-sm mt-1">
+                  <span className="text-2xl font-semibold text-emerald-600 mt-1">
                     {activeWord.definition}
                   </span>
                 </div>
