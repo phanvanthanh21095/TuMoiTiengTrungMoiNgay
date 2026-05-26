@@ -58,15 +58,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
     }
   };
 
-  // Play word on load
-  useEffect(() => {
-    if (activeWord && !isFlipped && direction === 'character-first') {
-      const timer = setTimeout(() => {
-        handleSpeak(activeWord.character);
-      }, 400);
-      return () => clearTimeout(timer);
-    }
-  }, [currentIndex, activeWord, direction]);
+
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);

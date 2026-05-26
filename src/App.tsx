@@ -4,21 +4,21 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { 
-  BookOpen, 
-  Keyboard, 
-  Plus, 
-  Search, 
-  Trash2, 
-  Edit3, 
-  Star, 
-  Bookmark, 
-  PenTool, 
-  Trophy, 
-  ChevronRight, 
-  Layers, 
-  Smile, 
-  RefreshCw, 
+import {
+  BookOpen,
+  Keyboard,
+  Plus,
+  Search,
+  Trash2,
+  Edit3,
+  Star,
+  Bookmark,
+  PenTool,
+  Trophy,
+  ChevronRight,
+  Layers,
+  Smile,
+  RefreshCw,
   HelpCircle,
   FileSpreadsheet,
   Settings,
@@ -40,11 +40,11 @@ import { convertNumberedPinyin } from './utils/pinyin';
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
   const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dictionary'>('flashcards');
-  
+
   // Search & Filter Dictionary State
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
-  
+
   // Writing Pad display on Flashcards tab toggle
   const [showDraftPad, setShowDraftPad] = useState(true);
 
@@ -54,11 +54,11 @@ export default function App() {
   const [formHanzi, setFormHanzi] = useState('');
   const [formPinyin, setFormPinyin] = useState('');
   const [formDefinition, setFormDefinition] = useState('');
-  const [formCategory, setFormCategory] = useState('Bài 4: Tự học');
+  const [formCategory, setFormCategory] = useState('Bài 1: Giới thiệu bản thân');
   const [formExampleChinese, setFormExampleChinese] = useState('');
   const [formExampleVietnamese, setFormExampleVietnamese] = useState('');
   const [showAddForm, setShowAddForm] = useState(false);
-  
+
   // Statistics State
   const [streak, setStreak] = useState(1);
 
@@ -67,7 +67,31 @@ export default function App() {
     const saved = localStorage.getItem('study_chinese_vocab_v1');
     if (saved) {
       try {
-        setWords(JSON.parse(saved));
+        const parsed: VocabularyWord[] = JSON.parse(saved);
+        let hasChanges = false;
+        
+        // 1. Migrate old 'Bài 4' to 'Bài 1: Giới thiệu bản thân'
+        let migrated = parsed.map(w => {
+          if (w.category.toLowerCase().includes('bài 4') || w.category.trim() === 'Bài 4') {
+            hasChanges = true;
+            return { ...w, category: 'Bài 1: Giới thiệu bản thân' };
+          }
+          return w;
+        });
+
+        // 2. Merge missing words from INITIAL_VOCABULARY (e.g. newly added Bài 2 words)
+        INITIAL_VOCABULARY.forEach(defaultWord => {
+          const exists = migrated.some(w => w.character === defaultWord.character && w.category === defaultWord.category);
+          if (!exists) {
+            migrated.push(defaultWord);
+            hasChanges = true;
+          }
+        });
+
+        setWords(migrated);
+        if (hasChanges) {
+          localStorage.setItem('study_chinese_vocab_v1', JSON.stringify(migrated));
+        }
       } catch (e) {
         setWords(INITIAL_VOCABULARY);
       }
@@ -104,7 +128,7 @@ export default function App() {
       if (w.id === id) {
         const correctCount = isCorrect ? (w.correctCount || 0) + 1 : (w.correctCount || 0);
         const incorrectCount = !isCorrect ? (w.incorrectCount || 0) + 1 : (w.incorrectCount || 0);
-        
+
         // Advance study status automatically
         let status = w.status;
         if (correctCount >= 3 && incorrectCount === 0) {
@@ -150,7 +174,7 @@ export default function App() {
             character: formHanzi.trim(),
             pinyin: formPinyin.trim(),
             definition: formDefinition.trim(),
-            category: formCategory.trim() || 'Bài 4: Tự học',
+            category: formCategory.trim() || 'Bài 1: Giới thiệu bản thân',
             exampleChinese: formExampleChinese.trim() || undefined,
             exampleVietnamese: formExampleVietnamese.trim() || undefined
           };
@@ -167,7 +191,7 @@ export default function App() {
         character: formHanzi.trim(),
         pinyin: formPinyin.trim(),
         definition: formDefinition.trim(),
-        category: formCategory.trim() || 'Bài 4: Tự học',
+        category: formCategory.trim() || 'Bài 1: Giới thiệu bản thân',
         exampleChinese: formExampleChinese.trim() || undefined,
         exampleVietnamese: formExampleVietnamese.trim() || undefined,
         correctCount: 0,
@@ -197,7 +221,7 @@ export default function App() {
     setEditingWordId(word.id);
     setIsFormEditing(true);
     setShowAddForm(true);
-    
+
     // Smooth scroll to top wrapper form
     window.scrollTo({ top: 320, behavior: 'smooth' });
   };
@@ -206,7 +230,7 @@ export default function App() {
   const handleDeleteWord = (id: string) => {
     const wordToDelete = words.find(w => w.id === id);
     if (!wordToDelete) return;
-    
+
     const confirmText = `Bạn có chắc chắn muốn xóa từ vựng "${wordToDelete.character}" (${wordToDelete.pinyin}) khỏi danh sách học tập không?`;
     if (window.confirm(confirmText)) {
       const filtered = words.filter(w => w.id !== id);
@@ -216,7 +240,7 @@ export default function App() {
 
   // Reset entire vocabulary list to base template
   const handleRestoreDefaults = () => {
-    if (window.confirm("Bạn có muốn đặt lại danh sách từ vựng về mặc định của Bài 4 (25 từ gốc trong ảnh)? Các từ mới do bạn thêm sẽ bị xóa.")) {
+    if (window.confirm("Bạn có muốn đặt lại danh sách từ vựng về mặc định của Bài 1 (25 từ gốc)? Các từ mới do bạn thêm sẽ bị xóa.")) {
       saveWordsToStorage(INITIAL_VOCABULARY);
       localStorage.setItem('study_chinese_streak', '1');
       setStreak(1);
@@ -228,7 +252,7 @@ export default function App() {
 
   // Search filter implementation
   const filteredDictionary = words.filter((word) => {
-    const matchesKeyword = 
+    const matchesKeyword =
       word.character.toLowerCase().includes(searchQuery.toLowerCase()) ||
       word.pinyin.toLowerCase().includes(searchQuery.toLowerCase()) ||
       word.definition.toLowerCase().includes(searchQuery.toLowerCase());
@@ -246,8 +270,8 @@ export default function App() {
   const favoritedCount = words.filter(w => w.favorite).length;
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500/20 selection:text-indigo-900" id="main-application-canvas">
-      
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500/20 selection:text-indigo-900 flex flex-col" id="main-application-canvas">
+
       {/* Decorative ambient top glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-42 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -260,7 +284,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-lg font-extrabold tracking-tight text-slate-900 flex items-center gap-1.5">
-                Tiếng Trung Bài 4
+                Tiếng Trung
                 <span className="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 border border-slate-200 text-indigo-600 font-semibold">Tự Thảo & Đối thoại</span>
               </h1>
               <p className="text-xs text-slate-500 mt-0.5 font-sans">Ứng dụng học thuộc lòng: Phiên âm Hán tự, Pinyin và Bộ từ vựng chi tiết</p>
@@ -288,8 +312,8 @@ export default function App() {
       </header>
 
       {/* Main Container */}
-      <main className="max-w-7xl mx-auto px-4 py-6 flex flex-col gap-6" id="dashboard-container">
-        
+      <main className="max-w-7xl w-full mx-auto px-4 py-6 flex flex-col gap-6 flex-1" id="dashboard-container">
+
         {/* Statistics progress cards bento-grid */}
         <section className="grid grid-cols-2 md:grid-cols-5 gap-3" id="stats-banner-bento">
           {/* Card Total */}
@@ -339,11 +363,10 @@ export default function App() {
             <button
               id="tab-flashcards"
               onClick={() => setActiveTab('flashcards')}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${
-                activeTab === 'flashcards'
-                  ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
-              }`}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'flashcards'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
             >
               <Layers size={14} />
               <span>Học Flashcards ghép Thử viết</span>
@@ -352,11 +375,10 @@ export default function App() {
             <button
               id="tab-quiz"
               onClick={() => setActiveTab('quiz')}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${
-                activeTab === 'quiz'
-                  ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
-              }`}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'quiz'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
             >
               <Keyboard size={14} />
               <span>Luyện Gõ & Trắc nghiệm (Bật ngay)</span>
@@ -365,11 +387,10 @@ export default function App() {
             <button
               id="tab-dictionary"
               onClick={() => setActiveTab('dictionary')}
-              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${
-                activeTab === 'dictionary'
-                  ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
-                  : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
-              }`}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'dictionary'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
             >
               <BookOpen size={14} />
               <span>Sổ Từ & Cập Nhật Chữ ({words.length})</span>
@@ -381,7 +402,7 @@ export default function App() {
         <section id="workspace-payload">
           {activeTab === 'flashcards' && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start" id="flashcards-tab-container">
-              
+
               {/* Flashcard Slider deck (takes 7 columns in grid) */}
               <div className="lg:col-span-7 flex flex-col gap-1.5">
                 <div className="flex items-center justify-between px-1">
@@ -411,7 +432,7 @@ export default function App() {
                       <span>Bàn luyện viết bổ trợ</span>
                     </span>
                   </div>
-                  
+
                   {/* Provide the active character on the current deck as tracing visual, if any words exist */}
                   <WritingPad
                     traceWord={
@@ -440,15 +461,15 @@ export default function App() {
 
           {activeTab === 'dictionary' && (
             <div className="flex flex-col gap-6" id="dictionary-tab-container">
-              
+
               {/* Split layout: Add/Edit word form and search box */}
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-                
+
                 {/* Search, Filter Lexicon list (7 cols) */}
                 <div className="lg:col-span-7 flex flex-col gap-4">
-                  
+
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm" id="dictionary-query-bar">
-                    
+
                     {/* Search Field */}
                     <div className="relative w-full sm:w-auto flex-1">
                       <Search className="absolute top-1/2 left-3.5 -translate-y-1/2 text-slate-400" size={16} />
@@ -516,7 +537,7 @@ export default function App() {
 
                       <form onSubmit={handleSubmitForm} className="flex flex-col gap-4">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          
+
                           {/* Chinese Char */}
                           <div className="flex flex-col gap-1.5">
                             <label htmlFor="form-hanzi" className="text-xs font-semibold text-slate-600">Chữ Hán (Ký tự tiếng Trung): <span className="text-rose-500">*</span></label>
@@ -556,7 +577,7 @@ export default function App() {
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          
+
                           {/* Definition */}
                           <div className="flex flex-col gap-1.5">
                             <label htmlFor="form-definition" className="text-xs font-semibold text-slate-600">Nghĩa Tiếng Việt: <span className="text-rose-500">*</span></label>
@@ -579,7 +600,7 @@ export default function App() {
                               type="text"
                               value={formCategory}
                               onChange={(e) => setFormCategory(e.target.value)}
-                              placeholder="Ví dụ: Bài 4: Từ mới II"
+                              placeholder="Ví dụ: Bài 2: Thời gian"
                               className="bg-slate-50 text-xs text-slate-900 p-3 rounded-lg border border-slate-200 focus:outline-none focus:border-indigo-500"
                             />
                           </div>
@@ -589,7 +610,7 @@ export default function App() {
                         {/* Practical example sentences (optional) */}
                         <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 flex flex-col gap-3">
                           <span className="text-[11px] font-bold text-slate-500 uppercase tracking-widest">Mẫu câu ví dụ thực tế (Không bắt buộc)</span>
-                          
+
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div className="flex flex-col gap-1">
                               <span className="text-[10px] text-slate-500">Câu tiếng Trung:</span>
@@ -633,7 +654,7 @@ export default function App() {
                           >
                             Xóa trắng nháp
                           </button>
-                          
+
                           <button
                             id="submit-form-btn"
                             type="submit"
@@ -660,13 +681,13 @@ export default function App() {
                         </div>
                       ) : (
                         filteredDictionary.map((word) => (
-                          <div 
+                          <div
                             key={word.id}
                             className="bg-white hover:bg-slate-50 border border-slate-200 p-4 rounded-xl flex items-center justify-between gap-4 transition group relative shadow-sm select-text"
                           >
                             <div className="flex items-center gap-4 min-w-0">
                               {/* Hanzi sign */}
-                              <div className="h-12 w-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900 text-2xl font-sans tracking-wide shrink-0">
+                              <div className="h-12 min-w-12 px-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900 text-2xl font-sans tracking-wide shrink-0 whitespace-nowrap">
                                 {word.character}
                               </div>
 
@@ -685,24 +706,22 @@ export default function App() {
 
                             {/* Option actions */}
                             <div className="flex items-center gap-2 shrink-0">
-                              
+
                               {/* Study indicator badge */}
-                              <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border hidden sm:inline-block ${
-                                word.status === 'mastered'
-                                  ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
-                                  : word.status === 'learning'
+                              <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border hidden sm:inline-block ${word.status === 'mastered'
+                                ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
+                                : word.status === 'learning'
                                   ? 'bg-amber-50 text-amber-600 border-amber-200'
                                   : 'bg-slate-100 text-slate-500 border-slate-200'
-                              }`}>
+                                }`}>
                                 {word.status === 'mastered' ? 'Đã thuộc' : word.status === 'learning' ? 'Đang học' : 'Mới tinh'}
                               </span>
 
                               <button
                                 id={`fav-dic-${word.id}`}
                                 onClick={() => handleToggleFavorite(word.id)}
-                                className={`p-1.8 rounded-lg cursor-pointer hover:bg-slate-100 transition ${
-                                  word.favorite ? 'text-rose-500' : 'text-slate-400 hover:text-rose-500'
-                                }`}
+                                className={`p-1.8 rounded-lg cursor-pointer hover:bg-slate-100 transition ${word.favorite ? 'text-rose-500' : 'text-slate-400 hover:text-rose-500'
+                                  }`}
                                 title="Đánh dấu ưa chuộng"
                               >
                                 <Star size={14} className={word.favorite ? 'fill-rose-500' : ''} />
@@ -737,35 +756,71 @@ export default function App() {
                 {/* Left/Right Sidebar explaining Chapter Grammar and Photos context (5 cols) */}
                 <div className="lg:col-span-5 flex flex-col gap-4">
                   <div className="bg-white border border-slate-200 p-5 rounded-2xl flex flex-col gap-4 shadow-sm" id="grammar-summary">
-                    <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5 border-b border-slate-100 pb-2">
-                      <FileSpreadsheet size={14} className="text-amber-500" />
-                      Ngữ pháp Trọng Điểm - Bài 4
-                    </span>
+                    {categoryFilter === 'Bài 2: Thời gian' ? (
+                      <>
+                        <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5 border-b border-slate-100 pb-2">
+                          <FileSpreadsheet size={14} className="text-amber-500" />
+                          Ngữ pháp Trọng Điểm - Bài 2: Thời gian
+                        </span>
 
-                    <div className="flex flex-col gap-4 text-xs text-slate-600 leading-relaxed" id="grammar-docs-content">
-                      <div className="flex flex-col gap-1">
-                        <strong className="text-slate-900">1. Trợ từ từ hỏi 吗 (ma):</strong>
-                        <p>Đặt cuối câu trần thuật để biến câu đó thành câu nghi vấn có-không. Thường dịch là "chăng, phải không, hả?".</p>
-                        <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 你是学生吗？ (Bạn là học sinh phải không?)</p>
-                      </div>
+                        <div className="flex flex-col gap-4 text-xs text-slate-600 leading-relaxed" id="grammar-docs-content">
+                          <div className="flex flex-col gap-1">
+                            <strong className="text-slate-900">1. Cách nói Thứ trong tuần (星期 + Số):</strong>
+                            <p>Dùng từ "星期" (xīngqī) kết hợp với các số từ 1 đến 6 để chỉ các thứ từ thứ Hai đến thứ Bảy. Chủ Nhật dùng "星期天" (xīngqītiān) hoặc "星期日" (xīngqīrì).</p>
+                            <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 星期一 (Thứ Hai), 星期六 (Thứ Bảy), 星期天 (Chủ Nhật)</p>
+                          </div>
 
-                      <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
-                        <strong className="text-slate-900">2. Phó từ cũng 也 (yě):</strong>
-                        <p>Đứng trước động từ biểu thị hành động tương đồng với chủ thể khác. Không đứng đầu câu.</p>
-                        <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 我也是越南人。 (Tôi cũng là người Việt Nam.)</p>
-                      </div>
+                          <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
+                            <strong className="text-slate-900">2. Cấu trúc nói Thứ, Ngày, Tháng, Năm:</strong>
+                            <p>Tiếng Trung nói từ đơn vị lớn đến nhỏ: Năm (年 nián) → Tháng (月 yuè) → Ngày/Mồng (号 hào / 日 rì) → Thứ (星期 xīngqī).</p>
+                            <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 2026年5月26号 (Ngày 26 tháng 5 năm 2026)</p>
+                          </div>
 
-                      <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
-                        <strong className="text-slate-900">3. Động từ sở hữu 有 (yǒu):</strong>
-                        <p>Biểu thị sự chiếm hữu, sở hữu hoặc tồn tại. Phủ định của <strong className="text-rose-500">有</strong> bắt buộc dùng <strong className="text-rose-500">没有</strong> (không được dùng 不有).</p>
-                        <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 我没有汉语老师。 (Tôi không có giáo viên tiếng Trung.)</p>
-                      </div>
+                          <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
+                            <strong className="text-slate-900">3. Vị trí của trạng từ chỉ thời gian:</strong>
+                            <p>Trạng ngữ chỉ thời gian có thể đứng trước chủ ngữ hoặc ngay sau chủ ngữ để xác định mốc thời gian của hành động.</p>
+                            <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 今天我没去公司。 (Hôm nay tôi không đến công ty.)</p>
+                          </div>
 
-                      <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
-                        <strong className="text-slate-900">4. Đại từ chỉ định 这 (đây) vs 那 (kia):</strong>
-                        <p><strong className="text-slate-900">这 (zhè)</strong> dùng để chỉ người/vật ở khoảng cách gần người nói; <strong className="text-slate-900">那 (nà)</strong> chỉ người/vật ở xa.</p>
-                      </div>
-                    </div>
+                          <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
+                            <strong className="text-slate-900">4. Phân biệt "小时" (tiếng/giờ) và "点" (giờ mốc):</strong>
+                            <p><strong className="text-slate-900">点 (diǎn)</strong> dùng để nói giờ trên đồng hồ (bây giờ là mấy giờ); <strong className="text-slate-900">小时 (xiǎoshí)</strong> dùng để nói về lượng thời gian (học trong mấy tiếng).</p>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5 border-b border-slate-100 pb-2">
+                          <FileSpreadsheet size={14} className="text-amber-500" />
+                          Ngữ pháp Trọng Điểm - Bài 1
+                        </span>
+
+                        <div className="flex flex-col gap-4 text-xs text-slate-600 leading-relaxed" id="grammar-docs-content">
+                          <div className="flex flex-col gap-1">
+                            <strong className="text-slate-900">1. Trợ từ từ hỏi 吗 (ma):</strong>
+                            <p>Đặt cuối câu trần thuật để biến câu đó thành câu nghi vấn có-không. Thường dịch là "chăng, phải không, hả?".</p>
+                            <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 你是学生吗？ (Bạn là học sinh phải không?)</p>
+                          </div>
+
+                          <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
+                            <strong className="text-slate-900">2. Phó từ cũng 也 (yě):</strong>
+                            <p>Đứng trước động từ biểu thị hành động tương đồng với chủ thể khác. Không đứng đầu câu.</p>
+                            <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 我也是越南人。 (Tôi cũng là người Việt Nam.)</p>
+                          </div>
+
+                          <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
+                            <strong className="text-slate-900">3. Động từ sở hữu 有 (yǒu):</strong>
+                            <p>Biểu thị sự chiếm hữu, sở hữu hoặc tồn tại. Phủ định của <strong className="text-rose-500">有</strong> bắt buộc dùng <strong className="text-rose-500">没有</strong> (không được dùng 不有).</p>
+                            <p className="font-semibold text-amber-600 font-mono mt-0.5">Ví dụ: 我没有汉语老师。 (Tôi không có giáo viên tiếng Trung.)</p>
+                          </div>
+
+                          <div className="flex flex-col gap-1 border-t border-slate-100 pt-2.5">
+                            <strong className="text-slate-900">4. Đại từ chỉ định 这 (đây) vs 那 (kia):</strong>
+                            <p><strong className="text-slate-900">这 (zhè)</strong> dùng để chỉ người/vật ở khoảng cách gần người nói; <strong className="text-slate-900">那 (nà)</strong> chỉ người/vật ở xa.</p>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
 
                   <div className="p-4 bg-indigo-50 border border-indigo-100 rounded-2xl flex items-start gap-3">
@@ -788,8 +843,8 @@ export default function App() {
       {/* Styled Footer */}
       <footer className="border-t border-slate-200 bg-slate-50 text-slate-500 text-[11px] text-center py-7 mt-8" id="app-footer">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span>THIẾT KẾ ĐẶC QUYỀN TRÊN NỀN TẢNG COGNITIVE WORKSPACE</span>
-          <span>© 2026 Học thuộc lòng Tiếng Trung. Bản quyền thuộc về học viên phanvanthanh120195. Biểu trưng bởi phác đồ nét vẽ 田字格</span>
+          <span>THIẾT KẾ ĐẶC QUYỀN TRÊN NỀN TẢNG PVT</span>
+          <span>© 2026 Học thuộc lòng Tiếng Trung. Bản quyền thuộc về Phan Văn Thành. Biểu trưng bởi phác đồ nét vẽ 田字格</span>
         </div>
       </footer>
 

@@ -3,7 +3,7 @@ export interface VocabularyWord {
   character: string;      // Chữ Hán (e.g., "这")
   pinyin: string;         // Phiên âm (e.g., "zhè")
   definition: string;     // Nghĩa tiếng Việt (e.g., "cái này")
-  category: string;       // Nhãn phân loại (e.g., "Bài 4: Giới thiệu bản thân", "Tự học", v.v.)
+  category: string;       // Nhãn phân loại / tên bài (e.g., "Bài 1: Giới thiệu bản thân", "Bài 2: Thời gian")
   notes?: string;         // Ghi chú thêm (khắc họa chi tiết)
   exampleChinese?: string; // Ví dụ câu tiếng Trung
   exampleVietnamese?: string; // Dịch câu ví dụ tiếng Việt
