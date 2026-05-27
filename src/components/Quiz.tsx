@@ -729,12 +729,12 @@ export default function Quiz({ words, onUpdateWordStatus }: QuizProps) {
                   </div>
 
                   {activeQuestion.word.exampleChinese && (
-                    <div className="text-[11px] bg-white p-2.5 rounded-lg border border-slate-200 mt-2 shadow-sm flex items-center justify-between gap-3">
+                    <div className="text-[12px] bg-white p-2.5 rounded-lg border border-slate-200 mt-2 shadow-sm flex items-center justify-between gap-3">
                       <div className="flex-1">
-                        <div className="text-slate-500 font-medium font-mono uppercase tracking-widest text-[9px] mb-1">Cụm ví dụ minh họa:</div>
+                        <div className="text-slate-500 font-medium font-mono uppercase tracking-widest text-[12px] mb-1">Cụm ví dụ minh họa:</div>
                         <div className="text-slate-800 font-sans tracking-wide leading-relaxed font-semibold">{activeQuestion.word.exampleChinese}</div>
                         {activeQuestion.word.examplePinyin && (
-                          <div className="text-amber-600 font-mono text-[10px] mt-0.5">{activeQuestion.word.examplePinyin}</div>
+                          <div className="text-amber-600 font-mono text-[15px] mt-0.5">{activeQuestion.word.examplePinyin}</div>
                         )}
                         <div className="text-slate-500 mt-0.5">{activeQuestion.word.exampleVietnamese}</div>
                       </div>
