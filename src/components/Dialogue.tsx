@@ -21,6 +21,43 @@ interface LessonData {
 
 const LESSONS_DATA: LessonData[] = [
   {
+    id: "lesson-0",
+    lessonTitle: "Bài 0: Chào hỏi",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Chào hỏi đơn giản",
+        lines: [
+          { speaker: 'A', chinese: '你好！', pinyin: 'Nǐ hǎo!', vietnamese: 'Xin chào!' },
+          { speaker: 'B', chinese: '你好！', pinyin: 'Nǐ hǎo!', vietnamese: 'Xin chào!' },
+          { speaker: 'A', chinese: '你好吗？', pinyin: 'Nǐ hǎo ma?', vietnamese: 'Bạn khỏe không?' },
+          { speaker: 'B', chinese: '我很好。', pinyin: 'Wǒ hěn hǎo.', vietnamese: 'Tôi rất khỏe.' },
+          { speaker: 'A', chinese: '今天忙吗？', pinyin: 'Jīntiān máng ma?', vietnamese: 'Hôm nay bạn bận không?' },
+          { speaker: 'B', chinese: '不忙，谢谢。', pinyin: 'Bù máng, xièxie.', vietnamese: 'Không bận, cảm ơn.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Làm quen – Giới thiệu tên",
+        lines: [
+          { speaker: 'A', chinese: '你好，我叫安。', pinyin: 'Nǐ hǎo, wǒ jiào Ān.', vietnamese: 'Xin chào, tôi tên An.' },
+          { speaker: 'B', chinese: '你好，我叫明。', pinyin: 'Nǐ hǎo, wǒ jiào Míng.', vietnamese: 'Xin chào, tôi tên Minh.' },
+          { speaker: 'A', chinese: '你是学生吗？', pinyin: 'Nǐ shì xuésheng ma?', vietnamese: 'Bạn là học sinh à?' },
+          { speaker: 'B', chinese: '是的，我是学生。', pinyin: 'Shì de, wǒ shì xuésheng.', vietnamese: 'Vâng, tôi là học sinh.' },
+          { speaker: 'A', chinese: '很高兴认识你。', pinyin: 'Hěn gāoxìng rènshi nǐ.', vietnamese: 'Rất vui được quen bạn.' },
+          { speaker: 'B', chinese: '我也很高兴。', pinyin: 'Wǒ yě hěn gāoxìng.', vietnamese: 'Tôi cũng rất vui.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Chào buổi sáng",
+        lines: [
+          { speaker: 'A', chinese: '早上好！', pinyin: 'Zǎo shang hǎo!', vietnamese: 'Chào buổi sáng!' },
+          { speaker: 'B', chinese: '早上好！', pinyin: 'Zǎo shang hǎo!', vietnamese: 'Chào buổi sáng!' },
+          { speaker: 'A', chinese: '你今天好吗？', pinyin: 'Nǐ jīntiān hǎo ma?', vietnamese: 'Hôm nay bạn khỏe không?' },
+          { speaker: 'B', chinese: '还好。', pinyin: 'Hái hǎo.', vietnamese: 'Cũng ổn.' }
+        ]
+      }
+    ]
+  },
+  {
     id: "lesson-1",
     lessonTitle: "Bài 1: Giới thiệu bản thân",
     dialogues: [

@@ -56,7 +56,7 @@ export default function App() {
   const [formHanzi, setFormHanzi] = useState('');
   const [formPinyin, setFormPinyin] = useState('');
   const [formDefinition, setFormDefinition] = useState('');
-  const [formCategory, setFormCategory] = useState('Bài 1: Giới thiệu bản thân');
+  const [formCategory, setFormCategory] = useState('Bài 0: Chào hỏi');
   const [formExampleChinese, setFormExampleChinese] = useState('');
   const [formExamplePinyin, setFormExamplePinyin] = useState('');
   const [formExampleVietnamese, setFormExampleVietnamese] = useState('');
@@ -188,7 +188,7 @@ export default function App() {
             character: formHanzi.trim(),
             pinyin: formPinyin.trim(),
             definition: formDefinition.trim(),
-            category: formCategory.trim() || 'Bài 1: Giới thiệu bản thân',
+            category: formCategory.trim() || 'Bài 0: Chào hỏi',
             exampleChinese: formExampleChinese.trim() || undefined,
             examplePinyin: formExamplePinyin.trim() || undefined,
             exampleVietnamese: formExampleVietnamese.trim() || undefined
@@ -206,7 +206,7 @@ export default function App() {
         character: formHanzi.trim(),
         pinyin: formPinyin.trim(),
         definition: formDefinition.trim(),
-        category: formCategory.trim() || 'Bài 1: Giới thiệu bản thân',
+        category: formCategory.trim() || 'Bài 0: Chào hỏi',
         exampleChinese: formExampleChinese.trim() || undefined,
         examplePinyin: formExamplePinyin.trim() || undefined,
         exampleVietnamese: formExampleVietnamese.trim() || undefined,
@@ -258,7 +258,7 @@ export default function App() {
 
   // Reset entire vocabulary list to base template
   const handleRestoreDefaults = () => {
-    if (window.confirm("Bạn có muốn đặt lại danh sách từ vựng về mặc định của Bài 1 (25 từ gốc)? Các từ mới do bạn thêm sẽ bị xóa.")) {
+    if (window.confirm("Bạn có muốn đặt lại danh sách từ vựng về mặc định ban đầu không? Các từ mới do bạn thêm sẽ bị xóa.")) {
       saveWordsToStorage(INITIAL_VOCABULARY);
       localStorage.setItem('study_chinese_streak', '1');
       setStreak(1);
