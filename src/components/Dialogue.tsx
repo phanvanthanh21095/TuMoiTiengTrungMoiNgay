@@ -101,15 +101,15 @@ const LESSONS_DATA: LessonData[] = [
 export default function Dialogue() {
   const [selectedLessonIndex, setSelectedLessonIndex] = useState<number>(0);
   const [selectedDialogueIndex, setSelectedDialogueIndex] = useState<number>(0);
-  
+
   const [showPinyin, setShowPinyin] = useState<boolean>(true);
   const [showVietnamese, setShowVietnamese] = useState<boolean>(true);
-  
+
   // Voices selection
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
   const [voiceA, setVoiceA] = useState<string>('');
   const [voiceB, setVoiceB] = useState<string>('');
-  
+
   // Custom speech settings for speaker A and B
   const [pitchA, setPitchA] = useState<number>(0.9);
   const [pitchB, setPitchB] = useState<number>(1.1);
@@ -120,7 +120,7 @@ export default function Dialogue() {
   const [isPlayingSeq, setIsPlayingSeq] = useState<boolean>(false);
   const [activeLineIndex, setActiveLineIndex] = useState<number | null>(null);
   const [currentSpeakerSpeaking, setCurrentSpeakerSpeaking] = useState<'A' | 'B' | null>(null);
-  
+
   const seqTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const currentLesson = LESSONS_DATA[selectedLessonIndex];
@@ -134,7 +134,7 @@ export default function Dialogue() {
         // Filter Chinese voices primarily, but fallback to all voices
         const zhVoices = availableVoices.filter(v => v.lang.startsWith('zh') || v.lang.includes('CN') || v.lang.includes('TW') || v.lang.includes('HK'));
         setVoices(availableVoices);
-        
+
         // Pick defaults
         if (zhVoices.length > 0) {
           // Voice A default is first Chinese voice found (typically mainland CN)
@@ -228,13 +228,13 @@ export default function Dialogue() {
   // Play dialogue line by line sequentially
   const playDialogueSequence = (startIndex = 0) => {
     setIsPlayingSeq(true);
-    
+
     const playNext = (index: number) => {
       if (index >= currentDialogue.lines.length) {
         handleStop();
         return;
       }
-      
+
       speakLine(currentDialogue.lines[index], index, () => {
         // Delay 1s between lines for natural rhythm
         seqTimeoutRef.current = setTimeout(() => {
@@ -270,7 +270,7 @@ export default function Dialogue() {
 
   return (
     <div className="flex flex-col gap-6" id="dialogue-outer-wrapper">
-      
+
       {/* Tab cha: Danh sách Bài học */}
       <div className="bg-white border border-slate-200 p-4 rounded-2xl shadow-sm flex flex-col gap-2">
         <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5 border-b border-slate-100 pb-2">
@@ -286,11 +286,10 @@ export default function Dialogue() {
                 setSelectedLessonIndex(idx);
                 setSelectedDialogueIndex(0);
               }}
-              className={`px-5 py-3 rounded-xl text-xs font-bold transition flex items-center gap-2 cursor-pointer border ${
-                selectedLessonIndex === idx
-                  ? 'bg-indigo-600 text-white border-indigo-500 shadow-md'
-                  : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-600 hover:text-slate-900'
-              }`}
+              className={`px-5 py-3 rounded-xl text-xs font-bold transition flex items-center gap-2 cursor-pointer border ${selectedLessonIndex === idx
+                ? 'bg-indigo-600 text-white border-indigo-500 shadow-md'
+                : 'bg-slate-50 hover:bg-slate-100 border-slate-200 text-slate-600 hover:text-slate-900'
+                }`}
             >
               <span>{lesson.lessonTitle}</span>
             </button>
@@ -300,10 +299,10 @@ export default function Dialogue() {
 
       {/* Main Dialogue Content */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start" id="dialogue-main-container">
-        
+
         {/* Sidebar: Selection and settings (4 cols) */}
         <div className="lg:col-span-4 flex flex-col gap-4">
-          
+
           {/* Dialogue Selection */}
           <div className="bg-white border border-slate-200 p-4 rounded-2xl shadow-sm flex flex-col gap-3">
             <span className="text-xs font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5 border-b border-slate-100 pb-2">
@@ -318,11 +317,10 @@ export default function Dialogue() {
                     handleStop();
                     setSelectedDialogueIndex(i);
                   }}
-                  className={`w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition flex items-center justify-between cursor-pointer border ${
-                    selectedDialogueIndex === i
-                      ? 'bg-indigo-50 border-indigo-200 text-indigo-700 shadow-sm'
-                      : 'bg-slate-50 hover:bg-slate-100 border-slate-100 text-slate-600 hover:text-slate-900'
-                  }`}
+                  className={`w-full text-left px-4 py-3 rounded-xl text-xs font-bold transition flex items-center justify-between cursor-pointer border ${selectedDialogueIndex === i
+                    ? 'bg-indigo-50 border-indigo-200 text-indigo-700 shadow-sm'
+                    : 'bg-slate-50 hover:bg-slate-100 border-slate-100 text-slate-600 hover:text-slate-900'
+                    }`}
                 >
                   <span>{d.title}</span>
                   <ChevronRight size={14} className={selectedDialogueIndex === i ? 'text-indigo-500' : 'text-slate-400'} />
@@ -433,7 +431,7 @@ export default function Dialogue() {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-[10px] text-slate-500 border-t border-slate-100 pt-2 leading-relaxed">
               💡 <strong>Mẹo nhỏ:</strong> Nếu thiết bị của bạn không có nhiều giọng đọc tiếng Trung, bạn có thể chỉnh <strong>Tốc độ</strong> và <strong>Độ trầm/bổng</strong> khác nhau để tạo ra sự khác biệt rõ rệt giữa hai nhân vật.
             </div>
@@ -462,7 +460,7 @@ export default function Dialogue() {
 
         {/* Main chat window layout (8 cols) */}
         <div className="lg:col-span-8 flex flex-col gap-4">
-          
+
           {/* Play control bar */}
           <div className="bg-white border border-slate-200 p-4 rounded-2xl shadow-sm flex items-center justify-between">
             <div className="flex flex-col">
@@ -473,25 +471,14 @@ export default function Dialogue() {
             <div className="flex items-center gap-2">
               <button
                 onClick={toggleSequence}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer ${
-                  isPlayingSeq
-                    ? 'bg-amber-600 hover:bg-amber-500 text-white'
-                    : 'bg-indigo-600 hover:bg-indigo-500 text-white'
-                }`}
+                className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow cursor-pointer ${isPlayingSeq
+                  ? 'bg-amber-600 hover:bg-amber-500 text-white'
+                  : 'bg-indigo-600 hover:bg-indigo-500 text-white'
+                  }`}
               >
                 {isPlayingSeq ? <Pause size={14} /> : <Play size={14} />}
                 <span>{isPlayingSeq ? 'Tạm Dừng' : 'Đọc Toàn Bộ'}</span>
               </button>
-
-              {isPlayingSeq && (
-                <button
-                  onClick={handleStop}
-                  className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-600 cursor-pointer transition"
-                  title="Dừng phát âm"
-                >
-                  <Square size={14} />
-                </button>
-              )}
             </div>
           </div>
 
@@ -505,22 +492,20 @@ export default function Dialogue() {
               return (
                 <div
                   key={index}
-                  className={`flex gap-3 max-w-[85%] ${
-                    isSpeakerA ? 'self-start flex-row' : 'self-end flex-row-reverse'
-                  }`}
+                  className={`flex gap-3 max-w-[85%] ${isSpeakerA ? 'self-start flex-row' : 'self-end flex-row-reverse'
+                    }`}
                 >
                   {/* Speaker Avatar Icon */}
                   <div
                     onClick={() => speakLine(line, index)}
-                    className={`h-9 w-9 rounded-full flex items-center justify-center font-bold text-xs shrink-0 cursor-pointer shadow-sm select-none border transition-all duration-200 active:scale-95 ${
-                      isSpeakerA
-                        ? isSpeakingNow
-                          ? 'bg-indigo-600 text-white border-indigo-500 ring-4 ring-indigo-100'
-                          : 'bg-white text-indigo-700 border-indigo-200 hover:bg-indigo-50'
-                        : isSpeakingNow
-                          ? 'bg-emerald-600 text-white border-emerald-500 ring-4 ring-emerald-100'
-                          : 'bg-white text-emerald-700 border-emerald-200 hover:bg-emerald-50'
-                    }`}
+                    className={`h-9 w-9 rounded-full flex items-center justify-center font-bold text-xs shrink-0 cursor-pointer shadow-sm select-none border transition-all duration-200 active:scale-95 ${isSpeakerA
+                      ? isSpeakingNow
+                        ? 'bg-indigo-600 text-white border-indigo-500 ring-4 ring-indigo-100'
+                        : 'bg-white text-indigo-700 border-indigo-200 hover:bg-indigo-50'
+                      : isSpeakingNow
+                        ? 'bg-emerald-600 text-white border-emerald-500 ring-4 ring-emerald-100'
+                        : 'bg-white text-emerald-700 border-emerald-200 hover:bg-emerald-50'
+                      }`}
                     title={`Bấm để nghe nhân vật ${line.speaker} nói`}
                   >
                     {isSpeakingNow ? (
@@ -533,20 +518,18 @@ export default function Dialogue() {
                   {/* Dialog Content Bubble */}
                   <div
                     onClick={() => speakLine(line, index)}
-                    className={`p-4 rounded-2xl shadow-sm border transition-all duration-300 relative cursor-pointer select-text ${
-                      isSpeakerA
-                        ? isActive
-                          ? 'bg-indigo-50/90 border-indigo-300 shadow-md ring-1 ring-indigo-200'
-                          : 'bg-white border-slate-200 hover:border-slate-300'
-                        : isActive
-                          ? 'bg-emerald-50/90 border-emerald-300 shadow-md ring-1 ring-emerald-200'
-                          : 'bg-white border-slate-200 hover:border-slate-300'
-                    }`}
+                    className={`p-4 rounded-2xl shadow-sm border transition-all duration-300 relative cursor-pointer select-text ${isSpeakerA
+                      ? isActive
+                        ? 'bg-indigo-50/90 border-indigo-300 shadow-md ring-1 ring-indigo-200'
+                        : 'bg-white border-slate-200 hover:border-slate-300'
+                      : isActive
+                        ? 'bg-emerald-50/90 border-emerald-300 shadow-md ring-1 ring-emerald-200'
+                        : 'bg-white border-slate-200 hover:border-slate-300'
+                      }`}
                   >
                     {/* Chinese Text */}
-                    <p className={`text-base tracking-wide font-sans ${
-                      isSpeakerA ? 'text-indigo-950' : 'text-emerald-950'
-                    }`}>
+                    <p className={`text-base tracking-wide font-sans ${isSpeakerA ? 'text-indigo-950' : 'text-emerald-950'
+                      }`}>
                       {line.chinese}
                     </p>
 
@@ -563,12 +546,11 @@ export default function Dialogue() {
                         {line.vietnamese}
                       </p>
                     )}
-                    
+
                     {/* Play Indicator dot */}
                     {isActive && (
-                      <span className={`absolute top-2 right-2 h-1.5 w-1.5 rounded-full ${
-                        isSpeakerA ? 'bg-indigo-600 animate-ping' : 'bg-emerald-600 animate-ping'
-                      }`}></span>
+                      <span className={`absolute top-2 right-2 h-1.5 w-1.5 rounded-full ${isSpeakerA ? 'bg-indigo-600 animate-ping' : 'bg-emerald-600 animate-ping'
+                        }`}></span>
                     )}
                   </div>
                 </div>
