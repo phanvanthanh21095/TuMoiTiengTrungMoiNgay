@@ -535,7 +535,7 @@ export default function Dialogue() {
 
                     {/* Pinyin Text */}
                     {showPinyin && (
-                      <p className="text-xs font-mono text-amber-600 tracking-wide mt-1">
+                      <p className="text-[15px] font-mono text-amber-600 tracking-wide mt-1">
                         {line.pinyin}
                       </p>
                     )}
