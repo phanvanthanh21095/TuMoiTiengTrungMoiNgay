@@ -43,7 +43,41 @@ import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary'>('flashcards');
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary'>(() => {
+    const path = window.location.pathname.replace(/^\//, '');
+    const tabOptions = ['flashcards', 'quiz', 'dialogue', 'reading', 'dictionary'];
+    if (path && tabOptions.includes(path)) {
+      return path as 'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary';
+    }
+    const savedTab = localStorage.getItem('study_chinese_active_tab');
+    if (savedTab && tabOptions.includes(savedTab)) {
+      return savedTab as 'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary';
+    }
+    return 'flashcards';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('study_chinese_active_tab', activeTab);
+    if (window.location.pathname !== `/${activeTab}`) {
+      window.history.pushState(null, '', `/${activeTab}`);
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname.replace(/^\//, '');
+      const tabOptions = ['flashcards', 'quiz', 'dialogue', 'reading', 'dictionary'];
+      if (path && tabOptions.includes(path)) {
+        setActiveTab(path as 'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary');
+      } else {
+        setActiveTab('flashcards');
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, []);
 
   // Search & Filter Dictionary State
   const [searchQuery, setSearchQuery] = useState('');
