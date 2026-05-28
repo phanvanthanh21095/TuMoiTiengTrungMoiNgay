@@ -95,6 +95,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-2",
+    lessonTitle: "Bài 2: Thời gian",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Hỏi giờ – Sinh hoạt buổi sáng",
+        lines: [
+          { speaker: 'A', chinese: '现在几点？', pinyin: 'Xiànzài jǐ diǎn?', vietnamese: 'Bây giờ là mấy giờ?' },
+          { speaker: 'B', chinese: '现在早上八点。', pinyin: 'Xiànzài zǎoshang bā diǎn.', vietnamese: 'Bây giờ là 8 giờ sáng.' },
+          { speaker: 'A', chinese: '你每天早上几点起床？', pinyin: 'Nǐ měitiān zǎoshang jǐ diǎn qǐchuáng?', vietnamese: 'Mỗi ngày bạn mấy giờ thức dậy?' },
+          { speaker: 'B', chinese: '我每天早上七点起床。', pinyin: 'Wǒ měitiān zǎoshang qī diǎn qǐchuáng.', vietnamese: 'Mỗi ngày tôi thức dậy lúc 7 giờ sáng.' },
+          { speaker: 'A', chinese: '起床以后你做什么？', pinyin: 'Qǐchuáng yǐhòu nǐ zuò shénme?', vietnamese: 'Sau khi thức dậy bạn làm gì?' },
+          { speaker: 'B', chinese: '早上的时候我吃早饭，然后上班。', pinyin: 'Zǎoshang de shíhou wǒ chī zǎofàn, ránhòu shàngbān.', vietnamese: 'Buổi sáng tôi ăn sáng rồi đi làm.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Hỏi ngày – Thứ – Thời gian",
+        lines: [
+          { speaker: 'A', chinese: '今天几月几号？', pinyin: 'Jīntiān jǐ yuè jǐ hào?', vietnamese: 'Hôm nay là ngày bao nhiêu tháng mấy?' },
+          { speaker: 'B', chinese: '今天十二月二十四号。', pinyin: 'Jīntiān shí\'èr yuè èrshísì hào.', vietnamese: 'Hôm nay là ngày 24 tháng 12.' },
+          { speaker: 'A', chinese: '今天星期几？', pinyin: 'Jīntiān xīngqī jǐ?', vietnamese: 'Hôm nay là thứ mấy?' },
+          { speaker: 'B', chinese: '今天是星期三。', pinyin: 'Jīntiān shì xīngqī sān.', vietnamese: 'Hôm nay là thứ Tư.' },
+          { speaker: 'A', chinese: '昨天你忙不忙？', pinyin: 'Zuótiān nǐ máng bu máng?', vietnamese: 'Hôm qua bạn có bận không?' },
+          { speaker: 'B', chinese: '昨天我工作了一整天，很忙。', pinyin: 'Zuótiān wǒ gōngzuò le yì zhěngtian, hěn máng.', vietnamese: 'Hôm qua tôi làm việc cả ngày, rất bận.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Thời gian làm việc – Kế hoạch",
+        lines: [
+          { speaker: 'A', chinese: '你每天工作几个小时？', pinyin: 'Nǐ měitiān gōngzuò jǐ gè xiǎoshí?', vietnamese: 'Mỗi ngày bạn làm việc mấy tiếng?' },
+          { speaker: 'B', chinese: '我每天工作八个小时。', pinyin: 'Wǒ měitiān gōngzuò bā gè xiǎoshí.', vietnamese: 'Mỗi ngày tôi làm việc 8 tiếng.' },
+          { speaker: 'A', chinese: '你晚上忙吗？', pinyin: 'Nǐ wǎnshang máng ma?', vietnamese: 'Buổi tối bạn có bận không?' },
+          { speaker: 'B', chinese: '晚上的时候不太忙。', pinyin: 'Wǎnshang de shíhou bú tài máng.', vietnamese: 'Buổi tối thì không bận lắm.' },
+          { speaker: 'A', chinese: '明天你上班吗？', pinyin: 'Míngtiān nǐ shàngbān ma?', vietnamese: 'Ngày mai bạn có đi làm không?' },
+          { speaker: 'B', chinese: '明天要上班。', pinyin: 'Míngtiān yào shàngbān.', vietnamese: 'Ngày mai phải đi làm.' }
+        ]
+      }
+    ]
   }
 ];
 
