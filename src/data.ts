@@ -990,6 +990,45 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     status: 'new'
   },
   {
+    id: '77',
+    character: '做',
+    pinyin: 'zuò',
+    definition: 'làm',
+    category: 'Bài 1: Giới thiệu bản thân',
+    exampleChinese: '她在做饭。',
+    examplePinyin: 'Tā zài zuòfàn.',
+    exampleVietnamese: 'Cô ấy đang nấu ăn.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '78',
+    character: '最近',
+    pinyin: 'zuìjìn',
+    definition: 'dạo này / gần đây',
+    category: 'Bài 1: Giới thiệu bản thân',
+    exampleChinese: '你最近怎么样？',
+    examplePinyin: 'Nǐ zuìjìn zěnmeyàng?',
+    exampleVietnamese: 'Dạo này bạn thế nào?',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '79',
+    character: '朋友',
+    pinyin: 'péngyou',
+    definition: 'bạn bè / bạn hữu',
+    category: 'Bài 1: Giới thiệu bản thân',
+    exampleChinese: '他是我的朋友。',
+    examplePinyin: 'Tā shì wǒ de péngyou.',
+    exampleVietnamese: 'Anh ấy là bạn của tôi.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
     id: '26',
     character: '时间',
     pinyin: 'shíjiān',

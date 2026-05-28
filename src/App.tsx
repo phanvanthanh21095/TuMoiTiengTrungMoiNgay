@@ -28,7 +28,8 @@ import {
   Palette,
   Eye,
   X,
-  MessageSquare
+  MessageSquare,
+  FileText
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -37,11 +38,12 @@ import Flashcards from './components/Flashcards';
 import Quiz from './components/Quiz';
 import WritingPad from './components/WritingPad';
 import Dialogue from './components/Dialogue';
+import Reading from './components/Reading';
 import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dialogue' | 'dictionary'>('flashcards');
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary'>('flashcards');
 
   // Search & Filter Dictionary State
   const [searchQuery, setSearchQuery] = useState('');
@@ -428,6 +430,18 @@ export default function App() {
             </button>
 
             <button
+              id="tab-reading"
+              onClick={() => setActiveTab('reading')}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'reading'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+            >
+              <FileText size={14} />
+              <span>Đoạn văn ngắn</span>
+            </button>
+
+            <button
               id="tab-dictionary"
               onClick={() => setActiveTab('dictionary')}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'dictionary'
@@ -505,6 +519,12 @@ export default function App() {
           {activeTab === 'dialogue' && (
             <div className="py-4" id="dialogue-tab-container">
               <Dialogue />
+            </div>
+          )}
+
+          {activeTab === 'reading' && (
+            <div className="py-4" id="reading-tab-container">
+              <Reading />
             </div>
           )}
 
