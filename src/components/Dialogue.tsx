@@ -160,6 +160,7 @@ export default function Dialogue() {
   const [activeLineIndex, setActiveLineIndex] = useState<number | null>(null);
   const [currentSpeakerSpeaking, setCurrentSpeakerSpeaking] = useState<'A' | 'B' | null>(null);
 
+  const isPlayingRef = useRef<boolean>(false);
   const seqTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const currentLesson = LESSONS_DATA[selectedLessonIndex];
@@ -203,6 +204,7 @@ export default function Dialogue() {
   }, []);
 
   const handleStop = () => {
+    isPlayingRef.current = false;
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
@@ -266,17 +268,22 @@ export default function Dialogue() {
 
   // Play dialogue line by line sequentially
   const playDialogueSequence = (startIndex = 0) => {
+    handleStop();
     setIsPlayingSeq(true);
+    isPlayingRef.current = true;
 
     const playNext = (index: number) => {
+      if (!isPlayingRef.current) return;
       if (index >= currentDialogue.lines.length) {
         handleStop();
         return;
       }
 
       speakLine(currentDialogue.lines[index], index, () => {
+        if (!isPlayingRef.current) return;
         // Delay 1s between lines for natural rhythm
         seqTimeoutRef.current = setTimeout(() => {
+          if (!isPlayingRef.current) return;
           playNext(index + 1);
         }, 1000);
       });
