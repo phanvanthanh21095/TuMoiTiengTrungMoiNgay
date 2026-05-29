@@ -134,6 +134,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-3",
+    lessonTitle: "Bài 3: Một ngày của tôi",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Buổi sáng",
+        lines: [
+          { speaker: 'A', chinese: '你每天几点起床？', pinyin: 'Nǐ měitiān jǐ diǎn qǐchuáng?', vietnamese: 'Mỗi ngày bạn dậy mấy giờ?' },
+          { speaker: 'B', chinese: '我每天六点起床。', pinyin: 'Wǒ měitiān liù diǎn qǐchuáng.', vietnamese: 'Mình dậy lúc 6 giờ mỗi ngày.' },
+          { speaker: 'A', chinese: '你早上做什么？', pinyin: 'Nǐ zǎoshang zuò shénme?', vietnamese: 'Buổi sáng bạn làm gì?' },
+          { speaker: 'B', chinese: '我早上洗漱和吃早饭。', pinyin: 'Wǒ zǎoshang xǐshù hé chī zǎofàn.', vietnamese: 'Buổi sáng mình vệ sinh cá nhân và ăn sáng.' },
+          { speaker: 'A', chinese: '吃早饭后，你做什么？', pinyin: 'Chī zǎofàn hòu, nǐ zuò shénme?', vietnamese: 'Sau khi ăn sáng, bạn làm gì?' },
+          { speaker: 'B', chinese: '我准备出门去上班。', pinyin: 'Wǒ zhǔnbèi chūmén qù shàngbān.', vietnamese: 'Mình chuẩn bị ra ngoài đi làm.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Buổi chiều",
+        lines: [
+          { speaker: 'A', chinese: '你下午做什么？', pinyin: 'Xiàwǔ nǐ zuò shénme?', vietnamese: 'Buổi chiều bạn làm gì?' },
+          { speaker: 'B', chinese: '我下午工作或者休息。', pinyin: 'Wǒ xiàwǔ gōngzuò huòzhě xiūxi.', vietnamese: 'Buổi chiều mình làm việc hoặc nghỉ ngơi.' },
+          { speaker: 'A', chinese: '你有空的时候做什么？', pinyin: 'Nǐ yǒu kòng de shíhou zuò shénme?', vietnamese: 'Khi rảnh bạn làm gì?' },
+          { speaker: 'B', chinese: '我喜欢看书或者听音乐。', pinyin: 'Wǒ xǐhuān kàn shū huòzhě tīng yīnyuè.', vietnamese: 'Mình thích đọc sách hoặc nghe nhạc.' },
+          { speaker: 'A', chinese: '有时候你出去运动吗？', pinyin: 'Yǒu shíhou nǐ chūqù yùndòng ma?', vietnamese: 'Có khi nào bạn ra ngoài tập thể dục không?' },
+          { speaker: 'B', chinese: '有时候我去游泳或者散步。', pinyin: 'Yǒu shíhou wǒ qù yóuyǒng huòzhě sànbù.', vietnamese: 'Có khi mình đi bơi hoặc đi dạo.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Buổi tối",
+        lines: [
+          { speaker: 'A', chinese: '你晚上几点回家？', pinyin: 'Nǐ wǎnshang jǐ diǎn huí jiā?', vietnamese: 'Buổi tối bạn về nhà lúc mấy giờ?' },
+          { speaker: 'B', chinese: '我六点回家。', pinyin: 'Wǒ liù diǎn huí jiā.', vietnamese: 'Mình về nhà lúc 6 giờ.' },
+          { speaker: 'A', chinese: '晚上你喜欢做什么？', pinyin: 'Wǎnshang nǐ xǐhuān zuò shénme?', vietnamese: 'Buổi tối bạn thích làm gì?' },
+          { speaker: 'B', chinese: '我喜欢看电影和听音乐。', pinyin: 'Wǒ xǐhuān kàn diànyǐng hé tīng yīnyuè.', vietnamese: 'Mình thích xem phim và nghe nhạc.' },
+          { speaker: 'A', chinese: '睡觉之前，你做什么？', pinyin: 'Shuìjiào zhīqián, nǐ zuò shénme?', vietnamese: 'Trước khi đi ngủ bạn làm gì?' },
+          { speaker: 'B', chinese: '我洗澡然后睡觉。', pinyin: 'Wǒ xǐzǎo ránhòu shuìjiào.', vietnamese: 'Mình tắm rồi đi ngủ.' }
+        ]
+      }
+    ]
   }
 ];
 
