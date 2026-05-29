@@ -105,6 +105,21 @@ export default function App() {
 
   // Load words from LocalStorage on mount
   useEffect(() => {
+    // Helper function to assign unique IDs to a list of vocabulary words to prevent React key collision bugs
+    const ensureUniqueIds = (list: VocabularyWord[]): VocabularyWord[] => {
+      const seen = new Set<string>();
+      return list.map((word, index) => {
+        if (!word.id || seen.has(word.id)) {
+          return {
+            ...word,
+            id: `vocab_${index}_${word.character}`
+          };
+        }
+        seen.add(word.id);
+        return word;
+      });
+    };
+
     const saved = localStorage.getItem('study_chinese_vocab_v1');
     if (saved) {
       try {
@@ -140,16 +155,25 @@ export default function App() {
           }
         });
 
-        setWords(migrated);
+        // 3. Ensure all loaded and merged words have unique IDs
+        const cleanedMigrated = ensureUniqueIds(migrated);
+        if (JSON.stringify(cleanedMigrated) !== JSON.stringify(migrated)) {
+          hasChanges = true;
+        }
+
+        setWords(cleanedMigrated);
         if (hasChanges) {
-          localStorage.setItem('study_chinese_vocab_v1', JSON.stringify(migrated));
+          localStorage.setItem('study_chinese_vocab_v1', JSON.stringify(cleanedMigrated));
         }
       } catch (e) {
-        setWords(INITIAL_VOCABULARY);
+        const cleanedDefaults = ensureUniqueIds(INITIAL_VOCABULARY);
+        setWords(cleanedDefaults);
+        localStorage.setItem('study_chinese_vocab_v1', JSON.stringify(cleanedDefaults));
       }
     } else {
-      setWords(INITIAL_VOCABULARY);
-      localStorage.setItem('study_chinese_vocab_v1', JSON.stringify(INITIAL_VOCABULARY));
+      const cleanedDefaults = ensureUniqueIds(INITIAL_VOCABULARY);
+      setWords(cleanedDefaults);
+      localStorage.setItem('study_chinese_vocab_v1', JSON.stringify(cleanedDefaults));
     }
 
     // Streak initialization
@@ -297,7 +321,18 @@ export default function App() {
   // Reset entire vocabulary list to base template
   const handleRestoreDefaults = () => {
     if (window.confirm("Bạn có muốn đặt lại danh sách từ vựng về mặc định ban đầu không? Các từ mới do bạn thêm sẽ bị xóa.")) {
-      saveWordsToStorage(INITIAL_VOCABULARY);
+      const seen = new Set<string>();
+      const cleaned = INITIAL_VOCABULARY.map((word, index) => {
+        if (!word.id || seen.has(word.id)) {
+          return {
+            ...word,
+            id: `vocab_${index}_${word.character}`
+          };
+        }
+        seen.add(word.id);
+        return word;
+      });
+      saveWordsToStorage(cleaned);
       localStorage.setItem('study_chinese_streak', '1');
       setStreak(1);
     }
