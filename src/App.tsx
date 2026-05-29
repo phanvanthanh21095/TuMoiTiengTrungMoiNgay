@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   BookOpen,
+  Languages,
   Keyboard,
   Plus,
   Search,
@@ -39,19 +40,20 @@ import Quiz from './components/Quiz';
 import WritingPad from './components/WritingPad';
 import Dialogue from './components/Dialogue';
 import Reading from './components/Reading';
+import SentenceTranslation from './components/SentenceTranslation';
 import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary'>(() => {
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary'>(() => {
     const path = window.location.pathname.replace(/^\//, '');
-    const tabOptions = ['flashcards', 'quiz', 'dialogue', 'reading', 'dictionary'];
+    const tabOptions = ['flashcards', 'quiz', 'translate', 'dialogue', 'reading', 'dictionary'];
     if (path && tabOptions.includes(path)) {
-      return path as 'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary';
+      return path as 'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary';
     }
     const savedTab = localStorage.getItem('study_chinese_active_tab');
     if (savedTab && tabOptions.includes(savedTab)) {
-      return savedTab as 'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary';
+      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary';
     }
     return 'flashcards';
   });
@@ -66,9 +68,9 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/^\//, '');
-      const tabOptions = ['flashcards', 'quiz', 'dialogue', 'reading', 'dictionary'];
+      const tabOptions = ['flashcards', 'quiz', 'translate', 'dialogue', 'reading', 'dictionary'];
       if (path && tabOptions.includes(path)) {
-        setActiveTab(path as 'flashcards' | 'quiz' | 'dialogue' | 'reading' | 'dictionary');
+        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary');
       } else {
         setActiveTab('flashcards');
       }
@@ -448,7 +450,7 @@ export default function App() {
                 }`}
             >
               <Keyboard size={14} />
-              <span>Luyện Gõ & Trắc nghiệm (Bật ngay)</span>
+              <span>Luyện Gõ & Trắc nghiệm</span>
             </button>
 
             <button
@@ -473,6 +475,18 @@ export default function App() {
             >
               <FileText size={14} />
               <span>Đoạn văn ngắn</span>
+            </button>
+
+            <button
+              id="tab-translate"
+              onClick={() => setActiveTab('translate')}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'translate'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+            >
+              <Languages size={14} />
+              <span>Dịch Câu</span>
             </button>
 
             <button
@@ -546,6 +560,14 @@ export default function App() {
               <Quiz
                 words={words}
                 onUpdateWordStatus={handleUpdateWordStatus}
+              />
+            </div>
+          )}
+
+          {activeTab === 'translate' && (
+            <div className="py-4" id="translate-tab-container">
+              <SentenceTranslation
+                words={words}
               />
             </div>
           )}
