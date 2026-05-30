@@ -53,6 +53,19 @@ const DEFAULT_PASSAGES: PassageData[] = [
       { chinese: "我爸妈都是农民，妹妹还是个学生。", pinyin: "Wǒ bà mā dōu shì nóngmín, mèimei háishì ge xuésheng.", vietnamese: "Bố mẹ tôi đều là nông dân, em gái vẫn là học sinh." },
       { chinese: "我有很多有趣的爱好比如：听音乐，唱歌，旅游，看电影，……", pinyin: "Wǒ yǒu hěnduō yǒuqù de àihào bìrú: Tīng yīnyuè, chànggē, lǚyóu, kàn diànyǐng,......", vietnamese: "Tôi có nhiều sở thích thú vị như: nghe nhạc, hát, du lịch, xem phim,..." }
     ]
+  },
+  {
+    id: "passage-4",
+    title: "Đoạn văn 4: Một ngày ở nơi làm việc (我在办公室的一天)",
+    lines: [
+      { chinese: "我每天早上八点去公司上班。", pinyin: "Wǒ měitiān zǎoshang bā diǎn qù gōngsī shàngbān.", vietnamese: "Mỗi ngày tôi đi làm ở công ty lúc 8 giờ sáng." },
+      { chinese: "到了公司，我的第一件事就是打卡。", pinyin: "Dào le gōngsī, wǒ de dì yī jiàn shì jiùshì dǎkǎ.", vietnamese: "Đến công ty, việc đầu tiên của tôi chính là chấm công." },
+      { chinese: "今天有很多任务，经理在办公室等我完成报告。", pinyin: "Jīntiān yǒu hěnduō rènwu, jīnglǐ zài bàngōngshì děng wǒ wánchéng bàogào.", vietnamese: "Hôm nay có rất nhiều nhiệm vụ, quản lý đang ở trong văn phòng đợi tôi hoàn thành báo cáo." },
+      { chinese: "中午我和同事们一起吃面条，聊天。", pinyin: "Zhōngwǔ wǒ hé tóngshìmén yìqǐ chī miàntiáo, liáotiān.", vietnamese: "Buổi trưa tôi cùng các đồng nghiệp ăn mì và trò chuyện." },
+      { chinese: "下午我们在会议室开会，讨论工作总结。", pinyin: "Xiàwǔ wǒmen zài huìyìshì kāihuì, tǎolùn gōngzuò zǒngjié.", vietnamese: "Buổi chiều chúng tôi họp ở phòng họp, thảo luận về bản tổng kết công việc." },
+      { chinese: "下班以前，我用电脑给经理发邮件。", pinyin: "Xiàbān yǐqián, wǒ yòng diànnǎo gěi jīnglǐ fā yóujiàn.", vietnamese: "Trước khi tan làm, tôi dùng máy tính gửi email cho quản lý." },
+      { chinese: "如果工作没做完，我就要加班，不能早退。", pinyin: "Rúguǒ gōngzuò méi zuò wán, wǒ jiù yào jiābān, bùnéng zǎotuì.", vietnamese: "Nếu công việc chưa làm xong, tôi phải tăng ca, không được về sớm." }
+    ]
   }
 ];
 

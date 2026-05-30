@@ -173,6 +173,39 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-4",
+    lessonTitle: "Bài 4: Một ngày nơi làm việc",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Đi làm và chấm công",
+        lines: [
+          { speaker: 'A', chinese: '你今天几点上班？', pinyin: 'Nǐ jīntiān jǐ diǎn shàngbān?', vietnamese: 'Hôm nay bạn đi làm lúc mấy giờ?' },
+          { speaker: 'B', chinese: '我八点准时上班, 到公司先打卡。', pinyin: 'Wǒ bā diǎn zhǔnshí shàngbān, dào gōngsī xiān dǎkǎ.', vietnamese: 'Mình đi làm đúng tám giờ, đến công ty việc đầu tiên là chấm công.' },
+          { speaker: 'A', chinese: '经理在办公室吗？', pinyin: 'Jīnglǐ zài bàngōngshì ma?', vietnamese: 'Quản lý có ở trong văn phòng không?' },
+          { speaker: 'B', chinese: '他不在办公室，他在会议室开会。', pinyin: 'Tā bú zài bàngōngshì, tā zài huìyìshì kāihuì.', vietnamese: 'Anh ấy không ở văn phòng, anh ấy đang ở phòng họp họp.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Công việc và Nhiệm vụ",
+        lines: [
+          { speaker: 'A', chinese: '今天你有什么任务？', pinyin: 'Jīntiān nǐ yǒu shénme rènwu?', vietnamese: 'Hôm nay bạn có nhiệm vụ gì?' },
+          { speaker: 'B', chinese: '我要写工作总结，然后发邮件给经理。', pinyin: 'Wǒ yào xiě gōngzuò zǒngjié, ránhòu fā yóujiàn gěi jīnglǐ.', vietnamese: 'Mình phải viết tổng kết công việc, sau đó gửi email cho quản lý.' },
+          { speaker: 'A', chinese: '你需要用电脑或者打印机吗？', pinyin: 'Nǐ xūyào yòng diànnǎo huòzhě dǎyìnjī ma?', vietnamese: 'Bạn có cần dùng máy tính hay máy in không?' },
+          { speaker: 'B', chinese: '需要，我正在复印和打印文件。', pinyin: 'Xūyào, wǒ zhèngzài fùyìn hé dǎyìn wénjiàn.', vietnamese: 'Có chứ, mình đang photocopy và in tài liệu.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Tăng ca và tan làm",
+        lines: [
+          { speaker: 'A', chinese: '今天你需要加班吗？', pinyin: 'Jīntiān nǐ xūyào jiābān ma?', vietnamese: 'Hôm nay bạn có cần tăng ca không?' },
+          { speaker: 'B', chinese: '今天工作很多，我要加班一个小时，不能早退。', pinyin: 'Jīntiān gōngzuò hěnduō, wǒ yào jiābān yí gè xiǎoshí, bùnéng zǎotuì.', vietnamese: 'Hôm nay nhiều việc quá, mình phải tăng ca một tiếng, không được về sớm.' },
+          { speaker: 'A', chinese: '同事们都下班了吗？', pinyin: 'Tóngshìmén dōu xiàbān le ma?', vietnamese: 'Các đồng nghiệp đã tan làm hết chưa?' },
+          { speaker: 'B', chinese: '有些同事已经回家了，有些还在工作。', pinyin: 'Yǒuxiē tóngshì yǐjīng huí jiā le, yǒuxiē hái zài gōngzuò.', vietnamese: 'Một số đồng nghiệp đã về nhà rồi, một số vẫn đang làm việc.' }
+        ]
+      }
+    ]
   }
 ];
 
