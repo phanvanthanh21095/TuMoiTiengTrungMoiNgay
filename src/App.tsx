@@ -128,7 +128,7 @@ export default function App() {
 
         // 1. Migrate old 'Bài 4' to 'Bài 1: Giới thiệu bản thân'
         let migrated = parsed.map(w => {
-          if (w.category.toLowerCase().includes('bài 4') || w.category.trim() === 'Bài 4') {
+          if (w.category.trim().toLowerCase() === 'bài 4') {
             hasChanges = true;
             return { ...w, category: 'Bài 1: Giới thiệu bản thân' };
           }
