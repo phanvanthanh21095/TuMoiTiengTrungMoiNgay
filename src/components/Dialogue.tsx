@@ -179,30 +179,75 @@ const LESSONS_DATA: LessonData[] = [
     lessonTitle: "Bài 4: Một ngày nơi làm việc",
     dialogues: [
       {
-        title: "Hội thoại 1: Đi làm và chấm công",
+        title: "Hội thoại 1: Buổi sáng đi làm",
         lines: [
           { speaker: 'A', chinese: '你今天几点上班？', pinyin: 'Nǐ jīntiān jǐ diǎn shàngbān?', vietnamese: 'Hôm nay bạn đi làm lúc mấy giờ?' },
-          { speaker: 'B', chinese: '我八点准时上班, 到公司先打卡。', pinyin: 'Wǒ bā diǎn zhǔnshí shàngbān, dào gōngsī xiān dǎkǎ.', vietnamese: 'Mình đi làm đúng tám giờ, đến công ty việc đầu tiên là chấm công.' },
-          { speaker: 'A', chinese: '经理在办公室吗？', pinyin: 'Jīnglǐ zài bàngōngshì ma?', vietnamese: 'Quản lý có ở trong văn phòng không?' },
-          { speaker: 'B', chinese: '他不在办公室，他在会议室开会。', pinyin: 'Tā bú zài bàngōngshì, tā zài huìyìshì kāihuì.', vietnamese: 'Anh ấy không ở văn phòng, anh ấy đang ở phòng họp họp.' }
+          { speaker: 'B', chinese: '我早上九点上班。', pinyin: 'Wǒ zǎoshang jiǔ diǎn shàngbān.', vietnamese: 'Tôi đi làm lúc 9 giờ sáng.' },
+          { speaker: 'A', chinese: '你今天有会议吗？', pinyin: 'Nǐ jīntiān yǒu huìyì ma?', vietnamese: 'Hôm nay bạn có cuộc họp không?' },
+          { speaker: 'B', chinese: '有，下午三点开会。', pinyin: 'Yǒu, xiàwǔ sān diǎn kāihuì.', vietnamese: 'Có, họp lúc 3 giờ chiều.' },
+          { speaker: 'A', chinese: '你忙吗？', pinyin: 'Nǐ máng ma?', vietnamese: 'Bạn có bận không?' },
+          { speaker: 'B', chinese: '很忙，要加班。', pinyin: 'Hěn máng, yào jiābān.', vietnamese: 'Rất bận, phải tăng ca.' }
         ]
       },
       {
-        title: "Hội thoại 2: Công việc và Nhiệm vụ",
+        title: "Hội thoại 2: Giao tiếp với đồng nghiệp",
         lines: [
-          { speaker: 'A', chinese: '今天你有什么任务？', pinyin: 'Jīntiān nǐ yǒu shénme rènwu?', vietnamese: 'Hôm nay bạn có nhiệm vụ gì?' },
-          { speaker: 'B', chinese: '我要写工作总结，然后发邮件给经理。', pinyin: 'Wǒ yào xiě gōngzuò zǒngjié, ránhòu fā yóujiàn gěi jīnglǐ.', vietnamese: 'Mình phải viết tổng kết công việc, sau đó gửi email cho quản lý.' },
-          { speaker: 'A', chinese: '你需要用电脑或者打印机吗？', pinyin: 'Nǐ xūyào yòng diànnǎo huòzhě dǎyìnjī ma?', vietnamese: 'Bạn có cần dùng máy tính hay máy in không?' },
-          { speaker: 'B', chinese: '需要，我正在复印和打印文件。', pinyin: 'Xūyào, wǒ zhèngzài fùyìn hé dǎyìn wénjiàn.', vietnamese: 'Có chứ, mình đang photocopy và in tài liệu.' }
+          { speaker: 'A', chinese: '你给同事发邮件了吗？', pinyin: 'Nǐ gěi tóngshì fā yóujiàn le ma?', vietnamese: 'Bạn đã gửi email cho đồng nghiệp chưa?' },
+          { speaker: 'B', chinese: '还没，我现在去发。', pinyin: 'Hái méi, wǒ xiànzài qù fā.', vietnamese: 'Chưa, tôi sẽ gửi ngay bây giờ.' },
+          { speaker: 'A', chinese: '你能帮我复印文件吗？', pinyin: 'Nǐ néng bāng wǒ fùyìn wénjiàn ma?', vietnamese: 'Bạn có thể giúp tôi photocopy tài liệu không?' },
+          { speaker: 'B', chinese: '可以，我马上复印。', pinyin: 'Kěyǐ, wǒ mǎshàng fùyìn.', vietnamese: 'Được, tôi sẽ photocopy ngay.' },
+          { speaker: 'A', chinese: '谢谢你！', pinyin: 'Xièxiè nǐ!', vietnamese: 'Cảm ơn bạn!' },
+          { speaker: 'B', chinese: '不客气。', pinyin: 'Bú kèqì.', vietnamese: 'Không có gì.' }
         ]
       },
       {
-        title: "Hội thoại 3: Tăng ca và tan làm",
+        title: "Hội thoại 3: Kết thúc công việc / Về nhà",
         lines: [
-          { speaker: 'A', chinese: '今天你需要加班吗？', pinyin: 'Jīntiān nǐ xūyào jiābān ma?', vietnamese: 'Hôm nay bạn có cần tăng ca không?' },
-          { speaker: 'B', chinese: '今天工作很多，我要加班一个小时，不能早退。', pinyin: 'Jīntiān gōngzuò hěnduō, wǒ yào jiābān yí gè xiǎoshí, bùnéng zǎotuì.', vietnamese: 'Hôm nay nhiều việc quá, mình phải tăng ca một tiếng, không được về sớm.' },
-          { speaker: 'A', chinese: '同事们都下班了吗？', pinyin: 'Tóngshìmén dōu xiàbān le ma?', vietnamese: 'Các đồng nghiệp đã tan làm hết chưa?' },
-          { speaker: 'B', chinese: '有些同事已经回家了，有些还在工作。', pinyin: 'Yǒuxiē tóngshì yǐjīng huí jiā le, yǒuxiē hái zài gōngzuò.', vietnamese: 'Một số đồng nghiệp đã về nhà rồi, một số vẫn đang làm việc.' }
+          { speaker: 'A', chinese: '你今天完成任务了吗？', pinyin: 'Nǐ jīntiān wánchéng rènwu le ma?', vietnamese: 'Hôm nay bạn hoàn thành nhiệm vụ chưa?' },
+          { speaker: 'B', chinese: '完成了，终于可以下班了。', pinyin: 'Wánchéng le, zhōngyú kěyǐ xiàbān le.', vietnamese: 'Xong rồi, cuối cùng có thể tan làm.' },
+          { speaker: 'A', chinese: '今天加班了吗？', pinyin: 'Jīntiān jiābān le ma?', vietnamese: 'Hôm nay bạn có tăng ca không?' },
+          { speaker: 'B', chinese: '没有，今天按时下班。', pinyin: 'Méi yǒu, jīntiān ànshí xiàbān.', vietnamese: 'Không, hôm nay tan làm đúng giờ.' },
+          { speaker: 'A', chinese: '那回家休息吧！', pinyin: 'Nà huí jiā xiūxi ba!', vietnamese: 'Vậy về nhà nghỉ ngơi đi!' },
+          { speaker: 'B', chinese: '好的，我回家做晚饭。', pinyin: 'Hǎo de, wǒ huí jiā zuò wǎnfàn.', vietnamese: 'Được, tôi về nhà nấu bữa tối.' }
+        ]
+      }
+    ]
+  },
+  {
+    id: "lesson-5",
+    lessonTitle: "Bài 5: Sở thích",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Hỏi – Đáp về sở thích",
+        lines: [
+          { speaker: 'A', chinese: '你的兴趣是什么？', pinyin: 'Nǐ de xìngqù shì shénme?', vietnamese: 'Sở thích của bạn là gì?' },
+          { speaker: 'B', chinese: '我的兴趣是看电影和听音乐。', pinyin: 'Wǒ de xìngqù shì kàn diànyǐng hé tīng yīnyuè.', vietnamese: 'Sở thích của tôi là xem phim và nghe nhạc.' },
+          { speaker: 'A', chinese: '你平时常常看电影吗？', pinyin: 'Nǐ píngshí chángcháng kàn diànyǐng ma?', vietnamese: 'Bình thường bạn hay xem phim không?' },
+          { speaker: 'B', chinese: '我平时有时间就看电影。', pinyin: 'Wǒ píngshí yǒu shíjiān jiù kàn diànyǐng.', vietnamese: 'Bình thường có thời gian là tôi xem phim.' },
+          { speaker: 'A', chinese: '你也喜欢在家听音乐吗？', pinyin: 'Nǐ yě xǐhuan zài jiā tīng yīnyuè ma?', vietnamese: 'Bạn cũng thích nghe nhạc ở nhà không?' },
+          { speaker: 'B', chinese: '是的，我晚上常常听音乐。', pinyin: 'Shì de, wǒ wǎnshang chángcháng tīng yīnyuè.', vietnamese: 'Đúng vậy, buổi tối tôi thường nghe nhạc.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Cuối tuần làm gì",
+        lines: [
+          { speaker: 'A', chinese: '周末你通常做什么？', pinyin: 'Zhōumò nǐ tōngcháng zuò shénme?', vietnamese: 'Cuối tuần bạn thường làm gì?' },
+          { speaker: 'B', chinese: '周末我喜欢睡觉和看书。', pinyin: 'Zhōumò wǒ xǐhuan shuìjiào hé kàn shū.', vietnamese: 'Cuối tuần tôi thích ngủ và đọc sách.' },
+          { speaker: 'A', chinese: '你周末常常在家吗？', pinyin: 'Nǐ zhōumò chángcháng zài jiā ma?', vietnamese: 'Cuối tuần bạn thường ở nhà không?' },
+          { speaker: 'B', chinese: '是的，我周末大多在家。', pinyin: 'Shì de, wǒ zhōumò dàduō zài jiā.', vietnamese: 'Đúng vậy, cuối tuần tôi đa số ở nhà.' },
+          { speaker: 'A', chinese: '你不喜欢出去玩吗？', pinyin: 'Nǐ bù xǐhuan chūqù wán ma?', vietnamese: 'Bạn không thích ra ngoài chơi à?' },
+          { speaker: 'B', chinese: '有时候出去，有时候在家休息。', pinyin: 'Yǒu shíhou chūqù, yǒu shíhou zài jiā xiūxi.', vietnamese: 'Có khi ra ngoài, có khi ở nhà nghỉ ngơi.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Nói về hứng thú",
+        lines: [
+          { speaker: 'A', chinese: '你对什么事情很有兴趣？', pinyin: 'Nǐ duì shénme shìqíng hěn yǒu xìngqù?', vietnamese: 'Bạn hứng thú với việc gì?' },
+          { speaker: 'B', chinese: '我对健身和养宠物有兴趣。', pinyin: 'Wǒ duì jiànshēn hé yǎng chǒngwù yǒu xìngqù.', vietnamese: 'Tôi hứng thú với tập gym và nuôi thú cưng.' },
+          { speaker: 'A', chinese: '你平时常常健身吗？', pinyin: 'Nǐ píngshí chángcháng jiànshēn ma?', vietnamese: 'Bình thường bạn hay tập gym không?' },
+          { speaker: 'B', chinese: '我有时间的时候就健身。', pinyin: 'Wǒ yǒu shíjiān de shíhou jiù jiànshēn.', vietnamese: 'Khi có thời gian tôi sẽ tập gym.' },
+          { speaker: 'A', chinese: '你喜欢和宠物一起玩吗？', pinyin: 'Nǐ xǐhuan hé chǒngwù yìqǐ wán ma?', vietnamese: 'Bạn thích chơi cùng thú cưng không?' },
+          { speaker: 'B', chinese: '是的，我在家常和宠物玩。', pinyin: 'Shì de, wǒ zài jiā chángcháng hé chǒngwù wán.', vietnamese: 'Đúng vậy, ở nhà tôi thường chơi với thú cưng.' }
         ]
       }
     ]
