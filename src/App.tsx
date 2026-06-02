@@ -30,7 +30,8 @@ import {
   Eye,
   X,
   MessageSquare,
-  FileText
+  FileText,
+  Volume2
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -336,6 +337,28 @@ export default function App() {
       localStorage.setItem('study_chinese_streak', '1');
       setStreak(1);
     }
+  };
+
+  // Text-to-Speech for dictionary words
+  const [speakingWordId, setSpeakingWordId] = useState<string | null>(null);
+
+  const handleSpeakChinese = (text: string, wordId: string, e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (!('speechSynthesis' in window)) {
+      alert("Trình duyệt này không hỗ trợ phát âm (TTS)!");
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'zh-CN';
+    utterance.rate = 0.85;
+
+    utterance.onstart = () => setSpeakingWordId(wordId);
+    utterance.onend = () => setSpeakingWordId(null);
+    utterance.onerror = () => setSpeakingWordId(null);
+
+    window.speechSynthesis.speak(utterance);
   };
 
   // Category values extractor
@@ -895,6 +918,17 @@ export default function App() {
                                 }`}>
                                 {word.status === 'mastered' ? 'Đã thuộc' : word.status === 'learning' ? 'Đang học' : 'Mới tinh'}
                               </span>
+
+                              <button
+                                id={`speak-dic-${word.id}`}
+                                onClick={(e) => handleSpeakChinese(word.character, word.id, e)}
+                                className={`p-1.8 rounded-lg cursor-pointer hover:bg-slate-100 transition ${
+                                  speakingWordId === word.id ? 'text-amber-500' : 'text-slate-400 hover:text-amber-500'
+                                }`}
+                                title="Nghe phát âm"
+                              >
+                                <Volume2 size={14} className={speakingWordId === word.id ? 'animate-pulse' : ''} />
+                              </button>
 
                               <button
                                 id={`fav-dic-${word.id}`}
