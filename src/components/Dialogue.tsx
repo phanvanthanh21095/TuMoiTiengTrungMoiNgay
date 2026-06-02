@@ -93,6 +93,21 @@ const LESSONS_DATA: LessonData[] = [
           { speaker: 'A', chinese: '你有兄弟姐妹吗？', pinyin: 'Nǐ yǒu xiōngdì jiěmèi ma?', vietnamese: 'Bạn có anh chị em không?' },
           { speaker: 'B', chinese: '有，我有一个弟弟。', pinyin: 'Yǒu, wǒ yǒu yí gè dìdi.', vietnamese: 'Có, tôi có một em trai.' }
         ]
+      },
+      {
+        title: "Đoạn văn giới thiệu bản thân 2",
+        lines: [
+          { speaker: 'A', chinese: '大家好，我介绍一下。', pinyin: 'Dà jiā hǎo, wǒ jiè shào yí xià.', vietnamese: 'Xin chào mọi người, tôi xin giới thiệu một chút.' },
+          { speaker: 'A', chinese: '我叫成，今年三十一岁。', pinyin: 'Wǒ jiào Chéng, jīn nián sān shí yī suì.', vietnamese: 'Tôi tên Thành, năm nay 31 tuổi.' },
+          { speaker: 'A', chinese: '我是越南人，现在住在越南。', pinyin: 'Wǒ shì Yuènán rén, xiàn zài zhù zài Yuènán.', vietnamese: 'Tôi là người Việt Nam, hiện tại sống ở Việt Nam.' },
+          { speaker: 'A', chinese: '以前我是工程师，现在在语言中心学习中文。', pinyin: 'Yǐ qián wǒ shì gōng chéng shī, xiàn zài zài yǔ yán zhōng xīn xué xí Zhōngwén.', vietnamese: 'Trước đây tôi là kỹ sư, hiện tại đang học tiếng Trung ở trung tâm ngôn ngữ.' },
+          { speaker: 'A', chinese: '我学习中文大约三个星期了。', pinyin: 'Wǒ xué xí Zhōngwén dà yuē sān gè xīng qī le.', vietnamese: 'Tôi học tiếng Trung được khoảng 3 tuần rồi.' },
+          { speaker: 'A', chinese: '我家有四口人，包括爸爸、妈妈、妹妹和我。', pinyin: 'Wǒ jiā yǒu sì kǒu rén, bāo kuò bà ba, mā ma, mèi mei hé wǒ.', vietnamese: 'Gia đình tôi có 4 người, bao gồm bố, mẹ, em gái và tôi.' },
+          { speaker: 'A', chinese: '我的爱好是玩游戏。', pinyin: 'Wǒ de ài hào shì wán yóu xì.', vietnamese: 'Sở thích của tôi là chơi game.' },
+          { speaker: 'A', chinese: '空闲的时候，我常常听音乐和看电影。', pinyin: 'Kòng xián de shí hou, wǒ cháng cháng tīng yīn yuè hé kàn diàn yǐng.', vietnamese: 'Lúc rảnh rỗi, tôi thường nghe nhạc và xem phim.' },
+          { speaker: 'A', chinese: '我学习中文是为了工作。', pinyin: 'Wǒ xué xí Zhōngwén shì wèi le gōng zuò.', vietnamese: 'Tôi học tiếng Trung là vì công việc.' },
+          { speaker: 'A', chinese: '很高兴认识大家。谢谢。', pinyin: 'Hěn gāo xìng rèn shi dà jiā. Xiè xie.', vietnamese: 'Rất vui được quen biết mọi người. Cảm ơn.' }
+        ]
       }
     ]
   },
