@@ -82,6 +82,49 @@ const DEFAULT_PASSAGES: PassageData[] = [
       { chinese: "我学习中文是为了工作。", pinyin: "Wǒ xué xí Zhōngwén shì wèi le gōng zuò.", vietnamese: "Tôi học tiếng Trung là vì công việc." },
       { chinese: "很高兴认识大家。谢谢。", pinyin: "Hěn gāo xìng rèn shi dà jiā. Xiè xie.", vietnamese: "Rất vui được quen biết mọi người. Cảm ơn." }
     ]
+  },
+  {
+    id: "passage-6",
+    title: "Đoạn văn 6: Một ngày của tôi (我的一天)",
+    lines: [
+      { chinese: "每天早上七点我起床。然后我洗漱、刷牙和洗脸。", pinyin: "Měitiān zǎoshang qī diǎn wǒ qǐchuáng. Ránhòu wǒ xǐshù, shuāyá hé xǐliǎn.", vietnamese: "Mỗi ngày 7 giờ sáng tôi thức dậy. Sau đó tôi vệ sinh, đánh răng và rửa mặt." },
+      { chinese: "早上七点半我吃饭。八点我出门去语言中心学习中文。", pinyin: "Zǎoshang qī diǎn bàn wǒ chī fàn. Bā diǎn wǒ chūmén qù yǔyán zhōngxīn xuéxí Zhōngwén.", vietnamese: "7 giờ rưỡi sáng tôi ăn cơm. 8 giờ tôi ra ngoài đến trung tâm ngôn ngữ học tiếng Trung." },
+      { chinese: "中午十二点我和同学一起吃午饭，然后休息一下。", pinyin: "Zhōngwǔ shí'èr diǎn wǒ hé tóngxué yìqǐ chī wǔfàn, ránhòu xiūxi yíxià.", vietnamese: "Buổi trưa 12 giờ tôi cùng với bạn học ăn trưa, sau đó nghỉ ngơi một chút." },
+      { chinese: "下午一点继续学习中文。下午五点回家。", pinyin: "Xiàwǔ yì diǎn jìxù xuéxí Zhōngwén. Xiàwǔ wǔ diǎn huí jiā.", vietnamese: "1 giờ chiều tiếp tục học tiếng Trung. 5 giờ chiều về nhà." },
+      { chinese: "晚上六点我和家人一起吃晚饭。吃饭的时候，我们聊天。", pinyin: "Wǎnshàng liù diǎn wǒ hé jiārén yìqǐ chī wǎnfàn. Chī fàn de shíhou, wǒmen liáotiān.", vietnamese: "6 giờ tối tôi cùng gia đình ăn tối. Lúc ăn cơm, chúng tôi trò chuyện." },
+      { chinese: "晚饭以后，我常常听音乐或者看电影放松一下。", pinyin: "Wǎnfàn yǐhòu, wǒ chángcháng tīng yīnyuè huòzhě kàn diànyǐng fàngsōng yíxià.", vietnamese: "Sau bữa tối, tôi thường nghe nhạc hoặc xem phim thư giãn một chút." },
+      { chinese: "晚上十点我洗澡，然后睡觉。", pinyin: "Wǎnshàng shí diǎn wǒ xǐzǎo, ránhòu shuìjiào.", vietnamese: "10 giờ tối tôi tắm, sau đó đi ngủ." },
+      { chinese: "这就是我的一天。谢谢大家的聆听！", pinyin: "Zhè jiùshì wǒ de yì tiān. Xièxie dàjiā de língtīng!", vietnamese: "Đây chính là một ngày của tôi. Cảm ơn mọi người đã lắng nghe!" }
+    ]
+  },
+  {
+    id: "passage-7",
+    title: "Đoạn văn 7: Một ngày ở nơi làm việc (我在公司的一天)",
+    lines: [
+      { chinese: "每天早上八点我到公司上班，然后打卡。", pinyin: "Měi tiān zǎo shang bā diǎn wǒ dào gōng sī shàng bān, rán hòu dǎ kǎ.", vietnamese: "Mỗi ngày 8 giờ sáng tôi đến công ty đi làm, sau đó chấm công." },
+      { chinese: "我在办公室工作。", pinyin: "Wǒ zài bàn gōng shì gōng zuò.", vietnamese: "Tôi làm việc ở văn phòng." },
+      { chinese: "上午我查看文件、发邮件和打电话。", pinyin: "Shàng wǔ wǒ chá kàn wén jiàn, fā yóu jiàn hé dǎ diàn huà.", vietnamese: "Buổi sáng tôi xem tài liệu, gửi email và gọi điện thoại." },
+      { chinese: "有时候我和同事一起开会。", pinyin: "Yǒu shí hou wǒ hé tóng shì yì qǐ kāi huì.", vietnamese: "Đôi khi tôi cùng đồng nghiệp họp." },
+      { chinese: "中午十二点我和同事一起吃午饭。", pinyin: "Zhōng wǔ shí èr diǎn wǒ hé tóng shì yì qǐ chī wǔ fàn.", vietnamese: "Buổi trưa 12 giờ tôi cùng đồng nghiệp ăn trưa." },
+      { chinese: "下午我继续工作，完成经理安排的任务。", pinyin: "Xià wǔ wǒ jì xù gōng zuò, wán chéng jīng lǐ ān pái de rèn wu.", vietnamese: "Buổi chiều tôi tiếp tục làm việc, hoàn thành nhiệm vụ quản lý giao." },
+      { chinese: "下班前，我发送工作报告和工作总结。", pinyin: "Xià bān qián, wǒ fā sòng gōng zuò bào gào hé gōng zuò zǒng jié.", vietnamese: "Trước khi tan làm, tôi gửi báo cáo công việc và tổng kết công việc." },
+      { chinese: "下午五点半我下班回家。", pinyin: "Xià wǔ wǔ diǎn bàn wǒ xià bān huí jiā.", vietnamese: "5 giờ rưỡi chiều tôi tan làm về nhà." },
+      { chinese: "这就是我在公司的一天，谢谢大家！", pinyin: "Zhè jiù shì wǒ zài gōng sī de yì tiān, xiè xie dà jiā!", vietnamese: "Đây chính là một ngày của tôi ở công ty, cảm ơn mọi người!" }
+    ]
+  },
+  {
+    id: "passage-8",
+    title: "Đoạn văn 8: Sở thích của tôi (我的爱好)",
+    lines: [
+      { chinese: "大家好，今天我介绍一下我的爱好。", pinyin: "Dà jiā hǎo, jīn tiān wǒ jiè shào yí xià wǒ de ài hào.", vietnamese: "Chào mọi người, hôm nay tôi giới thiệu một chút về sở thích của tôi." },
+      { chinese: "我有很多爱好。", pinyin: "Wǒ yǒu hěn duō ài hào.", vietnamese: "Tôi có rất nhiều sở thích." },
+      { chinese: "我喜欢玩游戏、听音乐和看电影。", pinyin: "Wǒ xǐ huan wán yóu xì, tīng yīn yuè hé kàn diàn yǐng.", vietnamese: "Tôi thích chơi game, nghe nhạc và xem phim." },
+      { chinese: "有空的时候，我常常玩游戏或者看电影放松一下。", pinyin: "Yǒu kòng de shí hou, wǒ cháng cháng wán yóu xì huò zhě kàn diàn yǐng fàng sōng yí xià.", vietnamese: "Lúc rảnh, tôi thường chơi game hoặc xem phim thư giãn một chút." },
+      { chinese: "我对学习语言很感兴趣，现在我正在学习中文。", pinyin: "Wǒ duì xué xí yǔ yán hěn gǎn xìng qù, xiàn zài wǒ zhèng zài xué xí Zhōngwén.", vietnamese: "Tôi rất hứng thú với việc học ngôn ngữ, hiện tại tôi đang học tiếng Trung." },
+      { chinese: "我不喜欢熬夜，因为对身体不好。", pinyin: "Wǒ bù xǐ huan áo yè, yīn wèi duì shēn tǐ bù hǎo.", vietnamese: "Tôi không thích thức khuya, vì không tốt cho sức khỏe." },
+      { chinese: "我也不喜欢迟到。", pinyin: "Wǒ yě bù xǐ huan chí dào.", vietnamese: "Tôi cũng không thích đi trễ." },
+      { chinese: "这就是我的爱好，谢谢大家！", pinyin: "Zhè jiù shì wǒ de ài hào, xiè xie dà jiā!", vietnamese: "Đây chính là sở thích của tôi, cảm ơn mọi người!" }
+    ]
   }
 ];
 
