@@ -361,8 +361,12 @@ export default function App() {
     window.speechSynthesis.speak(utterance);
   };
 
-  // Category values extractor
-  const categoriesList = Array.from(new Set(words.map(w => w.category)));
+  // Category values extractor (sorted by lesson number)
+  const categoriesList = Array.from(new Set(words.map(w => w.category))).sort((a: any, b: any) => {
+    const numA = parseInt(a.match(/\d+/)?.[0] || '999');
+    const numB = parseInt(b.match(/\d+/)?.[0] || '999');
+    return numA - numB;
+  });
 
   // Accent/Diacritic remover helper for Vietnamese search
   const removeVietnameseTones = (str: string): string => {
