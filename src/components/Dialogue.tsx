@@ -251,6 +251,42 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-6",
+    lessonTitle: "Bài 6: Mua sắm",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Hỏi về giá – Xem hàng",
+        lines: [
+          { speaker: 'A', chinese: '你好，我想买东西。', pinyin: 'Nǐ hǎo, wǒ xiǎng mǎi dōngxi.', vietnamese: 'Chào bạn, tôi muốn mua đồ.' },
+          { speaker: 'B', chinese: '好的，你看看这个。', pinyin: 'Hǎo de, nǐ kànkan zhège.', vietnamese: 'Vâng, bạn xem cái này nhé.' },
+          { speaker: 'A', chinese: '这个多少钱？', pinyin: 'Zhège duōshao qián?', vietnamese: 'Cái này bao nhiêu tiền?' },
+          { speaker: 'B', chinese: '不贵，价格很便宜。', pinyin: 'Bú guì, jiàgè hěn piányi.', vietnamese: 'Không đắt, giá rất rẻ.' },
+          { speaker: 'A', chinese: '可以试一下吗？', pinyin: 'Kěyǐ shì yíxià ma?', vietnamese: 'Tôi thử một chút được không?' },
+          { speaker: 'B', chinese: '可以，你试试吧。', pinyin: 'Kěyǐ, nǐ shìshi ba.', vietnamese: 'Được, bạn thử đi.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Thử đồ – Chọn size, màu",
+        lines: [
+          { speaker: 'A', chinese: '这个有点小。', pinyin: 'Zhège yǒudiǎn xiǎo.', vietnamese: 'Cái này hơi nhỏ.' },
+          { speaker: 'B', chinese: '那你试试大一点的。你喜欢这个颜色吗？', pinyin: 'Nà nǐ shìshi dà yìdiǎn de. Nǐ xǐhuan zhège yánsè ma?', vietnamese: 'Vậy bạn thử cái to hơn nhé. Bạn thích màu này không?' },
+          { speaker: 'A', chinese: '喜欢，这个很好看。便宜一点可以吗？', pinyin: 'Xǐhuan, zhège hěn hǎokàn. Piányi yìdiǎn kěyǐ ma?', vietnamese: 'Thích, cái này đẹp lắm. Rẻ hơn một chút được không?' },
+          { speaker: 'B', chinese: '可以。', pinyin: 'Kěyǐ.', vietnamese: 'Được.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Mua ở siêu thị – Quét mã thanh toán",
+        lines: [
+          { speaker: 'A', chinese: '你好，这个多少钱？', pinyin: 'Nǐ hǎo, zhège duōshao qián?', vietnamese: 'Chào bạn, cái này bao nhiêu tiền?' },
+          { speaker: 'B', chinese: '不贵，三十五块。', pinyin: 'Bú guì, sānshíwǔ kuài.', vietnamese: '35 tệ, không đắt.' },
+          { speaker: 'A', chinese: '我买两个，可以便宜一点吗？', pinyin: 'Wǒ mǎi liǎng gè, kěyǐ piányi yìdiǎn ma?', vietnamese: 'Tôi mua hai cái, có thể rẻ hơn một chút không?' },
+          { speaker: 'B', chinese: '好的，给你算三十块一个。', pinyin: 'Hǎo de, gěi nǐ suàn sānshí kuài yí gè.', vietnamese: 'Được, tính cho bạn 30 tệ một cái.' },
+          { speaker: 'A', chinese: '好的，我扫码付钱。', pinyin: 'Hǎo de, wǒ sǎomǎ fù qián.', vietnamese: 'Vâng, tôi quét mã thanh toán.' }
+        ]
+      }
+    ]
   }
 ];
 

@@ -31,7 +31,8 @@ import {
   X,
   MessageSquare,
   FileText,
-  Volume2
+  Volume2,
+  GraduationCap
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -42,19 +43,20 @@ import WritingPad from './components/WritingPad';
 import Dialogue from './components/Dialogue';
 import Reading from './components/Reading';
 import SentenceTranslation from './components/SentenceTranslation';
+import Grammar from './components/Grammar';
 import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary'>(() => {
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary'>(() => {
     const path = window.location.pathname.replace(/^\//, '');
-    const tabOptions = ['flashcards', 'quiz', 'translate', 'dialogue', 'reading', 'dictionary'];
+    const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary'];
     if (path && tabOptions.includes(path)) {
-      return path as 'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary';
+      return path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary';
     }
     const savedTab = localStorage.getItem('study_chinese_active_tab');
     if (savedTab && tabOptions.includes(savedTab)) {
-      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary';
+      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary';
     }
     return 'flashcards';
   });
@@ -69,9 +71,9 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/^\//, '');
-      const tabOptions = ['flashcards', 'quiz', 'translate', 'dialogue', 'reading', 'dictionary'];
+      const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary'];
       if (path && tabOptions.includes(path)) {
-        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'dialogue' | 'reading' | 'dictionary');
+        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary');
       } else {
         setActiveTab('flashcards');
       }
@@ -552,6 +554,18 @@ export default function App() {
             </button>
 
             <button
+              id="tab-grammar"
+              onClick={() => setActiveTab('grammar')}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'grammar'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+            >
+              <GraduationCap size={14} />
+              <span>Ngữ Pháp</span>
+            </button>
+
+            <button
               id="tab-dictionary"
               onClick={() => setActiveTab('dictionary')}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'dictionary'
@@ -560,7 +574,7 @@ export default function App() {
                 }`}
             >
               <BookOpen size={14} />
-              <span>Sổ Từ & Cập Nhật Chữ ({words.length})</span>
+              <span>Sổ Từ Vựng</span>
             </button>
           </div>
         </section>
@@ -631,6 +645,12 @@ export default function App() {
               <SentenceTranslation
                 words={words}
               />
+            </div>
+          )}
+
+          {activeTab === 'grammar' && (
+            <div className="py-4" id="grammar-tab-container">
+              <Grammar />
             </div>
           )}
 
@@ -926,9 +946,8 @@ export default function App() {
                               <button
                                 id={`speak-dic-${word.id}`}
                                 onClick={(e) => handleSpeakChinese(word.character, word.id, e)}
-                                className={`p-1.8 rounded-lg cursor-pointer hover:bg-slate-100 transition ${
-                                  speakingWordId === word.id ? 'text-amber-500' : 'text-slate-400 hover:text-amber-500'
-                                }`}
+                                className={`p-1.8 rounded-lg cursor-pointer hover:bg-slate-100 transition ${speakingWordId === word.id ? 'text-amber-500' : 'text-slate-400 hover:text-amber-500'
+                                  }`}
                                 title="Nghe phát âm"
                               >
                                 <Volume2 size={14} className={speakingWordId === word.id ? 'animate-pulse' : ''} />
