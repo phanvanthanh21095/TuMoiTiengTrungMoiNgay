@@ -386,7 +386,7 @@ export default function App() {
     const normalizedQuery = removeVietnameseTones(searchQuery);
 
     const matchesCharacter = word.character.toLowerCase().includes(queryLower);
-    const matchesPinyin = word.pinyin.toLowerCase().includes(queryLower);
+    const matchesPinyin = removeVietnameseTones(word.pinyin).includes(normalizedQuery);
     const matchesDefinition = removeVietnameseTones(word.definition).includes(normalizedQuery);
 
     const matchesKeyword = matchesCharacter || matchesPinyin || matchesDefinition;
