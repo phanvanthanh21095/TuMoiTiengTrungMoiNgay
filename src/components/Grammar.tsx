@@ -311,6 +311,30 @@ const GRAMMAR_DATA: GrammarLesson[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-7",
+    lessonTitle: "Bài 7: Gọi điện thoại",
+    points: [
+      {
+        title: "1. Cấu trúc gọi điện thoại: 给 (gěi) + Người + 打电话 (dǎ diànhuà)",
+        description: "Dùng để biểu thị hành động chủ động gọi điện thoại cho một đối tượng cụ thể nào đó.",
+        formula: "给 (gěi) + Người + 打电话 (dǎ diànhuà)",
+        examples: [
+          { chinese: "我给妈妈打电话。", pinyin: "Wǒ gěi māma dǎ diànhuà.", vietnamese: "Tôi gọi điện cho mẹ." },
+          { chinese: "他要给老师打电话。", pinyin: "Tā yào gěi lǎoshī dǎ diànhuà.", vietnamese: "Anh ấy muốn gọi điện cho thầy giáo." }
+        ]
+      },
+      {
+        title: "2. Cấu trúc đồng tham gia: S + 跟 (gēn) + Người/Sự việc + 动词 (Động từ)",
+        description: "Từ 跟 (gēn) có nghĩa là 'với', 'cùng', 'giữa'. Cấu trúc này dùng để nhấn mạnh một đối tượng cùng tham gia thực hiện hành động với chủ ngữ.",
+        formula: "主语 (Chủ ngữ) + 跟 (gēn) + Người/Sự việc + 动词 (Động từ) (+ Tân ngữ)",
+        examples: [
+          { chinese: "我跟你打电话。", pinyin: "Wǒ gēn nǐ dǎ diànhuà.", vietnamese: "Tôi nói chuyện điện thoại với bạn." },
+          { chinese: "她跟老师说话。", pinyin: "Tā gēn lǎoshī shuōhuà.", vietnamese: "Cô ấy nói chuyện với thầy giáo." }
+        ]
+      }
+    ]
   }
 ];
 

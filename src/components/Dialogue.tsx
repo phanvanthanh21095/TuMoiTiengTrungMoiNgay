@@ -287,6 +287,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-7",
+    lessonTitle: "Bài 7: Gọi điện thoại",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Gọi điện thoại hỏi thăm",
+        lines: [
+          { speaker: 'A', chinese: '喂，你好！请问王老师在吗？', pinyin: 'Wéi, nǐ hǎo! Qǐngwèn Wáng lǎoshī zài ma?', vietnamese: 'A lô, xin chào! Xin hỏi thầy Vương có ở đó không?' },
+          { speaker: 'B', chinese: '他现在不在，您想给他留言吗？', pinyin: 'Tā xiànzài bú zài, nín xiǎng gěi tā liúyán ma?', vietnamese: 'Thầy ấy bây giờ không có, bạn có muốn để lại lời nhắn không?' },
+          { speaker: 'A', chinese: '好的，请帮我留言。', pinyin: 'Hǎo de, qǐng bāng wǒ liúyán.', vietnamese: 'Được, xin giúp tôi để lại lời nhắn.' },
+          { speaker: 'B', chinese: '好的，我会告诉他。', pinyin: 'Hǎo de, wǒ huì gàosù tā.', vietnamese: 'Được, tôi sẽ báo cho thầy biết.' },
+          { speaker: 'A', chinese: '我会回电话给他。', pinyin: 'Wǒ huì huí diànhuà gěi tā.', vietnamese: 'Tôi sẽ gọi lại cho thầy.' },
+          { speaker: 'B', chinese: '好的，他收到消息会联系你。', pinyin: 'Hǎo de, tā shōu dào xiāoxi huì liánxì nǐ.', vietnamese: 'Được, khi nhận tin nhắn, thầy sẽ liên lạc với bạn.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Gọi điện thoại và nhắn tin",
+        lines: [
+          { speaker: 'A', chinese: '我想给你打视频电话，你方便吗？', pinyin: 'Wǒ xiǎng gěi nǐ dǎ shìpín diànhuà, nǐ fāngbiàn ma?', vietnamese: 'Tôi muốn gọi video cho bạn, bạn có tiện không?' },
+          { speaker: 'B', chinese: '现在有点忙，等会儿再打吧。', pinyin: 'Xiànzài yǒudiǎn máng, děng huìr zài dǎ ba.', vietnamese: 'Bây giờ tôi đang bận chút, lát gọi lại nhé.' },
+          { speaker: 'A', chinese: '好的，我发消息确认一下。', pinyin: 'Hǎo de, wǒ fā xiāoxi quèrèn yíxià.', vietnamese: 'Được, tôi gửi tin nhắn xác nhận nhé.' },
+          { speaker: 'B', chinese: '好的，我收到就回复你。', pinyin: 'Hǎo de, wǒ shōu dào jiù huífù nǐ.', vietnamese: 'Được, tôi nhận được sẽ trả lời bạn.' },
+          { speaker: 'A', chinese: '如果有问题，我再打给你。', pinyin: 'Rúguǒ yǒu wèntí, wǒ zài dǎ gěi nǐ.', vietnamese: 'Nếu có vấn đề, tôi sẽ gọi lại cho bạn.' },
+          { speaker: 'B', chinese: '没问题，等你的电话。', pinyin: 'Méiwèntí, děng nǐ de diànhuà.', vietnamese: 'Không vấn đề gì, tôi sẽ chờ điện thoại của bạn.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Trao đổi kế hoạch cuối tuần",
+        lines: [
+          { speaker: 'A', chinese: '喂，你好！你周末有空吗？', pinyin: 'Wéi, nǐ hǎo! Nǐ zhōumò yǒu kòng ma?', vietnamese: 'A lô, xin chào! Cuối tuần bạn có rảnh không?' },
+          { speaker: 'B', chinese: '你好，我周末有空。你有什么计划？', pinyin: 'Nǐ hǎo, wǒ zhōumò yǒu kòng. Nǐ yǒu shénme jìhuà?', vietnamese: 'Xin chào, cuối tuần tôi rảnh. Bạn có kế hoạch gì?' },
+          { speaker: 'A', chinese: '我想去看电影，你想一起去吗？', pinyin: 'Wǒ xiǎng qù kàn diànyǐng, nǐ xiǎng yìqǐ qù ma?', vietnamese: 'Tôi muốn đi xem phim, bạn có muốn đi cùng không?' },
+          { speaker: 'B', chinese: '好啊，几点去呢？', pinyin: 'Hǎo a, jǐ diǎn qù ne?', vietnamese: 'Được, đi mấy giờ?' },
+          { speaker: 'A', chinese: '下午三点怎么样？', pinyin: 'Xiàwǔ sān diǎn zěnmeyàng?', vietnamese: '3 giờ chiều thế nào?' },
+          { speaker: 'B', chinese: '没问题，我下午三点在电影院等你。', pinyin: 'Méiwèntí, wǒ xiàwǔ sān diǎn zài diànyǐngyuàn děng nǐ.', vietnamese: 'Không vấn đề gì, tôi sẽ đợi bạn ở rạp lúc 3 giờ chiều.' }
+        ]
+      }
+    ]
   }
 ];
 
