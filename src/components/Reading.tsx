@@ -71,16 +71,15 @@ const DEFAULT_PASSAGES: PassageData[] = [
     id: "passage-5",
     title: "Đoạn văn 5: Giới thiệu bản thân 2 (自我介绍 二)",
     lines: [
-      { chinese: "大家好，我介绍一下。", pinyin: "Dà jiā hǎo, wǒ jiè shào yí xià.", vietnamese: "Chào mọi người, tôi xin giới thiệu một chút." },
-      { chinese: "我叫成，今年三十一岁。", pinyin: "Wǒ jiào Chéng, jīn nián sān shí yī suì.", vietnamese: "Tôi tên Thành, năm nay 31 tuổi." },
-      { chinese: "我是越南人，现在住在越南。", pinyin: "Wǒ shì Yuènán rén, xiàn zài zhù zài Yuènán.", vietnamese: "Tôi là người Việt Nam, hiện tại sống ở Việt Nam." },
-      { chinese: "以前我是工程师，现在在语言中心学习中文。", pinyin: "Yǐ qián wǒ shì gōng chéng shī, xiàn zài zài yǔ yán zhōng xīn xué xí Zhōngwén.", vietnamese: "Trước đây tôi là kỹ sư, hiện tại đang học tiếng Trung ở trung tâm ngôn ngữ." },
-      { chinese: "我学习中文大约三个星期了。", pinyin: "Wǒ xué xí Zhōngwén dà yuē sān gè xīng qī le.", vietnamese: "Tôi học tiếng Trung được khoảng 3 tuần rồi." },
-      { chinese: "我家有四口人，包括爸爸、妈妈、妹妹和我。", pinyin: "Wǒ jiā yǒu sì kǒu rén, bāo kuò bà ba, mā ma, mèi mei hé wǒ.", vietnamese: "Gia đình tôi có 4 người, gồm bố, mẹ, em gái và tôi." },
-      { chinese: "我的爱好是玩游戏。", pinyin: "Wǒ de ài hào shì wán yóu xì.", vietnamese: "Sở thích của tôi là chơi game." },
-      { chinese: "空闲的时候，我常常听音乐和看电影。", pinyin: "Kòng xián de shí hou, wǒ cháng cháng tīng yīn yuè hé kàn diàn yǐng.", vietnamese: "Lúc rảnh rỗi, tôi thường nghe nhạc và xem phim." },
-      { chinese: "我学习中文是为了工作。", pinyin: "Wǒ xué xí Zhōngwén shì wèi le gōng zuò.", vietnamese: "Tôi học tiếng Trung là vì công việc." },
-      { chinese: "很高兴认识大家。谢谢。", pinyin: "Hěn gāo xìng rèn shi dà jiā. Xiè xie.", vietnamese: "Rất vui được quen biết mọi người. Cảm ơn." }
+      { chinese: "大家好，我介绍一下。", pinyin: "Dà jiā hǎo, wǒ jièshào yíxià.", vietnamese: "Chào mọi người, tôi xin tự giới thiệu một chút." },
+      { chinese: "我叫成，今年三十一岁。", pinyin: "Wǒ jiào Chéng, jīnnián sānshíyī suì.", vietnamese: "Tôi tên Thành, năm nay 31 tuổi." },
+      { chinese: "我是越南人，现在住在越南。", pinyin: "Wǒ shì Yuènán rén, xiànzài zhù zài Yuènán.", vietnamese: "Tôi là người Việt Nam, hiện đang sống ở Việt Nam." },
+      { chinese: "以前我是工程师，现在在语言中心学习中文。", pinyin: "Yǐqián wǒ shì gōngchéngshī, xiànzài zài yǔyán zhōngxīn xuéxí Zhōngwén.", vietnamese: "Trước đây tôi là kỹ sư, hiện tại đang học tiếng Trung ở trung tâm ngôn ngữ." },
+      { chinese: "我学习中文大约三个星期了，希望以后能用中文工作。", pinyin: "Wǒ xuéxí Zhōngwén dàyuē sān gè xīngqī le, xīwàng yǐhòu néng yòng Zhōngwén gōngzuò.", vietnamese: "Tôi học tiếng Trung được khoảng 3 tuần rồi, hy vọng sau này có thể dùng tiếng Trung trong công việc." },
+      { chinese: "我家有四口人，包括爸爸、妈妈、妹妹和我。", pinyin: "Wǒ jiā yǒu sì kǒu rén, bāokuò bàba, māma, mèimei hé wǒ.", vietnamese: "Gia đình tôi có 4 người, gồm bố, mẹ, em gái và tôi." },
+      { chinese: "我的爱好是玩游戏。", pinyin: "Wǒ de àihào shì wán yóuxì.", vietnamese: "Sở thích của tôi là chơi game." },
+      { chinese: "空闲的时候，我常常听音乐和看电影。", pinyin: "Kòngxián de shíhou, wǒ chángcháng tīng yīnyuè hé kàn diànyǐng.", vietnamese: "Lúc rảnh rỗi, tôi thường nghe nhạc và xem phim." },
+      { chinese: "很高兴认识大家。谢谢！", pinyin: "Hěn gāoxìng rènshi dàjiā. Xièxie!", vietnamese: "Rất vui được làm quen với mọi người. Cảm ơn!" }
     ]
   },
   {

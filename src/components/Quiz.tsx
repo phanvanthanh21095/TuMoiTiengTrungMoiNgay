@@ -233,9 +233,9 @@ export default function Quiz({ words, onUpdateWordStatus }: QuizProps) {
       // Employ synonyms and parenthetical checks
       isCorrect = checkDefinitionCorrect(userTypedInput, activeQ.correctAnswer);
     } else {
-      // Multiple choice exact match
+      // Multiple choice - case-insensitive comparison
       const finalOption = optionOverride !== undefined ? optionOverride : selectedOption;
-      isCorrect = finalOption === activeQ.correctAnswer;
+      isCorrect = finalOption?.trim().toLowerCase() === activeQ.correctAnswer.trim().toLowerCase();
     }
 
     setIsCorrectResult(isCorrect);

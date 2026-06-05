@@ -244,12 +244,19 @@ export default function SentenceTranslation({ words }: SentenceTranslationProps)
   };
 
   // Check answer
-  const checkAnswer = (input: string, correctAnswer: string): boolean => {
+  const checkAnswer = (input: string, correctAnswer: string, correctAnswerPinyin?: string): boolean => {
     const normInput = normalizeText(input);
     const normCorrect = normalizeText(correctAnswer);
 
-    // Exact match
+    // Exact match (Chinese characters or Vietnamese)
     if (normInput === normCorrect) return true;
+
+    // Check Pinyin if available (case-insensitive, but tones must be correct)
+    if (correctAnswerPinyin) {
+      const normPinyinInput = normalizeText(input);
+      const normPinyinCorrect = normalizeText(correctAnswerPinyin);
+      if (normPinyinInput === normPinyinCorrect) return true;
+    }
 
     // For Vietnamese answers: fuzzy tone-free comparison
     if (translateMode === 'cn-to-vn') {
@@ -280,8 +287,8 @@ export default function SentenceTranslation({ words }: SentenceTranslationProps)
 
     const activeQ = questions[currentIdx];
     const isCorrect = translateMode === 'multiple-choice'
-      ? selectedOption === activeQ.correctAnswer
-      : checkAnswer(userInput, activeQ.correctAnswer);
+      ? selectedOption?.trim().toLowerCase() === activeQ.correctAnswer.trim().toLowerCase()
+      : checkAnswer(userInput, activeQ.correctAnswer, activeQ.correctAnswerPinyin);
 
     setIsCorrectResult(isCorrect);
     setIsSubmitted(true);
