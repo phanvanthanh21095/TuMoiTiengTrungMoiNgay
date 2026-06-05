@@ -75,7 +75,7 @@ const DEFAULT_PASSAGES: PassageData[] = [
       { chinese: "我叫成，今年三十一岁。", pinyin: "Wǒ jiào Chéng, jīnnián sānshíyī suì.", vietnamese: "Tôi tên Thành, năm nay 31 tuổi." },
       { chinese: "我是越南人，现在住在越南。", pinyin: "Wǒ shì Yuènán rén, xiànzài zhù zài Yuènán.", vietnamese: "Tôi là người Việt Nam, hiện đang sống ở Việt Nam." },
       { chinese: "以前我是工程师，现在在语言中心学习中文。", pinyin: "Yǐqián wǒ shì gōngchéngshī, xiànzài zài yǔyán zhōngxīn xuéxí Zhōngwén.", vietnamese: "Trước đây tôi là kỹ sư, hiện tại đang học tiếng Trung ở trung tâm ngôn ngữ." },
-      { chinese: "我学习中文大约三个星期了，希望以后能用中文工作。", pinyin: "Wǒ xuéxí Zhōngwén dàyuē sān gè xīngqī le, xīwàng yǐhòu néng yòng Zhōngwén gōngzuò.", vietnamese: "Tôi học tiếng Trung được khoảng 3 tuần rồi, hy vọng sau này có thể dùng tiếng Trung trong công việc." },
+      { chinese: "我学习中文已经三个星期了，希望以后能用中文工作。", pinyin: "Wǒ xuéxí Zhōngwén yǐjīng sān gè xīngqī le, xīwàng yǐhòu néng yòng Zhōngwén gōngzuò.", vietnamese: "Tôi học tiếng Trung được 3 tuần rồi, hy vọng sau này có thể dùng tiếng Trung trong công việc." },
       { chinese: "我家有四口人，包括爸爸、妈妈、妹妹和我。", pinyin: "Wǒ jiā yǒu sì kǒu rén, bāokuò bàba, māma, mèimei hé wǒ.", vietnamese: "Gia đình tôi có 4 người, gồm bố, mẹ, em gái và tôi." },
       { chinese: "我的爱好是玩游戏。", pinyin: "Wǒ de àihào shì wán yóuxì.", vietnamese: "Sở thích của tôi là chơi game." },
       { chinese: "空闲的时候，我常常听音乐和看电影。", pinyin: "Kòngxián de shíhou, wǒ chángcháng tīng yīnyuè hé kàn diànyǐng.", vietnamese: "Lúc rảnh rỗi, tôi thường nghe nhạc và xem phim." },
