@@ -294,8 +294,8 @@ export default function Dialogue() {
   const [selectedLessonIndex, setSelectedLessonIndex] = useState<number>(0);
   const [selectedDialogueIndex, setSelectedDialogueIndex] = useState<number>(0);
 
-  const [showPinyin, setShowPinyin] = useState<boolean>(true);
-  const [showVietnamese, setShowVietnamese] = useState<boolean>(true);
+  const [showPinyin, setShowPinyin] = useState<boolean>(false);
+  const [showVietnamese, setShowVietnamese] = useState<boolean>(false);
 
   // Voices selection
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
