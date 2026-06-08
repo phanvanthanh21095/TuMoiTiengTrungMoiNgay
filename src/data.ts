@@ -4354,5 +4354,83 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
+  },
+  {
+    id: '7_51',
+    character: '见面',
+    pinyin: 'jiànmiàn',
+    definition: 'gặp mặt',
+    category: 'Bài 7: Gọi điện thoại',
+    exampleChinese: '我们在哪儿见面？',
+    examplePinyin: 'Wǒmen zài nǎr jiànmiàn?',
+    exampleVietnamese: 'Chúng ta gặp mặt ở đâu?',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '7_52',
+    character: '忘',
+    pinyin: 'wàng',
+    definition: 'quên',
+    category: 'Bài 7: Gọi điện thoại',
+    exampleChinese: '别忘了给我打电话。',
+    examplePinyin: 'Bié wàng le gěi wǒ dǎ diànhuà.',
+    exampleVietnamese: 'Đừng quên gọi điện thoại cho tôi.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '7_53',
+    character: '正在',
+    pinyin: 'zhèngzài',
+    definition: 'đang',
+    category: 'Bài 7: Gọi điện thoại',
+    exampleChinese: '我正在给她打电话。',
+    examplePinyin: 'Wǒ zhèngzài gěi tā dǎ diànhuà.',
+    exampleVietnamese: 'Tôi đang gọi điện thoại cho cô ấy.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '7_54',
+    character: '通话',
+    pinyin: 'tōnghuà',
+    definition: 'gọi điện, nói chuyện điện thoại',
+    category: 'Bài 7: Gọi điện thoại',
+    exampleChinese: '他正在通话中。',
+    examplePinyin: 'Tā zhèngzài tōnghuà zhōng.',
+    exampleVietnamese: 'Anh ấy đang nói chuyện điện thoại.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '7_55',
+    character: '稍后',
+    pinyin: 'shāohòu',
+    definition: 'lát nữa, sau đó',
+    category: 'Bài 7: Gọi điện thoại',
+    exampleChinese: '请稍后，他正在通话。',
+    examplePinyin: 'Qǐng shāohòu, tā zhèngzài tōnghuà.',
+    exampleVietnamese: 'Vui lòng đợi lát nữa, anh ấy đang nói chuyện điện thoại.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '7_56',
+    character: '约',
+    pinyin: 'yuē',
+    definition: 'hẹn',
+    category: 'Bài 7: Gọi điện thoại',
+    exampleChinese: '我今天约了朋友见面。',
+    examplePinyin: 'Wǒ jīntiān yuē le péngyou jiànmiàn.',
+    exampleVietnamese: 'Hôm nay tôi hẹn gặp bạn bè.',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
   }
 ];

@@ -87,6 +87,7 @@ export default function App() {
   // Search & Filter Dictionary State
   const [searchQuery, setSearchQuery] = useState('');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
+  const [selectedWordForModal, setSelectedWordForModal] = useState<VocabularyWord | null>(null);
 
   // Writing Pad display on Flashcards tab toggle
   const [showDraftPad, setShowDraftPad] = useState(true);
@@ -909,7 +910,8 @@ export default function App() {
                         filteredDictionary.map((word) => (
                           <div
                             key={word.id}
-                            className="bg-white hover:bg-slate-50 border border-slate-200 p-4 rounded-xl flex items-center justify-between gap-4 transition group relative shadow-sm select-text"
+                            onClick={() => setSelectedWordForModal(word)}
+                            className="bg-white hover:bg-slate-50 border border-slate-200 p-4 rounded-xl flex items-center justify-between gap-4 transition group relative shadow-sm cursor-pointer select-text"
                           >
                             <div className="flex items-center gap-4 min-w-0">
                               {/* Hanzi sign */}
@@ -955,7 +957,10 @@ export default function App() {
 
                               <button
                                 id={`fav-dic-${word.id}`}
-                                onClick={() => handleToggleFavorite(word.id)}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleToggleFavorite(word.id);
+                                }}
                                 className={`p-1.8 rounded-lg cursor-pointer hover:bg-slate-100 transition ${word.favorite ? 'text-rose-500' : 'text-slate-400 hover:text-rose-500'
                                   }`}
                                 title="Đánh dấu ưa chuộng"
@@ -965,7 +970,10 @@ export default function App() {
 
                               <button
                                 id={`edit-dic-${word.id}`}
-                                onClick={() => handleLoadEdit(word)}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleLoadEdit(word);
+                                }}
                                 className="p-1.8 rounded-lg text-slate-400 hover:text-indigo-600 cursor-pointer hover:bg-slate-100 transition"
                                 title="Sửa chi tiết từ này"
                               >
@@ -974,7 +982,10 @@ export default function App() {
 
                               <button
                                 id={`del-dic-${word.id}`}
-                                onClick={() => handleDeleteWord(word.id)}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleDeleteWord(word.id);
+                                }}
                                 className="p-1.8 rounded-lg text-slate-400 hover:text-rose-600 cursor-pointer hover:bg-slate-100 transition"
                                 title="Xóa từ khỏi danh sách"
                               >
@@ -1083,6 +1094,140 @@ export default function App() {
           <span>© 2026 Học thuộc lòng Tiếng Trung. Bản quyền thuộc về Phan Văn Thành. Biểu trưng bởi phác đồ nét vẽ 田字格</span>
         </div>
       </footer>
+
+      {selectedWordForModal && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity"
+          onClick={() => setSelectedWordForModal(null)}
+        >
+          <div 
+            className="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 flex flex-col transform transition-all duration-350 scale-100"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="px-6 py-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+              <span className="text-[10px] bg-indigo-50 text-indigo-600 border border-indigo-100 px-2.5 py-1 rounded-full font-bold uppercase tracking-wider">
+                {selectedWordForModal.category}
+              </span>
+              <button
+                onClick={() => setSelectedWordForModal(null)}
+                className="p-1.5 rounded-full hover:bg-slate-200 text-slate-400 hover:text-slate-700 transition cursor-pointer"
+                title="Đóng"
+              >
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 flex flex-col gap-6 overflow-y-auto max-h-[70vh]">
+              {/* Character Details Box */}
+              <div className="flex gap-6 items-start">
+                {/* Tianzige grid layout for character */}
+                <div className="relative w-28 h-28 bg-rose-50/30 border-2 border-rose-100 rounded-2xl flex items-center justify-center text-slate-900 text-6xl font-sans tracking-wide shrink-0 shadow-inner overflow-hidden select-all">
+                  {/* Grid Lines */}
+                  <div className="absolute inset-0 border border-dashed border-rose-200/40 pointer-events-none" />
+                  <div className="absolute inset-y-0 left-1/2 border-l border-dashed border-rose-200/50 pointer-events-none" />
+                  <div className="absolute inset-x-0 top-1/2 border-t border-dashed border-rose-200/50 pointer-events-none" />
+                  <div className="absolute inset-0 rotate-45 scale-105 border-t border-dashed border-rose-100/50 pointer-events-none" />
+                  <div className="absolute inset-0 -rotate-45 scale-105 border-t border-dashed border-rose-100/50 pointer-events-none" />
+                  
+                  {/* Character */}
+                  <span className="relative z-10 font-bold">{selectedWordForModal.character}</span>
+                </div>
+
+                {/* Primary Info */}
+                <div className="flex flex-col gap-2.5 justify-center py-1">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-2xl font-black text-amber-600 tracking-wide select-all">
+                      {selectedWordForModal.pinyin}
+                    </span>
+                    <button
+                      onClick={(e) => handleSpeakChinese(selectedWordForModal.character, selectedWordForModal.id, e)}
+                      className="p-1.5 rounded-lg text-indigo-600 hover:bg-indigo-50 transition cursor-pointer"
+                      title="Nghe phát âm"
+                    >
+                      <Volume2 size={18} />
+                    </button>
+                  </div>
+                  <div className="text-slate-800 font-bold text-base md:text-lg select-all">
+                    {selectedWordForModal.definition}
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border ${
+                      selectedWordForModal.status === 'mastered'
+                        ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
+                        : selectedWordForModal.status === 'learning'
+                          ? 'bg-amber-50 text-amber-600 border-amber-200'
+                          : 'bg-slate-100 text-slate-500 border-slate-200'
+                    }`}>
+                      {selectedWordForModal.status === 'mastered' ? 'Đã thuộc' : selectedWordForModal.status === 'learning' ? 'Đang học' : 'Mới tinh'}
+                    </span>
+                    {selectedWordForModal.favorite && (
+                      <span className="flex items-center gap-1 text-[9px] bg-rose-50 text-rose-600 border border-rose-200 px-2 py-0.5 rounded-full font-bold uppercase">
+                        <Star size={8} className="fill-rose-500 text-rose-500" /> Ưa thích
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Notes Section if any */}
+              {selectedWordForModal.notes && (
+                <div className="p-3 bg-amber-50/50 border border-amber-100 rounded-xl text-xs text-slate-700">
+                  <strong className="text-amber-800 block mb-1">Ghi chú:</strong>
+                  {selectedWordForModal.notes}
+                </div>
+              )}
+
+              {/* Example Sentences */}
+              <div className="border-t border-slate-100 pt-5 flex flex-col gap-3">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">
+                  Ví dụ mẫu
+                </span>
+                
+                {selectedWordForModal.exampleChinese ? (
+                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/70 flex flex-col gap-2 relative group/ex">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex flex-col gap-1.5 min-w-0">
+                        <span className="text-slate-900 text-lg md:text-xl font-medium tracking-wide leading-relaxed select-all">
+                          {selectedWordForModal.exampleChinese}
+                        </span>
+                        <span className="font-mono text-xs font-bold text-amber-600 tracking-wide select-all">
+                          {selectedWordForModal.examplePinyin}
+                        </span>
+                      </div>
+                      <button
+                        onClick={(e) => handleSpeakChinese(selectedWordForModal.exampleChinese || '', selectedWordForModal.id + '_ex', e)}
+                        className="p-2 rounded-xl text-indigo-600 bg-white border border-slate-200 shadow-sm hover:bg-indigo-50 transition cursor-pointer shrink-0"
+                        title="Nghe phát âm câu ví dụ"
+                      >
+                        <Volume2 size={16} />
+                      </button>
+                    </div>
+                    <div className="text-slate-600 text-xs md:text-sm border-t border-slate-200/60 pt-2.5 mt-1 select-all">
+                      {selectedWordForModal.exampleVietnamese}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-slate-400 text-xs py-3 text-center border border-dashed border-slate-200 rounded-2xl">
+                    Chưa có câu ví dụ mẫu cho từ này.
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* Modal Footer */}
+            <div className="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+              <button
+                onClick={() => setSelectedWordForModal(null)}
+                className="px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold cursor-pointer hover:bg-slate-800 transition active:scale-95 shadow-md"
+              >
+                Đóng cửa sổ
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
