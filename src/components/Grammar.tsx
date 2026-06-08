@@ -335,6 +335,48 @@ const GRAMMAR_DATA: GrammarLesson[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-8",
+    lessonTitle: "Bài 8: Hỏi đường",
+    points: [
+      {
+        title: "1. Cấu trúc hỏi đường lịch sự: 请问 + [Địa điểm] + 在哪里？",
+        description: "Dùng để lịch sự hỏi vị trí của một địa điểm hoặc người.",
+        formula: "请问 (Qǐngwèn) + [Địa điểm] + 在哪里 (zài nǎlǐ)?",
+        examples: [
+          { chinese: "请问, 地铁站在哪里？", pinyin: "Qǐngwèn, dìtiě zhàn zài nǎlǐ?", vietnamese: "Xin hỏi, ga tàu điện ngầm ở đâu?" },
+          { chinese: "请问, 便利店在哪里？", pinyin: "Qǐngwèn, biànlìdiàn zài nǎlǐ?", vietnamese: "Xin hỏi, cửa hàng tiện lợi ở đâu?" }
+        ]
+      },
+      {
+        title: "2. Cấu trúc chỉ vị trí tương đối: [Địa điểm A] + 在 + [Địa điểm B] + 的旁边 / 对面 / 前面 / 后面",
+        description: "Nói vị trí tương đối của một địa điểm so với một địa điểm khác.",
+        formula: "[A] + 在 (zài) + [B] + 的旁边 (de pángbiān) / 对面 (duìmiàn) / 前面 (qiánmiàn) / 后面 (hòumiàn)",
+        examples: [
+          { chinese: "学校在公园的旁边。", pinyin: "Xuēxiào zài gōngyuán de pángbiān.", vietnamese: "Trường học ở bên cạnh công viên." },
+          { chinese: "超市在地铁站的对面。", pinyin: "Chāoshì zài dìtiě zhàn de duìmiàn.", vietnamese: "Siêu thị ở đối diện ga tàu điện ngầm." }
+        ]
+      },
+      {
+        title: "3. Cấu trúc hướng dẫn đi/rẽ: 往 + [Hướng/Bên] + 走 / 拐",
+        description: "Cách dùng để hướng dẫn rẽ hoặc đi về một hướng cụ thể.",
+        formula: "往 (Wǎng) + [左/右/前...] + 走 (zǒu) / 拐 (guǎi)",
+        examples: [
+          { chinese: "往左走，然后右拐。", pinyin: "Wǎng zuǒ zǒu, ránhòu yòu guǎi.", vietnamese: "Đi thẳng sang trái, sau đó rẽ phải." },
+          { chinese: "往前走，过红绿灯左拐。", pinyin: "Wǎng qián zǒu, guò hónglǜdēng zuǒ guǎi.", vietnamese: "Đi thẳng, qua đèn giao thông rồi rẽ trái." }
+        ]
+      },
+      {
+        title: "4. Cấu trúc hỏi thời gian đi bộ: 走路 + [đến...] + 需要多长时间？",
+        description: "Hỏi hoặc trả lời thời gian đi bộ từ một nơi đến một nơi khác.",
+        formula: "走路 (zǒulù) + [đến...] + 需要多长时间 (xūyào duōcháng shíjiān)?\nHoặc: 从 [A] 走路到 [B] 需要多长时间？",
+        examples: [
+          { chinese: "从地铁站走路到学校需要多长时间？", pinyin: "Cóng dìtiě zhàn zǒulù dào xuéxiào xūyào duōcháng shíjiān?", vietnamese: "Đi bộ từ ga tàu điện ngầm đến trường mất bao lâu?" },
+          { chinese: "从酒店走路到机场很近。", pinyin: "Cóng jiǔdiàn zǒulù dào jīchǎng hěn jìn.", vietnamese: "Đi bộ từ khách sạn đến sân bay rất gần." }
+        ]
+      }
+    ]
   }
 ];
 
@@ -393,7 +435,7 @@ export default function Grammar() {
 
       {/* Main Grid Content */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start" id="grammar-main-container">
-        
+
         {/* Sidebar: Grammar Points list (4 cols) */}
         <div className="lg:col-span-4 flex flex-col gap-4">
           <div className="bg-white border border-slate-200 p-4 rounded-2xl shadow-sm flex flex-col gap-3">
@@ -493,9 +535,8 @@ export default function Grammar() {
                       <span className="text-xs text-slate-500 border-t border-slate-100 pt-1 mt-1">{ex.vietnamese}</span>
                     </div>
                     <button
-                      className={`p-2 rounded-lg shrink-0 transition ${
-                        speakingText === ex.chinese ? 'bg-indigo-600 text-white shadow' : 'bg-slate-100 text-slate-400 group-hover:bg-indigo-50 group-hover:text-indigo-600'
-                      }`}
+                      className={`p-2 rounded-lg shrink-0 transition ${speakingText === ex.chinese ? 'bg-indigo-600 text-white shadow' : 'bg-slate-100 text-slate-400 group-hover:bg-indigo-50 group-hover:text-indigo-600'
+                        }`}
                     >
                       <Volume2 size={14} className={speakingText === ex.chinese ? 'animate-pulse' : ''} />
                     </button>

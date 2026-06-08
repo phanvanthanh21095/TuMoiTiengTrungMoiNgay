@@ -326,6 +326,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-8",
+    lessonTitle: "Bài 8: Hỏi đường",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Hỏi đường đến ga tàu điện ngầm",
+        lines: [
+          { speaker: 'A', chinese: '请问，地铁站怎么走？', pinyin: 'Qǐngwèn, dìtiě zhàn zěnme zǒu?', vietnamese: 'Xin hỏi, ga tàu điện ngầm đi như thế nào?' },
+          { speaker: 'B', chinese: '你先往前走，过两个路口，然后左拐。', pinyin: 'Nǐ xiān wǎng qián zǒu, guò liǎng gè lùkǒu, ránhòu zuǒ guǎi.', vietnamese: 'Bạn đi thẳng trước, qua hai ngã tư, sau đó rẽ trái.' },
+          { speaker: 'A', chinese: '走路远吗？', pinyin: 'Zǒulù yuǎn ma?', vietnamese: 'Đi bộ có xa không?' },
+          { speaker: 'B', chinese: '不远，大约十分钟就到了。', pinyin: 'Bù yuǎn, dàyuē shí fēnzhōng jiù dào le.', vietnamese: 'Không xa, khoảng 10 phút là tới.' },
+          { speaker: 'A', chinese: '哦，明白了，谢谢你！', pinyin: 'Ò, míngbai le, xièxie nǐ!', vietnamese: 'Ồ, hiểu rồi, cảm ơn bạn!' },
+          { speaker: 'B', chinese: '不客气。', pinyin: 'Bù kèqi.', vietnamese: 'Không có gì.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Hỏi đường đến công viên",
+        lines: [
+          { speaker: 'A', chinese: '请问，公园在哪里？', pinyin: 'Qǐngwèn, gōngyuán zài nǎlǐ?', vietnamese: 'Xin hỏi, công viên ở đâu?' },
+          { speaker: 'B', chinese: '公园在这条马路的右边。', pinyin: 'Gōngyuán zài zhè tiáo mǎlù de yòubiān.', vietnamese: 'Công viên ở bên phải con đường này.' },
+          { speaker: 'A', chinese: '离这里远吗？', pinyin: 'Lí zhèlǐ yuǎn ma?', vietnamese: 'Cách đây có xa không?' },
+          { speaker: 'B', chinese: '不远，走路大约五分钟就到。', pinyin: 'Bù yuǎn, zǒulù dàyuē wǔ fēnzhōng jiù dào.', vietnamese: 'Không xa, đi bộ khoảng 5 phút là tới.' },
+          { speaker: 'A', chinese: '太好了，谢谢你！', pinyin: 'Tài hǎo le, xièxie nǐ!', vietnamese: 'Tuyệt quá, cảm ơn bạn!' },
+          { speaker: 'B', chinese: '没问题。', pinyin: 'Méi wèntí.', vietnamese: 'Không sao.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Hỏi đường đến cửa hàng tiện lợi",
+        lines: [
+          { speaker: 'A', chinese: '请问，便利店怎么走？', pinyin: 'Qǐngwèn, biànlìdiàn zěnme zǒu?', vietnamese: 'Xin hỏi, đi cửa hàng tiện lợi như thế nào?' },
+          { speaker: 'B', chinese: '你往前走，过红绿灯，然后右拐。', pinyin: 'Nǐ wǎng qián zǒu, guò hónglǜdēng, ránhòu yòu guǎi.', vietnamese: 'Bạn đi thẳng, qua đèn giao thông, sau đó rẽ phải.' },
+          { speaker: 'A', chinese: '它离这里远吗？', pinyin: 'Tā lí zhèlǐ yuǎn ma?', vietnamese: 'Nó cách đây xa không?' },
+          { speaker: 'B', chinese: '不远，走路只需要三分钟。', pinyin: 'Bù yuǎn, zǒulù zhǐ xūyào sān fēnzhōng.', vietnamese: 'Không xa, đi bộ chỉ mất 3 phút.' },
+          { speaker: 'A', chinese: '明白了，谢谢你！', pinyin: 'Míngbai le, xièxie nǐ!', vietnamese: 'Hiểu rồi, cảm ơn bạn!' },
+          { speaker: 'B', chinese: '不客气。', pinyin: 'Bù kèqi.', vietnamese: 'Không có gì.' }
+        ]
+      }
+    ]
   }
 ];
 
