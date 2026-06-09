@@ -911,9 +911,9 @@ export default function App() {
                           <div
                             key={word.id}
                             onClick={() => setSelectedWordForModal(word)}
-                            className="bg-white hover:bg-slate-50 border border-slate-200 p-4 rounded-xl flex items-center justify-between gap-4 transition group relative shadow-sm cursor-pointer select-text"
+                            className="bg-white hover:bg-slate-50 border border-slate-200 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition group relative shadow-sm cursor-pointer select-text"
                           >
-                            <div className="flex items-center gap-4 min-w-0">
+                            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 min-w-0 w-full sm:w-auto">
                               {/* Hanzi sign */}
                               <div className="h-12 min-w-12 px-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900 text-2xl font-sans tracking-wide shrink-0 whitespace-nowrap">
                                 {word.character}
@@ -933,7 +933,7 @@ export default function App() {
                             </div>
 
                             {/* Option actions */}
-                            <div className="flex items-center gap-2 shrink-0">
+                            <div className="flex items-center justify-end sm:justify-start gap-2 shrink-0 w-full sm:w-auto pt-2 sm:pt-0 border-t border-slate-100 sm:border-transparent mt-2 sm:mt-0">
 
                               {/* Study indicator badge */}
                               <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border hidden sm:inline-block ${word.status === 'mastered'
@@ -1096,12 +1096,12 @@ export default function App() {
       </footer>
 
       {selectedWordForModal && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm transition-opacity"
           onClick={() => setSelectedWordForModal(null)}
         >
-          <div 
-            className="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-100 flex flex-col transform transition-all duration-350 scale-100"
+          <div
+            className="bg-white rounded-[2rem] max-w-xl w-full overflow-hidden shadow-2xl border border-slate-100 flex flex-col transform transition-all duration-350 scale-100"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
@@ -1120,25 +1120,28 @@ export default function App() {
 
             {/* Modal Content */}
             <div className="p-6 flex flex-col gap-6 overflow-y-auto max-h-[70vh]">
-              {/* Character Details Box */}
-              <div className="flex gap-6 items-start">
-                {/* Tianzige grid layout for character */}
-                <div className="relative w-28 h-28 bg-rose-50/30 border-2 border-rose-100 rounded-2xl flex items-center justify-center text-slate-900 text-6xl font-sans tracking-wide shrink-0 shadow-inner overflow-hidden select-all">
-                  {/* Grid Lines */}
-                  <div className="absolute inset-0 border border-dashed border-rose-200/40 pointer-events-none" />
-                  <div className="absolute inset-y-0 left-1/2 border-l border-dashed border-rose-200/50 pointer-events-none" />
-                  <div className="absolute inset-x-0 top-1/2 border-t border-dashed border-rose-200/50 pointer-events-none" />
-                  <div className="absolute inset-0 rotate-45 scale-105 border-t border-dashed border-rose-100/50 pointer-events-none" />
-                  <div className="absolute inset-0 -rotate-45 scale-105 border-t border-dashed border-rose-100/50 pointer-events-none" />
-                  
-                  {/* Character */}
-                  <span className="relative z-10 font-bold">{selectedWordForModal.character}</span>
+              <div className="flex flex-col gap-6 items-start w-full">
+                {/* Tianzige grid layout for characters */}
+                <div className="flex flex-wrap gap-2 w-fit max-w-full">
+                  {Array.from(selectedWordForModal.character).map((char, index) => (
+                    <div key={index} className="relative w-24 h-24 md:w-28 md:h-28 bg-rose-50/30 border-2 border-rose-100 rounded-2xl flex items-center justify-center text-slate-900 text-5xl md:text-6xl font-sans tracking-wide shrink-0 shadow-inner overflow-hidden select-all">
+                      {/* Grid Lines */}
+                      <div className="absolute inset-0 border border-dashed border-rose-200/40 pointer-events-none" />
+                      <div className="absolute inset-y-0 left-1/2 border-l border-dashed border-rose-200/50 pointer-events-none" />
+                      <div className="absolute inset-x-0 top-1/2 border-t border-dashed border-rose-200/50 pointer-events-none" />
+                      <div className="absolute inset-0 rotate-45 scale-150 border-t border-dashed border-rose-100/50 pointer-events-none" />
+                      <div className="absolute inset-0 -rotate-45 scale-150 border-t border-dashed border-rose-100/50 pointer-events-none" />
+
+                      {/* Character */}
+                      <span className="relative z-10 font-bold">{char}</span>
+                    </div>
+                  ))}
                 </div>
 
                 {/* Primary Info */}
-                <div className="flex flex-col gap-2.5 justify-center py-1">
+                <div className="flex flex-col gap-2 justify-center py-1 flex-1 min-w-[200px]">
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-2xl font-black text-amber-600 tracking-wide select-all">
+                    <span className="font-mono text-2xl font-black text-amber-600 tracking-wide select-all whitespace-nowrap">
                       {selectedWordForModal.pinyin}
                     </span>
                     <button
@@ -1153,13 +1156,12 @@ export default function App() {
                     {selectedWordForModal.definition}
                   </div>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border ${
-                      selectedWordForModal.status === 'mastered'
-                        ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
-                        : selectedWordForModal.status === 'learning'
-                          ? 'bg-amber-50 text-amber-600 border-amber-200'
-                          : 'bg-slate-100 text-slate-500 border-slate-200'
-                    }`}>
+                    <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold tracking-wider uppercase border ${selectedWordForModal.status === 'mastered'
+                      ? 'bg-emerald-50 text-emerald-600 border-emerald-200'
+                      : selectedWordForModal.status === 'learning'
+                        ? 'bg-amber-50 text-amber-600 border-amber-200'
+                        : 'bg-slate-100 text-slate-500 border-slate-200'
+                      }`}>
                       {selectedWordForModal.status === 'mastered' ? 'Đã thuộc' : selectedWordForModal.status === 'learning' ? 'Đang học' : 'Mới tinh'}
                     </span>
                     {selectedWordForModal.favorite && (
@@ -1184,7 +1186,7 @@ export default function App() {
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-widest block">
                   Ví dụ mẫu
                 </span>
-                
+
                 {selectedWordForModal.exampleChinese ? (
                   <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/70 flex flex-col gap-2 relative group/ex">
                     <div className="flex items-start justify-between gap-4">
@@ -1215,7 +1217,7 @@ export default function App() {
                 )}
               </div>
             </div>
-            
+
             {/* Modal Footer */}
             <div className="px-6 py-4 bg-slate-50 border-t border-slate-100 flex justify-end">
               <button
