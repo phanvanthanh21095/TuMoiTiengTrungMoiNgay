@@ -365,6 +365,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-9",
+    lessonTitle: "Bài 9: Màu sắc",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Nhận xét màu sắc",
+        lines: [
+          { speaker: 'A', chinese: '你觉得这个颜色怎么样？', pinyin: 'Nǐ juéde zhège yánsè zěnmeyàng?', vietnamese: 'Bạn thấy màu này thế nào?' },
+          { speaker: 'B', chinese: '我觉得颜色有点深。', pinyin: 'Wǒ juéde yánsè yǒudiǎn shēn.', vietnamese: 'Tôi thấy màu này hơi đậm.' },
+          { speaker: 'A', chinese: '深一点儿不好吗？', pinyin: 'Shēn yìdiǎnr bù hǎo ma?', vietnamese: 'Đậm hơn một chút không tốt sao?' },
+          { speaker: 'B', chinese: '我想要浅一点儿的。', pinyin: 'Wǒ xiǎng yào qiǎn yìdiǎnr de.', vietnamese: 'Tôi muốn màu nhạt hơn một chút.' },
+          { speaker: 'A', chinese: '这个颜色比较浅。', pinyin: 'Zhège yánsè bǐjiào qiǎn.', vietnamese: 'Màu này khá nhạt.' },
+          { speaker: 'B', chinese: '对，这个更合适。', pinyin: 'Duì, zhège gèng héshì.', vietnamese: 'Đúng rồi, màu này phù hợp hơn.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Nói về màu sắc trong nhà",
+        lines: [
+          { speaker: 'A', chinese: '你觉得这个房间的颜色怎么样？', pinyin: 'Nǐ juéde zhège fángjiān de yánsè zěnmeyàng?', vietnamese: 'Bạn thấy màu của căn phòng này thế nào?' },
+          { speaker: 'B', chinese: '我觉得白色很好看。', pinyin: 'Wǒ juéde báisè hěn hǎokàn.', vietnamese: 'Tôi thấy màu trắng rất đẹp.' },
+          { speaker: 'A', chinese: '白色让房间看起来更大。', pinyin: 'Báisè ràng fángjiān kàn qǐlái gèng dà.', vietnamese: 'Màu trắng làm căn phòng trông rộng hơn.' },
+          { speaker: 'B', chinese: '是的，也比较亮。', pinyin: 'Shì de, yě bǐjiào liàng.', vietnamese: 'Đúng vậy, cũng sáng hơn.' },
+          { speaker: 'A', chinese: '那你喜欢深色的房间吗？', pinyin: 'Nà nǐ xǐhuan shēnsè de fángjiān ma?', vietnamese: 'Vậy bạn có thích phòng màu đậm không?' },
+          { speaker: 'B', chinese: '不太喜欢，我更喜欢浅色。', pinyin: 'Bú tài xǐhuan, wǒ gèng xǐhuan qiǎnsè.', vietnamese: 'Không thích lắm, tôi thích màu nhạt hơn.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Hỏi màu khi mua áo",
+        lines: [
+          { speaker: 'A', chinese: '你好，这件衣服有别的颜色吗？', pinyin: 'Nǐ hǎo, zhè jiàn yīfu yǒu bié de yánsè ma?', vietnamese: 'Chào bạn, áo này có màu khác không?' },
+          { speaker: 'B', chinese: '有的，有黑色和白色。', pinyin: 'Yǒu de, yǒu hēisè hé báisè.', vietnamese: 'Có, có màu đen và màu trắng.' },
+          { speaker: 'A', chinese: '黑色看起来会不会太深？', pinyin: 'Hēisè kàn qǐlái huì bú huì tài shēn?', vietnamese: 'Màu đen nhìn có bị quá đậm không?' },
+          { speaker: 'B', chinese: '不会，很显瘦。', pinyin: 'Bú huì, hěn xiǎn shòu.', vietnamese: 'Không đâu, nhìn rất gọn dáng.' },
+          { speaker: 'A', chinese: '那我试一下黑色吧。', pinyin: 'Nà wǒ shì yíxià hēisè ba.', vietnamese: 'Vậy tôi thử màu đen nhé.' },
+          { speaker: 'B', chinese: '好的，试衣间在那边。', pinyin: 'Hǎo de, shìyījiān zài nàbiān.', vietnamese: 'Vâng, phòng thử đồ ở bên kia.' }
+        ]
+      }
+    ]
   }
 ];
 

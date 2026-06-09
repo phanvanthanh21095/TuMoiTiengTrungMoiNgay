@@ -377,6 +377,39 @@ const GRAMMAR_DATA: GrammarLesson[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-9",
+    lessonTitle: "Bài 9: Màu sắc",
+    points: [
+      {
+        title: "1. Cấu trúc Tính Từ + 一点儿 (yìdiǎnr) - Hơn một chút",
+        description: "Dùng khi muốn nói màu đậm hơn / nhạt hơn / sáng hơn một chút.",
+        formula: "Tính Từ + 一点儿 (yìdiǎnr)",
+        examples: [
+          { chinese: "这个颜色亮一点儿。", pinyin: "Zhège yánsè liàng yìdiǎnr.", vietnamese: "Màu này sáng hơn một chút." },
+          { chinese: "我想要浅一点儿的颜色。", pinyin: "Wǒ xiǎng yào qiǎn yìdiǎnr de yánsè.", vietnamese: "Tôi muốn màu nhạt hơn một chút." }
+        ]
+      },
+      {
+        title: "2. Cấu trúc 看起来 (kàn qǐlái) + Tính từ - Trông có vẻ...",
+        description: "Dùng khi nhận xét màu sắc bằng cảm nhận thị giác.",
+        formula: "看起来 (kàn qǐlái) + Tính từ",
+        examples: [
+          { chinese: "这个颜色看起来很好看。", pinyin: "Zhège yánsè kàn qǐlái hěn hǎokàn.", vietnamese: "Màu này nhìn rất đẹp." },
+          { chinese: "深色看起来比较稳重。", pinyin: "Shēnsè kàn qǐlái bǐjiào wěnzhòng.", vietnamese: "Màu đậm trông khá chững chạc." }
+        ]
+      },
+      {
+        title: "3. Cấu trúc 比较 (bǐjiào) + Tính từ - Khá, tương đối",
+        description: "Dùng khi so sánh nhẹ, nói mức độ vừa phải.",
+        formula: "比较 (bǐjiào) + Tính từ",
+        examples: [
+          { chinese: "白色比较干净。", pinyin: "Báisè bǐjiào gānjìng.", vietnamese: "Màu trắng khá sạch sẽ." },
+          { chinese: "这个颜色比较深。", pinyin: "Zhège yánsè bǐjiào shēn.", vietnamese: "Màu này khá đậm." }
+        ]
+      }
+    ]
   }
 ];
 
