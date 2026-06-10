@@ -410,6 +410,30 @@ const GRAMMAR_DATA: GrammarLesson[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-10",
+    lessonTitle: "Bài 10: Tiền tệ",
+    points: [
+      {
+        title: "1. Cấu trúc hỏi tổng số tiền: 一共 + 多少钱？",
+        description: "Dùng để hỏi tổng số tiền phải trả là bao nhiêu.",
+        formula: "一共 (yígòng) + 多少钱 (duōshao qián)?",
+        examples: [
+          { chinese: "一共多少钱？", pinyin: "Yígòng duōshao qián?", vietnamese: "Tổng cộng bao nhiêu tiền?" },
+          { chinese: "一共一百五十块。", pinyin: "Yígòng yībǎi wǔshí kuài.", vietnamese: "Tổng cộng là 150 tệ." }
+        ]
+      },
+      {
+        title: "2. Cấu trúc diễn tả số tiền đã tiêu: 花 + 多少钱 + 买...",
+        description: "Dùng để nói đã tiêu / đã tốn bao nhiêu tiền để mua một món đồ nào đó.",
+        formula: "花 (huā) + [Số tiền] + 买 (mǎi) + [Món đồ]",
+        examples: [
+          { chinese: "我花一百块买这个。", pinyin: "Wǒ huā yībǎi kuài mǎi zhège.", vietnamese: "Tôi tốn 100 tệ để mua cái này." },
+          { chinese: "他花很多钱买手机。", pinyin: "Tā huā hěn duō qián mǎi shǒujī.", vietnamese: "Anh ấy tốn rất nhiều tiền để mua điện thoại." }
+        ]
+      }
+    ]
   }
 ];
 

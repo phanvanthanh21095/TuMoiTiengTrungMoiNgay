@@ -404,6 +404,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-10",
+    lessonTitle: "Bài 10: Tiền tệ",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Hỏi giá & thanh toán",
+        lines: [
+          { speaker: 'A', chinese: '这个多少钱？', pinyin: 'Zhège duōshao qián?', vietnamese: 'Cái này bao nhiêu tiền?' },
+          { speaker: 'B', chinese: '一共一百二十块。', pinyin: 'Yígòng yībǎi èrshí kuài.', vietnamese: 'Tổng cộng 120 tệ.' },
+          { speaker: 'A', chinese: '有点贵，可以打折吗？', pinyin: 'Yǒudiǎn guì, kěyǐ dǎzhé ma?', vietnamese: 'Hơi đắt, có thể giảm giá không?' },
+          { speaker: 'B', chinese: '可以，打九折。', pinyin: 'Kěyǐ, dǎ jiǔ zhé.', vietnamese: 'Được, giảm 10%.' },
+          { speaker: 'A', chinese: '那我刷卡可以吗？', pinyin: 'Nà wǒ shuā kǎ kěyǐ ma?', vietnamese: 'Vậy tôi quẹt thẻ được không?' },
+          { speaker: 'B', chinese: '可以，请刷银行卡。', pinyin: 'Kěyǐ, qǐng shuā yínhángkǎ.', vietnamese: 'Được, mời quẹt thẻ ngân hàng.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Không đủ tiền - Chuyển khoản",
+        lines: [
+          { speaker: 'A', chinese: '这个价格是多少？', pinyin: 'Zhège jiàgé shì duōshao?', vietnamese: 'Giá của cái này là bao nhiêu?' },
+          { speaker: 'B', chinese: '六十块，不打折。', pinyin: 'Liùshí kuài, bù dǎzhé.', vietnamese: '60 tệ, không giảm giá.' },
+          { speaker: 'A', chinese: '我现金不够。', pinyin: 'Wǒ xiànjīn bú gòu.', vietnamese: 'Tiền mặt của tôi không đủ.' },
+          { speaker: 'B', chinese: '那可以刷卡或者转账。', pinyin: 'Nà kěyǐ shuā kǎ huòzhě zhuǎnzhàng.', vietnamese: 'Vậy có thể quẹt thẻ hoặc chuyển khoản.' },
+          { speaker: 'A', chinese: '我给你转账，可以吗？', pinyin: 'Wǒ gěi nǐ zhuǎnzhàng, kěyǐ ma?', vietnamese: 'Tôi chuyển khoản cho bạn được không?' },
+          { speaker: 'B', chinese: '可以，我马上确认。', pinyin: 'Kěyǐ, wǒ mǎshàng quèrèn.', vietnamese: 'Được, tôi xác nhận ngay.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Thanh toán bằng chuyển khoản / ví điện tử",
+        lines: [
+          { speaker: 'A', chinese: '这个可以用微信支付吗？', pinyin: 'Zhège kěyǐ yòng Wēixìn zhīfù ma?', vietnamese: 'Cái này có thể thanh toán bằng WeChat không?' },
+          { speaker: 'B', chinese: '可以，用支付宝也可以。', pinyin: 'Kěyǐ, yòng Zhīfùbǎo yě kěyǐ.', vietnamese: 'Được, dùng Alipay cũng được.' },
+          { speaker: 'A', chinese: '那我给你转账。', pinyin: 'Nà wǒ gěi nǐ zhuǎnzhàng.', vietnamese: 'Vậy tôi chuyển khoản cho bạn.' },
+          { speaker: 'B', chinese: '好的，一共是两百块。', pinyin: 'Hǎo de, yígòng shì liǎngbǎi kuài.', vietnamese: 'Được, tổng cộng là 200 tệ.' },
+          { speaker: 'A', chinese: '钱已经转过去了。', pinyin: 'Qián yǐjīng zhuǎn guòqù le.', vietnamese: 'Tiền đã chuyển rồi.' },
+          { speaker: 'B', chinese: '我收到了，谢谢你。', pinyin: 'Wǒ shōu dào le, xièxie nǐ.', vietnamese: 'Tôi nhận được rồi, cảm ơn bạn.' }
+        ]
+      }
+    ]
   }
 ];
 
