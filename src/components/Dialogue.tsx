@@ -441,6 +441,30 @@ const LESSONS_DATA: LessonData[] = [
           { speaker: 'A', chinese: '钱已经转过去了。', pinyin: 'Qián yǐjīng zhuǎn guòqù le.', vietnamese: 'Tiền đã chuyển rồi.' },
           { speaker: 'B', chinese: '我收到了，谢谢你。', pinyin: 'Wǒ shōu dào le, xièxie nǐ.', vietnamese: 'Tôi nhận được rồi, cảm ơn bạn.' }
         ]
+      },
+      {
+        title: "Hội thoại 4: Mua sắm vào cuối tuần (Zhōumò Gòuwù)",
+        lines: [
+          { speaker: 'A', chinese: '上午好！', pinyin: 'Shàngwǔ hǎo!', vietnamese: 'Chào buổi sáng!' },
+          { speaker: 'B', chinese: '上午好！欢迎光临！你想买什么？', pinyin: 'Shàngwǔ hǎo! Huānyíng guānglín! Nǐ xiǎng mǎi shénme?', vietnamese: 'Chào buổi sáng! Hoan nghênh quý khách. Bạn muốn mua gì ạ?' },
+          { speaker: 'A', chinese: '我想看一件衣服。那件天蓝色的衣服很好看，可以给我看一下吗？', pinyin: 'Wǒ xiǎng kàn yí jiàn yīfu. Nà jiàn tiānlánsè de yīfu hěn hǎokàn, kěyǐ gěi wǒ kàn yíxià ma?', vietnamese: 'Tôi muốn xem một cái áo. Cái áo màu xanh da trời kia đẹp quá, có thể cho tôi xem thử không?' },
+          { speaker: 'B', chinese: '可以。这件浅色的衣服，夏天穿看起来很亮，也很干净。你想试穿一下吗？试衣间在那边。', pinyin: 'Kěyǐ. Zhè jiàn qiǎnsè de yīfu, xiàtiān chuān kànqǐlái hěn liàng, yě hěn gānjìng. Nǐ xiǎng shì chuān yíxià ma? Shìyījiān zài nàbian.', vietnamese: 'Được chứ. Cái áo này màu nhạt, mùa hè mặc nhìn rất sáng và sạch sẽ. Bạn có muốn mặc thử không? Phòng thử đồ ở bên kia.' },
+          { speaker: 'A', chinese: '谢谢。这件衣服穿起来很舒服。但是你有深色一点儿的吗？', pinyin: 'Xièxie. Zhè jiàn yīfu chuān qǐlái hěn shūfu. Dànshì nǐ yǒu shēnsè yìdiǎnr de ma?', vietnamese: 'Cảm ơn. Cái áo này mặc rất thoải mái. Nhưng bạn có màu tối hơn một chút không?' },
+          { speaker: 'B', chinese: '我们有黑色和深蓝色。你喜欢黑色还是深蓝色？', pinyin: 'Wǒmen yǒu hēisè hé shēnlánsè. Nǐ xǐhuan hēisè háishì shēnlánsè?', vietnamese: 'Chúng tôi có màu đen và màu xanh đậm. Bạn thích màu đen hay màu xanh đậm?' },
+          { speaker: 'A', chinese: '我要深蓝色的。这个多少钱？', pinyin: 'Wǒ yào shēnlánsè de. Zhège duōshao qián?', vietnamese: 'Cho tôi lấy màu xanh đậm nhé. Cái này bao nhiêu tiền?' },
+          { speaker: 'B', chinese: '它的价格是三十五万越南盾。', pinyin: 'Tā de jiàgé shì sānshíwǔ wàn Yuènán dùn.', vietnamese: 'Giá của nó là 350.000 VND.' },
+          { speaker: 'A', chinese: '三十五万越南盾？太贵了！今天是星期天，有打折吗？', pinyin: 'Sānshíwǔ wàn Yuènán dùn? Tài guì le! Jīntiān shì xīngqītiān, yǒu dǎzhé ma?', vietnamese: '350k? Đắt quá! Hôm nay là Chủ nhật, có giảm giá không?' },
+          { speaker: 'B', chinese: '你的中文太好了！你是外国人吗？', pinyin: 'Nǐ de Zhōngwén tài hǎo le! Nǐ shì wàiguórén ma?', vietnamese: 'Tiếng Trung của bạn giỏi quá! Bạn là người nước ngoài phải không?' },
+          { speaker: 'A', chinese: '是的，我是越南人。现在我在这里学习。', pinyin: 'Shì de, wǒ shì Yuènán rén. Xiànzài wǒ zài zhèlǐ xuéxí.', vietnamese: 'Vâng, tôi là người Việt Nam, hiện tại tôi đang học ở đây.' },
+          { speaker: 'B', chinese: '哦，原来你是学生！那我给你打折吧。一共算你三十万越南盾就可以了。', pinyin: 'Ó, yuánlái nǐ shì xuéshēng! Nà wǒ gěi nǐ dǎzhé ba. Yígòng suàn nǐ sānshí wàn Yuènán dùn jiù kěyǐ le.', vietnamese: 'Ồ, ra là sinh viên! Vậy tôi sẽ giảm giá cho bạn nhé. Tổng cộng tính bạn 300k thôi.' },
+          { speaker: 'A', chinese: '很便宜，谢谢你！很高兴认识你。', pinyin: 'Hěn piányi, xièxie nǐ! Hěn gāoxìng rènshi nǐ.', vietnamese: 'Rất rẻ, cảm ơn bạn! Rất vui được biết bạn.' },
+          { speaker: 'B', chinese: '我也很高兴。你怎么支付？', pinyin: 'Wǒ yě hěn gāoxìng. Nǐ zěnme zhīfù?', vietnamese: 'Tôi cũng rất vui. Bạn thanh toán thế nào?' },
+          { speaker: 'A', chinese: '我的现金不够，只有十万越南盾。我可以刷卡或者转账吗？', pinyin: 'Wǒ de xiànjīn bù gòu, zhǐ yǒu shí wàn Yuènán dùn. Wǒ kěyǐ shuākǎ huòzhě zhuǎnzhàng ma?', vietnamese: 'Tiền mặt của tôi không đủ, chỉ có 100k thôi. Tôi có thể quẹt thẻ hoặc chuyển khoản không?' },
+          { speaker: 'B', chinese: '可以，你可以用支付宝或者微信支付。', pinyin: 'Kěyǐ, nǐ kěyǐ yòng Zhīfùbǎo huòzhě Wēixìn zhīfù.', vietnamese: 'Dạ được, bạn có thể thanh toán bằng Alipay hoặc WeChat.' },
+          { speaker: 'A', chinese: '那我用微信转账吧。我已经付款了。', pinyin: 'Nà wǒ yòng Wēixìn zhuǎnzhàng ba. Wǒ yǐjīng fùkuǎn le.', vietnamese: 'Vậy tôi chuyển khoản bằng WeChat nhé. Tôi đã thanh toán rồi.' },
+          { speaker: 'B', chinese: '好的，我马上确认。我已经收到钱了。谢谢你。祝你周末开心！', pinyin: 'Hǎo de, wǒ mǎshàng quèrèn. Wǒ yǐjīng shōudào qián le. Xièxie nǐ. Zhù nǐ zhōumò kāixīn!', vietnamese: 'Được, tôi xác nhận ngay. Tôi đã nhận được tiền rồi. Cảm ơn bạn. Chúc bạn cuối tuần vui vẻ!' },
+          { speaker: 'A', chinese: '再见！', pinyin: 'Zàijiàn!', vietnamese: 'Tạm biệt!' }
+        ]
       }
     ]
   }
