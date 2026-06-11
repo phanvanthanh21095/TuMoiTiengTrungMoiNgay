@@ -6666,5 +6666,605 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
+  },
+  {
+    id: '12_1',
+    character: '米饭',
+    pinyin: 'mǐfàn',
+    definition: 'Cơm trắng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_2',
+    character: '面条',
+    pinyin: 'miàntiáo',
+    definition: 'Mì',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_3',
+    character: '馒头',
+    pinyin: 'mántou',
+    definition: 'Bánh bao chay',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_4',
+    character: '包子',
+    pinyin: 'bāozi',
+    definition: 'Bánh bao nhân',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_5',
+    character: '鸡蛋',
+    pinyin: 'jīdàn',
+    definition: 'Trứng gà',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_6',
+    character: '鸡肉',
+    pinyin: 'jīròu',
+    definition: 'Thịt gà',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_7',
+    character: '猪肉',
+    pinyin: 'zhūròu',
+    definition: 'Thịt heo',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_8',
+    character: '牛肉',
+    pinyin: 'niúròu',
+    definition: 'Thịt bò',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_9',
+    character: '蔬菜',
+    pinyin: 'shūcài',
+    definition: 'Rau củ',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_10',
+    character: '青菜',
+    pinyin: 'qīngcài',
+    definition: 'Rau xanh',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_11',
+    character: '土豆',
+    pinyin: 'tǔdòu',
+    definition: 'Khoai tây',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_12',
+    character: '西红柿',
+    pinyin: 'xīhóngshì',
+    definition: 'Cà chua',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_13',
+    character: '豆腐',
+    pinyin: 'dòufu',
+    definition: 'Đậu phụ',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_14',
+    character: '饺子',
+    pinyin: 'jiǎozi',
+    definition: 'Bánh há cảo, sủi cảo',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_15',
+    character: '炒饭',
+    pinyin: 'chǎofàn',
+    definition: 'Cơm chiên',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_16',
+    character: '炒面',
+    pinyin: 'chǎomiàn',
+    definition: 'Mì xào',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_17',
+    character: '煮',
+    pinyin: 'zhǔ',
+    definition: 'Luộc',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_18',
+    character: '炸',
+    pinyin: 'zhá',
+    definition: 'Chiên, rán',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_19',
+    character: '烧',
+    pinyin: 'shāo',
+    definition: 'Nấu (ninh, kho)',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_20',
+    character: '烤',
+    pinyin: 'kǎo',
+    definition: 'Nướng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_21',
+    character: '炒',
+    pinyin: 'chǎo',
+    definition: 'Xào',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_22',
+    character: '蒸',
+    pinyin: 'zhēng',
+    definition: 'Hấp',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_23',
+    character: '煎',
+    pinyin: 'jiān',
+    definition: 'Chiên ít dầu, áp chảo',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_24',
+    character: '炖',
+    pinyin: 'dùn',
+    definition: 'Hầm',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_25',
+    character: '不了',
+    pinyin: 'bù liǎo',
+    definition: 'không nổi, không xong, không được',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_26',
+    character: '热',
+    pinyin: 'rè',
+    definition: 'nóng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_27',
+    character: '菜',
+    pinyin: 'cài',
+    definition: 'món',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_28',
+    character: '天气',
+    pinyin: 'tiānqì',
+    definition: 'thời tiết',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_29',
+    character: '番茄',
+    pinyin: 'fānqié',
+    definition: 'cà chua',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_30',
+    character: '臭',
+    pinyin: 'chòu',
+    definition: 'thối',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_31',
+    character: '酸',
+    pinyin: 'suān',
+    definition: 'chua',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_32',
+    character: '甜',
+    pinyin: 'tián',
+    definition: 'ngọt',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_33',
+    character: '苦',
+    pinyin: 'kǔ',
+    definition: 'đắng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_34',
+    character: '辣',
+    pinyin: 'là',
+    definition: 'cay',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_35',
+    character: '涩',
+    pinyin: 'sè',
+    definition: 'chát',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_36',
+    character: '咸',
+    pinyin: 'xián',
+    definition: 'mặn',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_37',
+    character: '淡',
+    pinyin: 'dàn',
+    definition: 'nhạt',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_38',
+    character: '重要',
+    pinyin: 'zhòngyào',
+    definition: 'quan trọng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_39',
+    character: '饿',
+    pinyin: 'è',
+    definition: 'đói',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_40',
+    character: '真',
+    pinyin: 'zhēn',
+    definition: 'thật',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_41',
+    character: '听说',
+    pinyin: 'tīngshuō',
+    definition: 'nghe nói',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_42',
+    character: '糖醋',
+    pinyin: 'tángcù',
+    definition: 'chua ngọt',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_43',
+    character: '排骨',
+    pinyin: 'páigǔ',
+    definition: 'sườn',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_44',
+    character: '有名',
+    pinyin: 'yǒumíng',
+    definition: 'nổi tiếng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_45',
+    character: '服务员',
+    pinyin: 'fúwùyuán',
+    definition: 'nhân viên phục vụ',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_46',
+    character: '碗',
+    pinyin: 'wǎn',
+    definition: 'bát',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_47',
+    character: '汤',
+    pinyin: 'tāng',
+    definition: 'canh, súp',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_48',
+    character: '香',
+    pinyin: 'xiāng',
+    definition: 'thơm',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_49',
+    character: '暖和',
+    pinyin: 'nuǎnhuo',
+    definition: 'ấm áp, ấm người',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_50',
+    character: '下次',
+    pinyin: 'xià cì',
+    definition: 'lần sau',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_51',
+    character: '清淡',
+    pinyin: 'qīngdàn',
+    definition: 'thanh đạm, ít dầu mỡ, vị nhẹ',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_52',
+    character: '平时',
+    pinyin: 'píngshí',
+    definition: 'bình thường',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_53',
+    character: '油腻的',
+    pinyin: 'yóunì de',
+    definition: 'nhiều dầu mỡ, ngấy',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_54',
+    character: '素菜馆',
+    pinyin: 'sùcàiguǎn',
+    definition: 'nhà hàng chay, quán ăn chay',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_55',
+    character: '馆',
+    pinyin: 'guǎn',
+    definition: 'quán, nhà',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_56',
+    character: '拿手',
+    pinyin: 'náshǒu',
+    definition: 'sở trường',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_57',
+    character: '简单',
+    pinyin: 'jiǎndān',
+    definition: 'đơn giản',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_58',
+    character: '一定',
+    pinyin: 'yídìng',
+    definition: 'chắc chắn',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_59',
+    character: '餐厅',
+    pinyin: 'cāntīng',
+    definition: 'nhà hàng',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '12_60',
+    character: '喝',
+    pinyin: 'hē',
+    definition: 'uống',
+    category: 'Bài 12: Chủ đề món ăn',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
   }
 ];

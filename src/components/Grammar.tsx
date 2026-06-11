@@ -458,6 +458,31 @@ const GRAMMAR_DATA: GrammarLesson[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-12",
+    lessonTitle: "Bài 12: Chủ đề món ăn",
+    points: [
+      {
+        title: "1. Động từ + 不了 (bù liǎo) - Không nổi / Không được",
+        description: "Dùng để chỉ không thể làm được hành động đó do điều kiện khách quan hoặc năng lực có hạn.",
+        formula: "Động từ + 不了 (bù liǎo)",
+        examples: [
+          { chinese: "吃不了这么多。", pinyin: "Chī bù liǎo zhème duō.", vietnamese: "Ăn không nổi nhiều như vậy." },
+          { chinese: "太热了，我睡不了。", pinyin: "Tài rè le, wǒ shuì bù liǎo.", vietnamese: "Nóng quá, tôi không ngủ được." },
+          { chinese: "这么多菜我们吃不了。", pinyin: "Zhème duō cài, wǒmen chī bù liǎo.", vietnamese: "Nhiều món vậy chúng ta ăn không hết." }
+        ]
+      },
+      {
+        title: "2. 看起来 (kàn qǐlái) - Trông có vẻ / Nhìn có vẻ",
+        description: "Dùng để diễn tả cảm nhận từ bên ngoài, dựa trên quan sát.",
+        formula: "看起来 (kàn qǐlái) + [Tính từ / Nhận xét]",
+        examples: [
+          { chinese: "这条鱼看起来很好吃。", pinyin: "Zhè tiáo yú kàn qǐlái hěn hǎo chī.", vietnamese: "Con cá này trông có vẻ rất ngon." },
+          { chinese: "今天的天气看起来不错。", pinyin: "Jīntiān de tiānqì kàn qǐlái bú cuò.", vietnamese: "Thời tiết hôm nay trông có vẻ ổn." }
+        ]
+      }
+    ]
   }
 ];
 export default function Grammar() {

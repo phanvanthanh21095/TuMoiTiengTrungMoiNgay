@@ -1090,8 +1090,8 @@ export default function App() {
       {/* Styled Footer */}
       <footer className="border-t border-slate-200 bg-slate-50 text-slate-500 text-[11px] text-center py-7 mt-8" id="app-footer">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span>THIẾT KẾ ĐẶC QUYỀN TRÊN NỀN TẢNG PVT</span>
-          <span>© 2026 Học thuộc lòng Tiếng Trung. Bản quyền thuộc về Phan Văn Thành. Biểu trưng bởi phác đồ nét vẽ 田字格</span>
+          <span>THIẾT KẾ ĐẶC QUYỀN THUỘC VỀ PVT</span>
+          <span>© 2026 Học thuộc lòng Tiếng Trung. Bản quyền thuộc về Phan Văn Thành.</span>
         </div>
       </footer>
 

@@ -506,6 +506,43 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-12",
+    lessonTitle: "Bài 12: Chủ đề món ăn",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Nhận xét món ăn",
+        lines: [
+          { speaker: 'A', chinese: '这道菜看起来很好吃！', pinyin: 'Zhè dào cài kàn qǐlái hěn hǎochī!', vietnamese: 'Món này trông ngon quá!' },
+          { speaker: 'B', chinese: '你尝尝，味道又香又辣。', pinyin: 'Nǐ chángchang, wèidào yòu xiāng yòu là.', vietnamese: 'Bạn thử đi, hương vị vừa thơm vừa cay.' },
+          { speaker: 'A', chinese: '真不错，不过对我来说有点太辣了。', pinyin: 'Zhēn búcuò, búguò duì wǒ lái shuō yǒudiǎn tài là le.', vietnamese: 'Ngon thật, nhưng với tôi thì hơi cay một chút.' },
+          { speaker: 'B', chinese: '我就喜欢这种味道。', pinyin: 'Wǒ jiù xǐhuān zhè zhǒng wèidào.', vietnamese: 'Tôi lại thích vị như thế này.' },
+          { speaker: 'A', chinese: '下次我们可以点清淡一点的菜。', pinyin: 'Xià cì wǒmen kěyǐ diǎn qīngdàn yìdiǎn de cài.', vietnamese: 'Lần sau chúng ta có thể gọi món thanh đạm hơn.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Hỏi về thói quen ăn uống",
+        lines: [
+          { speaker: 'A', chinese: '你平时喜欢吃什么菜？', pinyin: 'Nǐ píngshí xǐhuān chī shénme cài?', vietnamese: 'Bình thường bạn thích ăn món gì?' },
+          { speaker: 'B', chinese: '我比较喜欢吃清淡的菜，不太喜欢油腻的。', pinyin: 'Wǒ bǐjiào xǐhuān chī qīngdàn de cài, bú tài xǐhuān yóunì de.', vietnamese: 'Tôi thích ăn món thanh đạm, không thích đồ nhiều dầu.' },
+          { speaker: 'A', chinese: '我也是，尤其不喜欢太咸的菜。', pinyin: 'Wǒ yě shì, yóuqí bú xǐhuān tài xián de cài.', vietnamese: 'Tôi cũng vậy, đặc biệt là không thích món quá mặn.' },
+          { speaker: 'B', chinese: '那我们下次一起去吃素菜馆吧！', pinyin: 'Nà wǒmen xià cì yìqǐ qù chī sùcài guǎn ba!', vietnamese: 'Vậy lần sau chúng ta cùng đi ăn ở quán đồ chay nhé!' },
+          { speaker: 'A', chinese: '好啊，我正想试试看。', pinyin: 'Hǎo a, wǒ zhèng xiǎng shìshi kàn.', vietnamese: 'Được đấy, tôi cũng đang muốn thử xem sao.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Nấu ăn tại nhà",
+        lines: [
+          { speaker: 'A', chinese: '你会做饭吗？', pinyin: 'Nǐ huì zuò fàn ma?', vietnamese: 'Bạn biết nấu ăn không?' },
+          { speaker: 'B', chinese: '会一点儿，我经常在家做饭。', pinyin: 'Huì yìdiǎnr, wǒ jīngcháng zài jiā zuò fàn.', vietnamese: 'Biết một chút, tôi thường nấu ăn ở nhà.' },
+          { speaker: 'A', chinese: '你最拿手的菜是什么？', pinyin: 'Nǐ zuì náshǒu de cài shì shénme?', vietnamese: 'Món sở trường của bạn là món gì?' },
+          { speaker: 'B', chinese: '是番茄炒蛋，简单又好吃。', pinyin: 'Shì fānqié chǎo dàn, jiǎndān yòu hǎochī.', vietnamese: 'Là trứng xào cà chua, đơn giản mà ngon.' },
+          { speaker: 'A', chinese: '下次你做给我吃吧！', pinyin: 'Xià cì nǐ zuò gěi wǒ chī ba!', vietnamese: 'Lần sau bạn nấu cho tôi ăn nhé!' },
+          { speaker: 'B', chinese: '没问题，你一定会喜欢的。', pinyin: 'Méiwèntí, nǐ yídìng huì xǐhuān de.', vietnamese: 'Không vấn đề gì, chắc chắn bạn sẽ thích!' }
+        ]
+      }
+    ]
   }
 ];
 
