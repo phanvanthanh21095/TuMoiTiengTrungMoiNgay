@@ -251,8 +251,8 @@ const DEFAULT_PASSAGES: PassageData[] = [
     ]
   },
   {
-    id: "passage-18",
-    title: "Chủ đề: Con vật yêu thích của tôi (我最喜欢的动物)",
+    id: "passage-basic-18",
+    title: "Đoạn văn 9: Con vật yêu thích của tôi (我最喜欢的动物)",
     lines: [
       { chinese: "我非常喜欢动物。", pinyin: "Wǒ fēicháng xǐhuan dòngwù.", vietnamese: "Tôi rất thích động vật." },
       { chinese: "我家里养了很多宠物，比如狗、猫和鱼。", pinyin: "Wǒ jiālǐ yǎng le hěn duō chǒngwù, bǐrú gǒu, māo hé yú.", vietnamese: "Nhà tôi nuôi rất nhiều thú cưng, ví dụ như chó, mèo và cá." },
