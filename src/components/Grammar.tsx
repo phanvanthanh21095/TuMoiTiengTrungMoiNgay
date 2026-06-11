@@ -434,9 +434,32 @@ const GRAMMAR_DATA: GrammarLesson[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-11",
+    lessonTitle: "Bài 11: Động vật",
+    points: [
+      {
+        title: "1. Cấu trúc liệt kê ví dụ với 比如 (bǐrú)",
+        description: "Dùng để liệt kê ví dụ sau một danh từ hoặc chủ đề đã nói.",
+        formula: ".... + 比如 (bǐrú) + VD1、VD2....",
+        examples: [
+          { chinese: "动物园里有很多动物，比如老虎、大象和狮子。", pinyin: "Dòngwùyuán lǐ yǒu hěn duō dòngwù, bǐrú lǎohǔ, dàxiàng hé shīzi.", vietnamese: "Trong sở thú có rất nhiều động vật, ví dụ như hổ, voi và sư tử." },
+          { chinese: "海里有很多生物，比如鱼、虾、章鱼。", pinyin: "Hǎilǐ yǒu hěn duō shēngwù, bǐrú yú, xiā, zhāngyú.", vietnamese: "Dưới biển có rất nhiều sinh vật, chẳng hạn như cá, tôm, bạch tuộc." }
+        ]
+      },
+      {
+        title: "2. Cấu trúc chỉ cảm quan 看起来 (kàn qǐlái) - Trông có vẻ / nhìn có vẻ",
+        description: "Dùng để diễn tả cảm nhận từ bên ngoài, dựa trên quan sát bằng mắt.",
+        formula: "看起来 (kàn qǐlái) + [Nhận xét / Tính từ]",
+        examples: [
+          { chinese: "这条鱼看起来很好吃。", pinyin: "Zhè tiáo yú kàn qǐlái hěn hǎochī.", vietnamese: "Con cá này trông có vẻ rất ngon." },
+          { chinese: "今天的天气看起来不错。", pinyin: "Jīntiān de tiānqì kàn qǐlái búcuò.", vietnamese: "Thời tiết hôm nay trông có vẻ ổn." }
+        ]
+      }
+    ]
   }
 ];
-
 export default function Grammar() {
   const [selectedLessonIdx, setSelectedLessonIdx] = useState<number>(0);
   const [activePointIdx, setActivePointIdx] = useState<number>(0);

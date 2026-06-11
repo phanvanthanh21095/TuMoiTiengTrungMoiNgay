@@ -5966,5 +5966,685 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
+  },
+  {
+    id: '11_1',
+    character: '动物',
+    pinyin: 'dòngwù',
+    definition: 'động vật',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_2',
+    character: '狗',
+    pinyin: 'gǒu',
+    definition: 'chó',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_3',
+    character: '猫',
+    pinyin: 'māo',
+    definition: 'mèo',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_4',
+    character: '鸟',
+    pinyin: 'niǎo',
+    definition: 'chim',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_5',
+    character: '鱼',
+    pinyin: 'yú',
+    definition: 'cá',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_6',
+    character: '牛',
+    pinyin: 'niú',
+    definition: 'bò',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_7',
+    character: '猪',
+    pinyin: 'zhū',
+    definition: 'heo',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_8',
+    character: '鸡',
+    pinyin: 'jī',
+    definition: 'gà',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_9',
+    character: '鸭',
+    pinyin: 'yā',
+    definition: 'vịt',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_10',
+    character: '马',
+    pinyin: 'mǎ',
+    definition: 'ngựa',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_11',
+    character: '羊',
+    pinyin: 'yáng',
+    definition: 'dê / cừu',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_12',
+    character: '老鼠',
+    pinyin: 'lǎoshǔ',
+    definition: 'chuột',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_13',
+    character: '兔子',
+    pinyin: 'tùzi',
+    definition: 'thỏ',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_14',
+    character: '蛇',
+    pinyin: 'shé',
+    definition: 'rắn',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_15',
+    character: '老虎',
+    pinyin: 'lǎohǔ',
+    definition: 'hổ',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_16',
+    character: '狮子',
+    pinyin: 'shīzi',
+    definition: 'sư tử',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_17',
+    character: '大象',
+    pinyin: 'dàxiàng',
+    definition: 'voi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_18',
+    character: '猴子',
+    pinyin: 'hóuzi',
+    definition: 'khỉ',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_19',
+    character: '熊',
+    pinyin: 'xióng',
+    definition: 'gấu',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_20',
+    character: '鹿',
+    pinyin: 'lù',
+    definition: 'hươu',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_21',
+    character: '青蛙',
+    pinyin: 'qīngwā',
+    definition: 'ếch',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_22',
+    character: '乌龟',
+    pinyin: 'wūguī',
+    definition: 'rùa',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_23',
+    character: '蜜蜂',
+    pinyin: 'mìfēng',
+    definition: 'ong',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_24',
+    character: '蝴蝶',
+    pinyin: 'húdié',
+    definition: 'bướm',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_25',
+    character: '宠物',
+    pinyin: 'chǒngwù',
+    definition: 'thú cưng',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_26',
+    character: '不错',
+    pinyin: 'búcuò',
+    definition: 'không tệ, khá tốt, ổn',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_27',
+    character: '比如',
+    pinyin: 'bǐrú',
+    definition: 'ví dụ như, chẳng hạn như',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_28',
+    character: '里',
+    pinyin: 'lǐ',
+    definition: 'trong, dưới',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_29',
+    character: '养',
+    pinyin: 'yǎng',
+    definition: 'nuôi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_30',
+    character: '等',
+    pinyin: 'děng',
+    definition: 'đợi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_31',
+    character: '特别',
+    pinyin: 'tèbié',
+    definition: 'đặc biệt',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_32',
+    character: '怕',
+    pinyin: 'pà',
+    definition: 'sợ',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_33',
+    character: '害怕',
+    pinyin: 'hàipà',
+    definition: 'hơi sợ / sợ hãi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_34',
+    character: '新鲜',
+    pinyin: 'xīnxiān',
+    definition: 'tươi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_35',
+    character: '海鲜',
+    pinyin: 'hǎixiān',
+    definition: 'hải sản',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_36',
+    character: '最',
+    pinyin: 'zuì',
+    definition: 'nhất',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_37',
+    character: '尤其',
+    pinyin: 'yóuqí',
+    definition: 'đặc biệt',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_38',
+    character: '上次',
+    pinyin: 'shàng cì',
+    definition: 'lần trước',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_39',
+    character: '餐厅',
+    pinyin: 'cāntīng',
+    definition: 'nhà hàng',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_40',
+    character: '味道',
+    pinyin: 'wèidào',
+    definition: 'hương vị',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_41',
+    character: '鱿鱼',
+    pinyin: 'yóuyú',
+    definition: 'mực',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_42',
+    character: '章鱼',
+    pinyin: 'zhāngyú',
+    definition: 'bạch tuộc',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_43',
+    character: '不一样',
+    pinyin: 'bù yíyàng',
+    definition: 'khác nhau',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_44',
+    character: '一样',
+    pinyin: 'yíyàng',
+    definition: 'giống nhau',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_45',
+    character: '螺',
+    pinyin: 'luó',
+    definition: 'ốc',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_46',
+    character: '因为',
+    pinyin: 'yīnwèi',
+    definition: 'vì',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_47',
+    character: '重',
+    pinyin: 'zhòng',
+    definition: 'đậm / nặng',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_48',
+    character: '人类',
+    pinyin: 'rénlèi',
+    definition: 'con người',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_49',
+    character: '乖',
+    pinyin: 'guāi',
+    definition: 'ngoan',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_50',
+    character: '门口',
+    pinyin: 'ménkǒu',
+    definition: 'cổng / cửa',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_51',
+    character: '温柔',
+    pinyin: 'wēnróu',
+    definition: 'hiền / dịu dàng',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_52',
+    character: '聪明',
+    pinyin: 'cōngming',
+    definition: 'thông minh',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_53',
+    character: '笨',
+    pinyin: 'bèn',
+    definition: 'ngu ngốc',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_54',
+    character: '不过',
+    pinyin: 'búguò',
+    definition: 'nhưng',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_55',
+    character: '那',
+    pinyin: 'nà',
+    definition: 'vậy',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_56',
+    character: '调皮',
+    pinyin: 'tiáopí',
+    definition: 'nghịch ngợm',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_57',
+    character: '为什么',
+    pinyin: 'wèi shénme',
+    definition: 'vì sao',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_58',
+    character: '脏',
+    pinyin: 'zāng',
+    definition: 'bẩn',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_59',
+    character: '凶',
+    pinyin: 'xiōng',
+    definition: 'dữ',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_60',
+    character: '当然了',
+    pinyin: 'dāngrán le',
+    definition: 'tất nhiên rồi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_61',
+    character: '安静',
+    pinyin: 'ānjìng',
+    definition: 'yên tĩnh',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_62',
+    character: '总是',
+    pinyin: 'zǒngshì',
+    definition: 'lúc nào cũng',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_63',
+    character: '活跃',
+    pinyin: 'huóyuè',
+    definition: 'năng động / hoạt bát',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_64',
+    character: '食物',
+    pinyin: 'shíwù',
+    definition: 'đồ ăn',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_65',
+    character: '照顾',
+    pinyin: 'zhàogù',
+    definition: 'chăm sóc',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_66',
+    character: '蜂蜜',
+    pinyin: 'fēngmì',
+    definition: 'mật ong',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_67',
+    character: '属',
+    pinyin: 'shǔ',
+    definition: 'tuổi (dùng hỏi tuổi) / cầm tinh',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_68',
+    character: '口感',
+    pinyin: 'kǒugǎn',
+    definition: 'vị / cảm giác khi ăn',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
   }
 ];

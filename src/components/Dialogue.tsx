@@ -467,6 +467,45 @@ const LESSONS_DATA: LessonData[] = [
         ]
       }
     ]
+  },
+  {
+    id: "lesson-11",
+    lessonTitle: "Bài 11: Động vật",
+    dialogues: [
+      {
+        title: "Hội thoại 1: Nói về thú cưng trong nhà",
+        lines: [
+          { speaker: 'A', chinese: '你家有养宠物吗？', pinyin: 'Nǐ jiā yǒu yǎng chǒngwù ma?', vietnamese: 'Nhà bạn có nuôi thú cưng không?' },
+          { speaker: 'B', chinese: '有啊，我家养了一只猫。', pinyin: 'Yǒu a, wǒ jiā yǎng le yì zhī māo.', vietnamese: 'Có chứ, nhà tôi nuôi một con mèo.' },
+          { speaker: 'A', chinese: '它是什么颜色的？', pinyin: 'Tā shì shénme yánsè de?', vietnamese: 'Nó màu gì vậy?' },
+          { speaker: 'B', chinese: '是白色的，看起来很干净。', pinyin: 'Shì báisè de, kàn qǐlái hěn gānjìng.', vietnamese: 'Màu trắng, trông rất sạch sẽ.' },
+          { speaker: 'A', chinese: '它乖不乖？', pinyin: 'Tā guāi bù guāi?', vietnamese: 'Nó có ngoan không?' },
+          { speaker: 'B', chinese: '特别乖，每天都会在门口等我。', pinyin: 'Tèbié guāi, měitiān dōu huì zài ménkǒu děng wǒ.', vietnamese: 'Rất ngoan, ngày nào cũng đợi tôi ở cửa.' }
+        ]
+      },
+      {
+        title: "Hội thoại 2: Đi sở thú",
+        lines: [
+          { speaker: 'A', chinese: '周末你想去哪儿玩？', pinyin: 'Zhōumò nǐ xiǎng qù nǎr wán?', vietnamese: 'Cuối tuần này bạn muốn đi đâu chơi?' },
+          { speaker: 'B', chinese: '我想去动物园。', pinyin: 'Wǒ xiǎng qù dòngwùyuán.', vietnamese: 'Tôi muốn đi sở thú.' },
+          { speaker: 'A', chinese: '动物园里有什么动物？', pinyin: 'Dòngwùyuán lǐ yǒu shénme dòngwù?', vietnamese: 'Trong sở thú có những con vật gì?' },
+          { speaker: 'B', chinese: '有很多，比如老虎、大象和猴子。', pinyin: 'Yǒu hěn duō, bǐrú lǎohǔ, dàxiàng hé hóuzi.', vietnamese: 'Có nhiều lắm, như hổ, voi và khỉ.' },
+          { speaker: 'A', chinese: '我最喜欢大象，它看起来很温柔。', pinyin: 'Wǒ zuì xǐhuan dàxiàng, tā kàn qǐlái hěn wēnróu.', vietnamese: 'Tôi thích voi nhất, trông nó rất hiền.' },
+          { speaker: 'B', chinese: '我也喜欢猴子，它们特别聪明。', pinyin: 'Wǒ yě xǐhuan hóuzi, tāmen tèbié cōngmíng.', vietnamese: 'Tôi cũng thích khỉ, chúng rất thông minh.' }
+        ]
+      },
+      {
+        title: "Hội thoại 3: Mua hải sản ở chợ",
+        lines: [
+          { speaker: 'A', chinese: '今天市场的鱼新鲜吗？', pinyin: 'Jīntiān shìchǎng de yú xīnxiān ma?', vietnamese: 'Cá ở chợ hôm nay có tươi không?' },
+          { speaker: 'B', chinese: '特别新鲜，看起来很好吃。', pinyin: 'Tèbié xīnxiān, kàn qǐlái hěn hǎochī.', vietnamese: 'Rất tươi, nhìn là thấy ngon rồi.' },
+          { speaker: 'A', chinese: '我最喜欢吃虾和螃蟹。', pinyin: 'Wǒ zuì xǐhuan chī xiā hé pángxiè.', vietnamese: 'Tôi thích ăn tôm và cua nhất.' },
+          { speaker: 'B', chinese: '我也喜欢，不过螃蟹太贵了。', pinyin: 'Wǒ yě xǐhuan, búguò pángxiè tài guì le.', vietnamese: 'Tôi cũng thích, nhưng cua mắc quá.' },
+          { speaker: 'A', chinese: '那买点鱼吧。', pinyin: 'Nà mǎi diǎn yú ba.', vietnamese: 'Vậy mua ít cá đi.' },
+          { speaker: 'B', chinese: '好啊。', pinyin: 'Hǎo a.', vietnamese: 'Được đó.' }
+        ]
+      }
+    ]
   }
 ];
 
