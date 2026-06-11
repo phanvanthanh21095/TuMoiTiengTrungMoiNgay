@@ -6646,5 +6646,25 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
+  },
+  {
+    id: '11_69',
+    character: '又',
+    pinyin: 'yòu',
+    definition: 'vừa',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
+  },
+  {
+    id: '11_70',
+    character: '玩',
+    pinyin: 'wán',
+    definition: 'chơi',
+    category: 'Bài 11: Động vật',
+    correctCount: 0,
+    incorrectCount: 0,
+    status: 'new'
   }
 ];
