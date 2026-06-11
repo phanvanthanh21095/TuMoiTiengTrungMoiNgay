@@ -32,7 +32,8 @@ import {
   MessageSquare,
   FileText,
   Volume2,
-  GraduationCap
+  GraduationCap,
+  Hash
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -427,6 +428,17 @@ export default function App() {
 
           {/* Quick Streak info and reset links */}
           <div className="flex items-center gap-3">
+            <a
+              href="https://luyen-tieng-trung.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-500/20 transition cursor-pointer"
+              title="Học số đếm Tiếng Trung"
+            >
+              <Hash size={14} />
+              <span>Học Số</span>
+            </a>
+
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-600 text-xs font-bold" title="Số từ bấm trả lời đúng liên tiếp">
               <Flame size={14} className="fill-current animate-pulse text-amber-500" />
               <span>Chuỗi nhớ: {streak}</span>
