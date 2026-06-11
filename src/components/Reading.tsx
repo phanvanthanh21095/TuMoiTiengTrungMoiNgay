@@ -249,6 +249,23 @@ const DEFAULT_PASSAGES: PassageData[] = [
       { chinese: "你越是坚持，世界越会为你让路。", pinyin: "Nǐ yuè shì jiānchí, shìjiè yuè huì wèi nǐ rànglù.", vietnamese: "Bạn càng kiên trì, thế giới càng mở đường cho bạn." },
       { chinese: "才能不是突然出现的光，而是无数个不起眼的日子累积起来的亮。", pinyin: "Cáinéng bú shì tūrán chūxiàn de guāng, ér shì wúshù gè bù qǐyǎn de rìzi lěijī qǐlái de liàng.", vietnamese: "Tài năng không phải là ánh sáng bộc phát, mà là sự tích lũy từ rất nhiều ngày tháng bình thường nhưng đầy cố gắng." }
     ]
+  },
+  {
+    id: "passage-18",
+    title: "Chủ đề: Con vật yêu thích của tôi (我最喜欢的动物)",
+    lines: [
+      { chinese: "我非常喜欢动物。", pinyin: "Wǒ fēicháng xǐhuan dòngwù.", vietnamese: "Tôi rất thích động vật." },
+      { chinese: "我家里养了很多宠物，比如狗、猫和鱼。", pinyin: "Wǒ jiālǐ yǎng le hěn duō chǒngwù, bǐrú gǒu, māo hé yú.", vietnamese: "Nhà tôi nuôi rất nhiều thú cưng, ví dụ như chó, mèo và cá." },
+      { chinese: "我最喜欢的动物是狗。", pinyin: "Wǒ zuì xǐhuan de dòngwù shì gǒu.", vietnamese: "Tuy nhiên, con vật mà tôi thích nhất là chó." },
+      { chinese: "我的狗是白色的，它看起来很干净。", pinyin: "Wǒ de gǒu shì báisè de, tā kànqǐlái hěn gānjìng.", vietnamese: "Chó của tôi màu trắng, nó trông có vẻ rất sạch sẽ." },
+      { chinese: "它不脏，也不凶。", pinyin: "Tā bù zāng, yě bù xiōng.", vietnamese: "Nó không bẩn và cũng không dữ." },
+      { chinese: "它特别乖，也很聪明。", pinyin: "Tā tèbié guāi, yě hěn cōngming.", vietnamese: "Nó đặc biệt ngoan và rất thông minh." },
+      { chinese: "每天它都会在门口等我。", pinyin: "Měitiān tā dōu hùi zài ménkǒu děng wǒ.", vietnamese: "Ngày nào nó cũng ở cổng đợi tôi." },
+      { chinese: "它很活跃，总是喜欢吃东西。", pinyin: "Tā hěn huóyuè, zǒngshì xǐhuan chī dōngxi.", vietnamese: "Nó rất năng động và lúc nào cũng thích đồ ăn." },
+      { chinese: "我很喜欢照顾它。", pinyin: "Wǒ hěn xǐhuan zhàogù tā.", vietnamese: "Tôi rất thích chăm sóc nó" },
+      { chinese: "动物和人类一样，它们都需要爱。", pinyin: "Dòngwù hé rénlèi yíyàng, tāmen dōu xūyào ài.", vietnamese: "Động vật và con người giống nhau, chúng đều cần tình yêu." },
+      { chinese: "当然了，它是我的最好朋友。", pinyin: "Dāngrán le, tā shì wǒ zuì hǎo de péngyou.", vietnamese: "Tất nhiên rồi, nó là người bạn tốt nhất của tôi." }
+    ]
   }
 ];
 
