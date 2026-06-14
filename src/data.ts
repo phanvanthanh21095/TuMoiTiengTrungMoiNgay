@@ -5973,6 +5973,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'dòngwù',
     definition: 'động vật',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我喜欢小动物。',
+    examplePinyin: 'Wǒ xǐhuan xiǎo dòngwù.',
+    exampleVietnamese: 'Tôi thích động vật nhỏ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -5983,6 +5986,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'gǒu',
     definition: 'chó',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我家有一只狗。',
+    examplePinyin: 'Wǒ jiā yǒu yì zhī gǒu.',
+    exampleVietnamese: 'Nhà tôi có một chú chó.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -5993,6 +5999,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'māo',
     definition: 'mèo',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只猫很可爱。',
+    examplePinyin: 'Zhè zhī māo hěn kě ài.',
+    exampleVietnamese: 'Chú mèo này rất đáng yêu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6003,6 +6012,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'niǎo',
     definition: 'chim',
     category: 'Bài 11: Động vật',
+    exampleChinese: '树上有一只鸟。',
+    examplePinyin: 'Shù shàng yǒu yì zhī niǎo.',
+    exampleVietnamese: 'Trên cây có một chú chim.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6013,6 +6025,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yú',
     definition: 'cá',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我不喜欢吃鱼。',
+    examplePinyin: 'Wǒ bù xǐhuan chī yú.',
+    exampleVietnamese: 'Tôi không thích ăn cá.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6023,6 +6038,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'niú',
     definition: 'bò',
     category: 'Bài 11: Động vật',
+    exampleChinese: '那是一头牛。',
+    examplePinyin: 'Nà shì yì tóu niú.',
+    exampleVietnamese: 'Đó là một con bò.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6033,6 +6051,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhū',
     definition: 'heo',
     category: 'Bài 11: Động vật',
+    exampleChinese: '猪肉很贵。',
+    examplePinyin: 'Zhūròu hěn guì.',
+    exampleVietnamese: 'Thịt heo rất đắt.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6043,6 +6064,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'jī',
     definition: 'gà',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我们在吃鸡肉。',
+    examplePinyin: 'Wǒmen zài chī jīròu.',
+    exampleVietnamese: 'Chúng tôi đang ăn thịt gà.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6053,6 +6077,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yā',
     definition: 'vịt',
     category: 'Bài 11: Động vật',
+    exampleChinese: '湖里有鸭子。',
+    examplePinyin: 'Hú lǐ yǒu yāzi.',
+    exampleVietnamese: 'Trong hồ có vịt.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6063,6 +6090,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'mǎ',
     definition: 'ngựa',
     category: 'Bài 11: Động vật',
+    exampleChinese: '他会骑马。',
+    examplePinyin: 'Tā huì qí mǎ.',
+    exampleVietnamese: 'Anh ấy biết cưỡi ngựa.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6073,6 +6103,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yáng',
     definition: 'dê / cừu',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我想吃羊肉。',
+    examplePinyin: 'Wǒ xiǎng chī yángròu.',
+    exampleVietnamese: 'Tôi muốn ăn thịt cừu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6083,6 +6116,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'lǎoshǔ',
     definition: 'chuột',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我怕老鼠。',
+    examplePinyin: 'Wǒ pà lǎoshǔ.',
+    exampleVietnamese: 'Tôi sợ chuột.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6093,6 +6129,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tùzi',
     definition: 'thỏ',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只兔子很白。',
+    examplePinyin: 'Zhè zhī tùzi hěn bái.',
+    exampleVietnamese: 'Chú thỏ này rất trắng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6103,6 +6142,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shé',
     definition: 'rắn',
     category: 'Bài 11: Động vật',
+    exampleChinese: '蛇很危险。',
+    examplePinyin: 'Shé hěn wēixiǎn.',
+    exampleVietnamese: 'Rắn rất nguy hiểm.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6113,6 +6155,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'lǎohǔ',
     definition: 'hổ',
     category: 'Bài 11: Động vật',
+    exampleChinese: '动物园里有老虎。',
+    examplePinyin: 'Dòngwùyuán lǐ yǒu lǎohǔ.',
+    exampleVietnamese: 'Trong sở thú có hổ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6123,6 +6168,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shīzi',
     definition: 'sư tử',
     category: 'Bài 11: Động vật',
+    exampleChinese: '狮子在睡觉。',
+    examplePinyin: 'Shīzi zài shuìjiào.',
+    exampleVietnamese: 'Sư tử đang ngủ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6133,6 +6181,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'dàxiàng',
     definition: 'voi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '大象非常大。',
+    examplePinyin: 'Dàxiàng fēicháng dà.',
+    exampleVietnamese: 'Voi vô cùng lớn.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6143,6 +6194,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'hóuzi',
     definition: 'khỉ',
     category: 'Bài 11: Động vật',
+    exampleChinese: '猴子很聪明。',
+    examplePinyin: 'Hóuzi hěn cōngming.',
+    exampleVietnamese: 'Khỉ rất thông minh.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6153,6 +6207,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xióng',
     definition: 'gấu',
     category: 'Bài 11: Động vật',
+    exampleChinese: '那是一只黑熊。',
+    examplePinyin: 'Nà shì yì zhī hēixióng.',
+    exampleVietnamese: 'Đó là một con gấu đen.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6163,6 +6220,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'lù',
     definition: 'hươu',
     category: 'Bài 11: Động vật',
+    exampleChinese: '森林里有鹿。',
+    examplePinyin: 'Sēnlín lǐ yǒu lù.',
+    exampleVietnamese: 'Trong rừng có hươu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6173,6 +6233,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'qīngwā',
     definition: 'ếch',
     category: 'Bài 11: Động vật',
+    exampleChinese: '青蛙在叫。',
+    examplePinyin: 'Qīngwā zài jiào.',
+    exampleVietnamese: 'Ếch đang kêu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6183,6 +6246,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'wūguī',
     definition: 'rùa',
     category: 'Bài 11: Động vật',
+    exampleChinese: '乌龟走得很慢。',
+    examplePinyin: 'Wūguī zǒu de hěn màn.',
+    exampleVietnamese: 'Rùa đi rất chậm.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6193,6 +6259,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'mìfēng',
     definition: 'ong',
     category: 'Bài 11: Động vật',
+    exampleChinese: '蜜蜂在采蜜。',
+    examplePinyin: 'Mìfēng zài cǎimì.',
+    exampleVietnamese: 'Ong đang lấy mật.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6203,6 +6272,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'húdié',
     definition: 'bướm',
     category: 'Bài 11: Động vật',
+    exampleChinese: '蝴蝶很漂亮。',
+    examplePinyin: 'Húdié hěn piàoliang.',
+    exampleVietnamese: 'Bướm rất đẹp.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6213,6 +6285,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'chǒngwù',
     definition: 'thú cưng',
     category: 'Bài 11: Động vật',
+    exampleChinese: '你养宠物吗？',
+    examplePinyin: 'Nǐ yǎng chǒngwù ma?',
+    exampleVietnamese: 'Bạn có nuôi thú cưng không?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6223,6 +6298,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'búcuò',
     definition: 'không tệ, khá tốt, ổn',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只狗不错。',
+    examplePinyin: 'Zhè zhī gǒu búcuò.',
+    exampleVietnamese: 'Chú chó này không tồi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6233,6 +6311,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'bǐrú',
     definition: 'ví dụ như, chẳng hạn như',
     category: 'Bài 11: Động vật',
+    exampleChinese: '比如猫和狗。',
+    examplePinyin: 'Bǐrú māo hé gǒu.',
+    exampleVietnamese: 'Ví dụ như mèo và chó.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6243,6 +6324,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'lǐ',
     definition: 'trong, dưới',
     category: 'Bài 11: Động vật',
+    exampleChinese: '家里有小狗。',
+    examplePinyin: 'Jiā lǐ yǒu xiǎo gǒu.',
+    exampleVietnamese: 'Trong nhà có chó con.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6253,6 +6337,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yǎng',
     definition: 'nuôi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我想养一只猫。',
+    examplePinyin: 'Wǒ xiǎng yǎng yì zhī māo.',
+    exampleVietnamese: 'Tôi muốn nuôi một chú mèo.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6263,6 +6350,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'děng',
     definition: 'đợi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我喜欢猫、狗等宠物。',
+    examplePinyin: 'Wǒ xǐhuan māo, gǒu děng chǒngwù.',
+    exampleVietnamese: 'Tôi thích các thú cưng như mèo, chó vân vân.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6273,6 +6363,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tèbié',
     definition: 'đặc biệt',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只小鸟特别可爱。',
+    examplePinyin: 'Zhè zhī xiǎo niǎo tèbié kě ài.',
+    exampleVietnamese: 'Chú chim nhỏ này đặc biệt đáng yêu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6283,6 +6376,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'pà',
     definition: 'sợ',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我不怕狗。',
+    examplePinyin: 'Wǒ bú pà gǒu.',
+    exampleVietnamese: 'Tôi không sợ chó.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6293,6 +6389,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'hàipà',
     definition: 'hơi sợ / sợ hãi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '妹妹很害怕蛇。',
+    examplePinyin: 'Mèimei hěn hàipà shé.',
+    exampleVietnamese: 'Em gái rất sợ rắn.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6303,6 +6402,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xīnxiān',
     definition: 'tươi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这鱼很新鲜。',
+    examplePinyin: 'Zhè yú hěn xīnxiān.',
+    exampleVietnamese: 'Cá này rất tươi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6313,6 +6415,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'hǎixiān',
     definition: 'hải sản',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我喜欢吃海鲜。',
+    examplePinyin: 'Wǒ xǐhuan chī hǎixiān.',
+    exampleVietnamese: 'Tôi thích ăn hải sản.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6323,6 +6428,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zuì',
     definition: 'nhất',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我最喜欢小狗。',
+    examplePinyin: 'Wǒ zuì xǐhuan xiǎo gǒu.',
+    exampleVietnamese: 'Tôi thích chó con nhất.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6333,6 +6441,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yóuqí',
     definition: 'đặc biệt',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我喜欢动物，尤其是猫。',
+    examplePinyin: 'Wǒ xǐhuan dòngwù, yóuqí shì māo.',
+    exampleVietnamese: 'Tôi thích động vật, đặc biệt là mèo.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6343,6 +6454,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shàng cì',
     definition: 'lần trước',
     category: 'Bài 11: Động vật',
+    exampleChinese: '上次我看到了老虎。',
+    examplePinyin: 'Shàng cì wǒ kàndào le lǎohǔ.',
+    exampleVietnamese: 'Lần trước tôi đã nhìn thấy hổ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6353,6 +6467,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'cāntīng',
     definition: 'nhà hàng',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这家餐厅的海鲜很好吃。',
+    examplePinyin: 'Zhè jiā cāntīng de hǎixiān hěn hǎochī.',
+    exampleVietnamese: 'Hải sản của nhà hàng này rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6363,6 +6480,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'wèidào',
     definition: 'hương vị',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这道菜味道很好。',
+    examplePinyin: 'Zhè dào cài wèidào hěn hǎo.',
+    exampleVietnamese: 'Món ăn này hương vị rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6373,6 +6493,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yóuyú',
     definition: 'mực',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我想吃烤鱿鱼。',
+    examplePinyin: 'Wǒ xiǎng chī kǎo yóuyú.',
+    exampleVietnamese: 'Tôi muốn ăn mực nướng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6383,6 +6506,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhāngyú',
     definition: 'bạch tuộc',
     category: 'Bài 11: Động vật',
+    exampleChinese: '你吃过章鱼吗？',
+    examplePinyin: 'Nǐ chī guo zhāngyú ma?',
+    exampleVietnamese: 'Bạn đã ăn bạch tuộc bao giờ chưa?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6393,6 +6519,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'bù yíyàng',
     definition: 'khác nhau',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这两只猫不一样。',
+    examplePinyin: 'Zhè liǎng zhī māo bù yíyàng.',
+    exampleVietnamese: 'Hai chú mèo này không giống nhau.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6403,6 +6532,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yíyàng',
     definition: 'giống nhau',
     category: 'Bài 11: Động vật',
+    exampleChinese: '它们长得一样。',
+    examplePinyin: 'Tāmen zhǎng de yíyàng.',
+    exampleVietnamese: 'Chúng lớn lên giống nhau.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6413,6 +6545,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'luó',
     definition: 'ốc',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我不喜欢吃螺。',
+    examplePinyin: 'Wǒ bù xǐhuan chī luó.',
+    exampleVietnamese: 'Tôi không thích ăn ốc.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6423,6 +6558,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yīnwèi',
     definition: 'vì',
     category: 'Bài 11: Động vật',
+    exampleChinese: '因为我喜欢猫，所以我养了一只。',
+    examplePinyin: 'Yīnwèi wǒ xǐhuan māo, suǒyǐ wǒ yǎng le yì zhī.',
+    exampleVietnamese: 'Bởi vì tôi thích mèo nên tôi đã nuôi một con.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6433,6 +6571,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhòng',
     definition: 'đậm / nặng',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这头猪很重。',
+    examplePinyin: 'Zhè tóu zhū hěn zhòng.',
+    exampleVietnamese: 'Con heo này rất nặng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6443,6 +6584,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'rénlèi',
     definition: 'con người',
     category: 'Bài 11: Động vật',
+    exampleChinese: '人类也是动物。',
+    examplePinyin: 'Rénlèi yě shì dòngwù.',
+    exampleVietnamese: 'Con người cũng là động vật.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6453,6 +6597,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'guāi',
     definition: 'ngoan',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只狗很乖。',
+    examplePinyin: 'Zhè zhī gǒu hěn guāi.',
+    exampleVietnamese: 'Chú chó này rất ngoan.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6463,6 +6610,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'ménkǒu',
     definition: 'cổng / cửa',
     category: 'Bài 11: Động vật',
+    exampleChinese: '小猫在门口等你。',
+    examplePinyin: 'Xiǎo māo zài ménkǒu děng nǐ.',
+    exampleVietnamese: 'Mèo con đang đợi bạn ở cửa.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6473,6 +6623,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'wēnróu',
     definition: 'hiền / dịu dàng',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只兔子很温柔。',
+    examplePinyin: 'Zhè zhī tùzi hěn wēnróu.',
+    exampleVietnamese: 'Chú thỏ này rất hiền.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6483,6 +6636,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'cōngming',
     definition: 'thông minh',
     category: 'Bài 11: Động vật',
+    exampleChinese: '猴子很聪明。',
+    examplePinyin: 'Hóuzi hěn cōngming.',
+    exampleVietnamese: 'Khỉ rất thông minh.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6493,6 +6649,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'bèn',
     definition: 'ngu ngốc',
     category: 'Bài 11: Động vật',
+    exampleChinese: '它不笨。',
+    examplePinyin: 'Tā bú bèn.',
+    exampleVietnamese: 'Nó không ngốc.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6503,6 +6662,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'búguò',
     definition: 'nhưng',
     category: 'Bài 11: Động vật',
+    exampleChinese: '它很可爱，不过有点凶。',
+    examplePinyin: 'Tā hěn kě ài, búguò yǒudiǎn xiōng.',
+    exampleVietnamese: 'Nó rất đáng yêu, nhưng hơi dữ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6513,6 +6675,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'nà',
     definition: 'vậy',
     category: 'Bài 11: Động vật',
+    exampleChinese: '那是谁的猫？',
+    examplePinyin: 'Nà shì shéi de māo?',
+    exampleVietnamese: 'Đó là con mèo của ai?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6523,6 +6688,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tiáopí',
     definition: 'nghịch ngợm',
     category: 'Bài 11: Động vật',
+    exampleChinese: '小狗很调皮。',
+    examplePinyin: 'Xiǎo gǒu hěn tiáopí.',
+    exampleVietnamese: 'Chó con rất nghịch ngợm.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6533,6 +6701,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'wèi shénme',
     definition: 'vì sao',
     category: 'Bài 11: Động vật',
+    exampleChinese: '你为什么怕狗？',
+    examplePinyin: 'Nǐ wèi shénme pà gǒu?',
+    exampleVietnamese: 'Vì sao bạn sợ chó?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6543,6 +6714,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zāng',
     definition: 'bẩn',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只猫很脏。',
+    examplePinyin: 'Zhè zhī māo hěn zāng.',
+    exampleVietnamese: 'Chú mèo này rất bẩn.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6553,6 +6727,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xiōng',
     definition: 'dữ',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这只狗很凶。',
+    examplePinyin: 'Zhè zhī gǒu hěn xiōng.',
+    exampleVietnamese: 'Chú chó này rất dữ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6563,6 +6740,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'dāngrán le',
     definition: 'tất nhiên rồi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '当然了，我很喜欢它。',
+    examplePinyin: 'Dāngrán le, wǒ hěn xǐhuan tā.',
+    exampleVietnamese: 'Tất nhiên rồi, tôi rất thích nó.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6573,6 +6753,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'ānjìng',
     definition: 'yên tĩnh',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我的猫很安静。',
+    examplePinyin: 'Wǒ de māo hěn ānjìng.',
+    exampleVietnamese: 'Con mèo của tôi rất yên tĩnh.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6583,6 +6766,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zǒngshì',
     definition: 'lúc nào cũng',
     category: 'Bài 11: Động vật',
+    exampleChinese: '它总是睡觉。',
+    examplePinyin: 'Tā zǒngshì shuìjiào.',
+    exampleVietnamese: 'Nó lúc nào cũng ngủ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6593,6 +6779,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'huóyuè',
     definition: 'năng động / hoạt bát',
     category: 'Bài 11: Động vật',
+    exampleChinese: '小狗很活跃。',
+    examplePinyin: 'Xiǎo gǒu hěn huóyuè.',
+    exampleVietnamese: 'Chó con rất năng động.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6603,6 +6792,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shíwù',
     definition: 'đồ ăn',
     category: 'Bài 11: Động vật',
+    exampleChinese: '动物也需要食物。',
+    examplePinyin: 'Dòngwù yě xūyào shíwù.',
+    exampleVietnamese: 'Động vật cũng cần thức ăn.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6613,6 +6805,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhàogù',
     definition: 'chăm sóc',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我会好好照顾它。',
+    examplePinyin: 'Wǒ huì hǎohāo zhàogù tā.',
+    exampleVietnamese: 'Tôi sẽ chăm sóc nó cẩn thận.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6623,6 +6818,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'fēngmì',
     definition: 'mật ong',
     category: 'Bài 11: Động vật',
+    exampleChinese: '熊喜欢吃蜂蜜。',
+    examplePinyin: 'Xióng xǐhuan chī fēngmì.',
+    exampleVietnamese: 'Gấu thích ăn mật ong.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6633,6 +6831,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shǔ',
     definition: 'tuổi (dùng hỏi tuổi) / cầm tinh',
     category: 'Bài 11: Động vật',
+    exampleChinese: '我属猪。',
+    examplePinyin: 'Wǒ shǔ zhū.',
+    exampleVietnamese: 'Tôi cầm tinh con heo.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6643,6 +6844,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'kǒugǎn',
     definition: 'vị / cảm giác khi ăn',
     category: 'Bài 11: Động vật',
+    exampleChinese: '这种鱼口感很好。',
+    examplePinyin: 'Zhè zhǒng yú kǒugǎn hěn hǎo.',
+    exampleVietnamese: 'Loại cá này cảm giác khi ăn rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6653,6 +6857,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yòu',
     definition: 'vừa',
     category: 'Bài 11: Động vật',
+    exampleChinese: '它又聪明又可爱。',
+    examplePinyin: 'Tā yòu cōngming yòu kě ài.',
+    exampleVietnamese: 'Nó vừa thông minh vừa đáng yêu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6663,6 +6870,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'wán',
     definition: 'chơi',
     category: 'Bài 11: Động vật',
+    exampleChinese: '小猫在玩。',
+    examplePinyin: 'Xiǎo māo zài wán.',
+    exampleVietnamese: 'Mèo con đang chơi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6673,6 +6883,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'mǐfàn',
     definition: 'Cơm trắng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我要一碗米饭。',
+    examplePinyin: 'Wǒ yào yì wǎn mǐfàn.',
+    exampleVietnamese: 'Tôi muốn một bát cơm trắng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6683,6 +6896,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'miàntiáo',
     definition: 'Mì',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '他喜欢吃面条。',
+    examplePinyin: 'Tā xǐhuan chī miàntiáo.',
+    exampleVietnamese: 'Anh ấy thích ăn mì.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6693,6 +6909,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'mántou',
     definition: 'Bánh bao chay',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我早上吃了一个馒头。',
+    examplePinyin: 'Wǒ zǎoshang chī le yí ge mántou.',
+    exampleVietnamese: 'Sáng nay tôi đã ăn một chiếc bánh bao chay.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6703,6 +6922,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'bāozi',
     definition: 'Bánh bao nhân',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '包子很好吃。',
+    examplePinyin: 'Bāozi hěn hǎochī.',
+    exampleVietnamese: 'Bánh bao rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6713,6 +6935,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'jīdàn',
     definition: 'Trứng gà',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我每天吃一个鸡蛋。',
+    examplePinyin: 'Wǒ měitiān chī yí ge jīdàn.',
+    exampleVietnamese: 'Tôi ăn một quả trứng gà mỗi ngày.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6723,6 +6948,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'jīròu',
     definition: 'Thịt gà',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我不喜欢吃鸡肉。',
+    examplePinyin: 'Wǒ bù xǐhuan chī jīròu.',
+    exampleVietnamese: 'Tôi không thích ăn thịt gà.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6733,6 +6961,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhūròu',
     definition: 'Thịt heo',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这是猪肉吗？',
+    examplePinyin: 'Zhè shì zhūròu ma?',
+    exampleVietnamese: 'Đây là thịt heo phải không?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6743,6 +6974,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'niúròu',
     definition: 'Thịt bò',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '牛肉面很好吃。',
+    examplePinyin: 'Niúròumiàn hěn hǎochī.',
+    exampleVietnamese: 'Mì thịt bò rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6753,6 +6987,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shūcài',
     definition: 'Rau củ',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '多吃蔬菜对身体好。',
+    examplePinyin: 'Duō chī shūcài duì shēntǐ hǎo.',
+    exampleVietnamese: 'Ăn nhiều rau củ tốt cho sức khỏe.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6763,6 +7000,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'qīngcài',
     definition: 'Rau xanh',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '请给我一盘青菜。',
+    examplePinyin: 'Qǐng gěi wǒ yì pán qīngcài.',
+    exampleVietnamese: 'Xin cho tôi một đĩa rau xanh.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6773,6 +7013,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tǔdòu',
     definition: 'Khoai tây',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我喜欢吃土豆。',
+    examplePinyin: 'Wǒ xǐhuan chī tǔdòu.',
+    exampleVietnamese: 'Tôi thích ăn khoai tây.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6783,6 +7026,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xīhóngshì',
     definition: 'Cà chua',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '西红柿是红色的。',
+    examplePinyin: 'Xīhóngshì shì hóngsè de.',
+    exampleVietnamese: 'Cà chua có màu đỏ.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6793,6 +7039,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'dòufu',
     definition: 'Đậu phụ',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '你想吃豆腐吗？',
+    examplePinyin: 'Nǐ xiǎng chī dòufu ma?',
+    exampleVietnamese: 'Bạn có muốn ăn đậu phụ không?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6803,6 +7052,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'jiǎozi',
     definition: 'Bánh há cảo, sủi cảo',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '春节我们吃饺子。',
+    examplePinyin: 'Chūnjié wǒmen chī jiǎozi.',
+    exampleVietnamese: 'Tết Âm lịch chúng tôi ăn sủi cảo.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6813,6 +7065,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'chǎofàn',
     definition: 'Cơm chiên',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我要一份蛋炒饭。',
+    examplePinyin: 'Wǒ yào yí fèn dàn chǎofàn.',
+    exampleVietnamese: 'Tôi muốn một suất cơm chiên trứng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6823,6 +7078,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'chǎomiàn',
     definition: 'Mì xào',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这盘炒面有点辣。',
+    examplePinyin: 'Zhè pán chǎomiàn yǒudiǎn là.',
+    exampleVietnamese: 'Đĩa mì xào này hơi cay.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6833,6 +7091,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhǔ',
     definition: 'Luộc',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我会煮面条。',
+    examplePinyin: 'Wǒ huì zhǔ miàntiáo.',
+    exampleVietnamese: 'Tôi biết luộc mì.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6843,6 +7104,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhá',
     definition: 'Chiên, rán',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '炸鸡很好吃。',
+    examplePinyin: 'Zhá jī hěn hǎochī.',
+    exampleVietnamese: 'Gà rán rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6853,6 +7117,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'shāo',
     definition: 'Nấu (ninh, kho)',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '红烧肉很有名。',
+    examplePinyin: 'Hóngshāoròu hěn yǒumíng.',
+    exampleVietnamese: 'Thịt kho tàu rất nổi tiếng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6863,6 +7130,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'kǎo',
     definition: 'Nướng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我们去吃烤肉吧。',
+    examplePinyin: 'Wǒmen qù chī kǎoròu ba.',
+    exampleVietnamese: 'Chúng ta đi ăn thịt nướng nhé.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6873,6 +7143,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'chǎo',
     definition: 'Xào',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '炒菜需要油。',
+    examplePinyin: 'Chǎo cài xūyào yóu.',
+    exampleVietnamese: 'Xào rau cần dầu.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6883,6 +7156,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhēng',
     definition: 'Hấp',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这条鱼是蒸的。',
+    examplePinyin: 'Zhè tiáo yú shì zhēng de.',
+    exampleVietnamese: 'Con cá này là hấp.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6893,6 +7169,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'jiān',
     definition: 'Chiên ít dầu, áp chảo',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '煎鸡蛋很好做。',
+    examplePinyin: 'Jiān jīdàn hěn hǎo zuò.',
+    exampleVietnamese: 'Trứng chiên rất dễ làm.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6903,6 +7182,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'dùn',
     definition: 'Hầm',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这锅汤炖了很久。',
+    examplePinyin: 'Zhè guō tāng dùn le hěn jiǔ.',
+    exampleVietnamese: 'Nồi canh này hầm rất lâu rồi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6913,6 +7195,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'bù liǎo',
     definition: 'không nổi, không xong, không được',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我吃不了辣。',
+    examplePinyin: 'Wǒ chī bù liǎo là.',
+    exampleVietnamese: 'Tôi ăn không được cay.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6923,6 +7208,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'rè',
     definition: 'nóng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '趁热吃吧。',
+    examplePinyin: 'Chèn rè chī ba.',
+    exampleVietnamese: 'Nhân lúc còn nóng thì ăn đi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6933,6 +7221,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'cài',
     definition: 'món',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '今天做了三个菜。',
+    examplePinyin: 'Jīntiān zuò le sān ge cài.',
+    exampleVietnamese: 'Hôm nay làm ba món ăn.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6943,6 +7234,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tiānqì',
     definition: 'thời tiết',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '天气太热，不想吃饭。',
+    examplePinyin: 'Tiānqì tài rè, bù xiǎng chīfàn.',
+    exampleVietnamese: 'Thời tiết nóng quá, không muốn ăn cơm.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6953,6 +7247,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'fānqié',
     definition: 'cà chua',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '番茄炒蛋很好吃。',
+    examplePinyin: 'Fānqié chǎo dàn hěn hǎochī.',
+    exampleVietnamese: 'Cà chua xào trứng rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6963,6 +7260,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'chòu',
     definition: 'thối',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '臭豆腐虽然臭，但很好吃。',
+    examplePinyin: 'Chòudòufu suīrán chòu, dàn hěn hǎochī.',
+    exampleVietnamese: 'Đậu phụ thối tuy thối, nhưng rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6973,6 +7273,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'suān',
     definition: 'chua',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这个苹果有点酸。',
+    examplePinyin: 'Zhège píngguǒ yǒudiǎn suān.',
+    exampleVietnamese: 'Quả táo này hơi chua.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6983,6 +7286,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tián',
     definition: 'ngọt',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '蛋糕太甜了。',
+    examplePinyin: 'Dàngāo tài tián le.',
+    exampleVietnamese: 'Bánh kem ngọt quá.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -6993,6 +7299,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'kǔ',
     definition: 'đắng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '苦瓜很苦。',
+    examplePinyin: 'Kǔguā hěn kǔ.',
+    exampleVietnamese: 'Mướp đắng rất đắng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7003,6 +7312,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'là',
     definition: 'cay',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '你喜欢吃辣的吗？',
+    examplePinyin: 'Nǐ xǐhuan chī là de ma?',
+    exampleVietnamese: 'Bạn có thích ăn cay không?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7013,6 +7325,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'sè',
     definition: 'chát',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这茶有点涩。',
+    examplePinyin: 'Zhè chá yǒudiǎn sè.',
+    exampleVietnamese: 'Trà này hơi chát.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7023,6 +7338,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xián',
     definition: 'mặn',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这道菜太咸了。',
+    examplePinyin: 'Zhè dào cài tài xián le.',
+    exampleVietnamese: 'Món ăn này mặn quá.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7033,6 +7351,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'dàn',
     definition: 'nhạt',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '汤有点淡。',
+    examplePinyin: 'Tāng yǒudiǎn dàn.',
+    exampleVietnamese: 'Canh hơi nhạt.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7043,6 +7364,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhòngyào',
     definition: 'quan trọng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '吃饭很重要。',
+    examplePinyin: 'Chīfàn hěn zhòngyào.',
+    exampleVietnamese: 'Ăn cơm rất quan trọng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7053,6 +7377,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'è',
     definition: 'đói',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我饿了。',
+    examplePinyin: 'Wǒ è le.',
+    exampleVietnamese: 'Tôi đói rồi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7063,6 +7390,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'zhēn',
     definition: 'thật',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这道菜真好吃。',
+    examplePinyin: 'Zhè dào cài zhēn hǎochī.',
+    exampleVietnamese: 'Món ăn này thật ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7073,6 +7403,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tīngshuō',
     definition: 'nghe nói',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '听说这家店很好吃。',
+    examplePinyin: 'Tīngshuō zhè jiā diàn hěn hǎochī.',
+    exampleVietnamese: 'Nghe nói quán này rất ngon.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7083,6 +7416,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tángcù',
     definition: 'chua ngọt',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我喜欢吃糖醋排骨。',
+    examplePinyin: 'Wǒ xǐhuan chī tángcù páigǔ.',
+    exampleVietnamese: 'Tôi thích ăn sườn xào chua ngọt.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7093,6 +7429,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'páigǔ',
     definition: 'sườn',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '排骨多少钱一斤？',
+    examplePinyin: 'Páigǔ duōshao qián yì jīn?',
+    exampleVietnamese: 'Sườn bao nhiêu tiền một cân?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7103,6 +7442,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yǒumíng',
     definition: 'nổi tiếng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这家餐厅很有名。',
+    examplePinyin: 'Zhè jiā cāntīng hěn yǒumíng.',
+    exampleVietnamese: 'Nhà hàng này rất nổi tiếng.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7113,6 +7455,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'fúwùyuán',
     definition: 'nhân viên phục vụ',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '服务员，点菜！',
+    examplePinyin: 'Fúwùyuán, diǎn cài!',
+    exampleVietnamese: 'Phục vụ, gọi món!',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7123,6 +7468,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'wǎn',
     definition: 'bát',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '给我一个碗。',
+    examplePinyin: 'Gěi wǒ yí ge wǎn.',
+    exampleVietnamese: 'Cho tôi một cái bát.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7133,6 +7481,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'tāng',
     definition: 'canh, súp',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '你想喝什么汤？',
+    examplePinyin: 'Nǐ xiǎng hē shénme tāng?',
+    exampleVietnamese: 'Bạn muốn uống canh gì?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7143,6 +7494,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xiāng',
     definition: 'thơm',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这菜好香啊！',
+    examplePinyin: 'Zhè cài hǎo xiāng a!',
+    exampleVietnamese: 'Món này thơm quá!',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7153,6 +7507,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'nuǎnhuo',
     definition: 'ấm áp, ấm người',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '喝点热汤，暖和一下。',
+    examplePinyin: 'Hē diǎn rè tāng, nuǎnhuo yíxià.',
+    exampleVietnamese: 'Uống chút canh nóng, cho ấm người một chút.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7163,6 +7520,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'xià cì',
     definition: 'lần sau',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '下次再来。',
+    examplePinyin: 'Xià cì zài lái.',
+    exampleVietnamese: 'Lần sau lại đến.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7173,6 +7533,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'qīngdàn',
     definition: 'thanh đạm, ít dầu mỡ, vị nhẹ',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我喜欢吃清淡的。',
+    examplePinyin: 'Wǒ xǐhuan chī qīngdàn de.',
+    exampleVietnamese: 'Tôi thích ăn đồ thanh đạm.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7183,6 +7546,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'píngshí',
     definition: 'bình thường',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '平时我都在家吃饭。',
+    examplePinyin: 'Píngshí wǒ dōu zài jiā chīfàn.',
+    exampleVietnamese: 'Bình thường tôi đều ăn cơm ở nhà.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7193,6 +7559,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yóunì de',
     definition: 'nhiều dầu mỡ, ngấy',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这道菜太油腻了。',
+    examplePinyin: 'Zhè dào cài tài yóunì le.',
+    exampleVietnamese: 'Món ăn này quá ngấy.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7203,6 +7572,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'sùcàiguǎn',
     definition: 'nhà hàng chay, quán ăn chay',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '附近有一家素菜馆。',
+    examplePinyin: 'Fùjìn yǒu yì jiā sùcàiguǎn.',
+    exampleVietnamese: 'Gần đây có một nhà hàng chay.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7213,6 +7585,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'guǎn',
     definition: 'quán, nhà',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我们去下馆子吧。',
+    examplePinyin: 'Wǒmen qù xià guǎnzi ba.',
+    exampleVietnamese: 'Chúng ta ra quán ăn đi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7223,6 +7598,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'náshǒu',
     definition: 'sở trường',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这是我的拿手菜。',
+    examplePinyin: 'Zhè shì wǒ de náshǒu cài.',
+    exampleVietnamese: 'Đây là món sở trường của tôi.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7233,6 +7611,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'jiǎndān',
     definition: 'đơn giản',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '做这道菜很简单。',
+    examplePinyin: 'Zuò zhè dào cài hěn jiǎndān.',
+    exampleVietnamese: 'Làm món này rất đơn giản.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7243,6 +7624,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'yídìng',
     definition: 'chắc chắn',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '你一定喜欢吃。',
+    examplePinyin: 'Nǐ yídìng xǐhuan chī.',
+    exampleVietnamese: 'Bạn chắc chắn thích ăn.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7253,6 +7637,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'cāntīng',
     definition: 'nhà hàng',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '这家餐厅在哪儿？',
+    examplePinyin: 'Zhè jiā cāntīng zài nǎr?',
+    exampleVietnamese: 'Nhà hàng này ở đâu?',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
@@ -7263,6 +7650,9 @@ export const INITIAL_VOCABULARY: VocabularyWord[] = [
     pinyin: 'hē',
     definition: 'uống',
     category: 'Bài 12: Chủ đề món ăn',
+    exampleChinese: '我想喝水。',
+    examplePinyin: 'Wǒ xiǎng hē shuǐ.',
+    exampleVietnamese: 'Tôi muốn uống nước.',
     correctCount: 0,
     incorrectCount: 0,
     status: 'new'
