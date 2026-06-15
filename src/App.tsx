@@ -46,19 +46,20 @@ import Dialogue from './components/Dialogue';
 import Reading from './components/Reading';
 import SentenceTranslation from './components/SentenceTranslation';
 import Grammar from './components/Grammar';
+import Test from './components/Test';
 import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary'>(() => {
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test'>(() => {
     const path = window.location.pathname.replace(/^\//, '');
-    const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary'];
+    const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary', 'test'];
     if (path && tabOptions.includes(path)) {
-      return path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary';
+      return path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test';
     }
     const savedTab = localStorage.getItem('study_chinese_active_tab');
     if (savedTab && tabOptions.includes(savedTab)) {
-      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary';
+      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test';
     }
     return 'flashcards';
   });
@@ -73,9 +74,9 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/^\//, '');
-      const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary'];
+      const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary', 'test'];
       if (path && tabOptions.includes(path)) {
-        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary');
+        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test');
       } else {
         setActiveTab('flashcards');
       }
@@ -527,7 +528,7 @@ export default function App() {
                 }`}
             >
               <Layers size={14} />
-              <span>Học Flashcards ghép Thử viết</span>
+              <span>Học Flashcards</span>
             </button>
 
             <button
@@ -539,7 +540,7 @@ export default function App() {
                 }`}
             >
               <Keyboard size={14} />
-              <span>Luyện Gõ & Trắc nghiệm</span>
+              <span>Luyện Gõ</span>
             </button>
 
             <button
@@ -551,7 +552,7 @@ export default function App() {
                 }`}
             >
               <MessageSquare size={14} />
-              <span>Đối thoại / Hội thoại</span>
+              <span>Đối thoại</span>
             </button>
 
             <button
@@ -563,7 +564,7 @@ export default function App() {
                 }`}
             >
               <FileText size={14} />
-              <span>Đoạn văn ngắn</span>
+              <span>Đoạn văn</span>
             </button>
 
             <button
@@ -600,6 +601,18 @@ export default function App() {
             >
               <BookOpen size={14} />
               <span>Sổ Từ Vựng</span>
+            </button>
+
+            <button
+              id="tab-test"
+              onClick={() => setActiveTab('test')}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'test'
+                ? 'bg-rose-600 text-white shadow hover:bg-rose-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+            >
+              <CheckCircle size={14} />
+              <span>Kiểm Tra</span>
             </button>
           </div>
         </section>
@@ -688,6 +701,12 @@ export default function App() {
           {activeTab === 'reading' && (
             <div className="py-4" id="reading-tab-container">
               <Reading />
+            </div>
+          )}
+
+          {activeTab === 'test' && (
+            <div className="py-4" id="test-tab-container">
+              <Test />
             </div>
           )}
 
