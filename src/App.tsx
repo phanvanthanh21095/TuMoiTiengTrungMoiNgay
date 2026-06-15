@@ -33,7 +33,8 @@ import {
   FileText,
   Volume2,
   GraduationCap,
-  Hash
+  Hash,
+  Zap
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -437,6 +438,17 @@ export default function App() {
             >
               <Hash size={14} />
               <span>Học Số</span>
+            </a>
+
+            <a
+              href="https://luyen-phan-xa-tieng-trung.vercel.app/quiz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold shadow-md shadow-teal-500/20 transition cursor-pointer"
+              title="Luyện phản xạ Tiếng Trung"
+            >
+              <Zap size={14} />
+              <span>Phản xạ</span>
             </a>
 
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-600 text-xs font-bold" title="Số từ bấm trả lời đúng liên tiếp">
