@@ -441,7 +441,7 @@ export default function App() {
             </a>
 
             <a
-              href="https://luyen-phan-xa-tieng-trung.vercel.app/quiz"
+              href="https://luyen-phan-xa-tieng-trung.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-teal-600 hover:bg-teal-700 text-white text-xs font-bold shadow-md shadow-teal-500/20 transition cursor-pointer"
