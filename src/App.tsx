@@ -972,6 +972,22 @@ export default function App() {
                                   )}
                                 </div>
                                 <span className="text-slate-700 font-medium text-xs sm:text-sm truncate max-w-sm" title={word.definition}>{word.definition}</span>
+                                {word.exampleChinese && (
+                                  <div className="mt-2 text-xs text-slate-500 border-l-2 border-indigo-200 pl-2.5 py-0.5 flex flex-col gap-0.5 max-w-xl" onClick={(e) => e.stopPropagation()}>
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                      <span className="text-slate-800 font-semibold text-sm">{word.exampleChinese}</span>
+                                      <span className="text-slate-400 font-mono text-[11px]">({word.examplePinyin})</span>
+                                      <button
+                                        onClick={(e) => handleSpeakChinese(word.exampleChinese || '', word.id + '_ex', e)}
+                                        className={`p-1 rounded bg-slate-100 hover:bg-slate-200 transition ${speakingWordId === word.id + '_ex' ? 'text-amber-500' : 'text-slate-500 hover:text-amber-500'}`}
+                                        title="Nghe phát âm ví dụ"
+                                      >
+                                        <Volume2 size={12} className={speakingWordId === word.id + '_ex' ? 'animate-pulse' : ''} />
+                                      </button>
+                                    </div>
+                                    <span className="text-slate-500 italic text-[11px]">{word.exampleVietnamese}</span>
+                                  </div>
+                                )}
                               </div>
                             </div>
 
