@@ -958,7 +958,7 @@ export default function App() {
                           >
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 min-w-0 w-full sm:w-auto">
                               {/* Hanzi sign */}
-                              <div className="h-12 min-w-12 px-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900 text-2xl font-sans tracking-wide shrink-0 whitespace-nowrap">
+                              <div className="h-12 min-w-20 px-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900 text-2xl font-sans tracking-wide shrink-0 whitespace-nowrap">
                                 {word.character}
                               </div>
 
