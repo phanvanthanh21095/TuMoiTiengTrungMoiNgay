@@ -34,7 +34,8 @@ import {
   Volume2,
   GraduationCap,
   Hash,
-  Zap
+  Zap,
+  Calendar
 } from 'lucide-react';
 
 import { VocabularyWord } from './types';
@@ -47,19 +48,20 @@ import Reading from './components/Reading';
 import SentenceTranslation from './components/SentenceTranslation';
 import Grammar from './components/Grammar';
 import Test from './components/Test';
+import Diary from './components/Diary';
 import { convertNumberedPinyin } from './utils/pinyin';
 
 export default function App() {
   const [words, setWords] = useState<VocabularyWord[]>([]);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test'>(() => {
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test' | 'diary'>(() => {
     const path = window.location.pathname.replace(/^\//, '');
-    const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary', 'test'];
+    const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary', 'test', 'diary'];
     if (path && tabOptions.includes(path)) {
-      return path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test';
+      return path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test' | 'diary';
     }
     const savedTab = localStorage.getItem('study_chinese_active_tab');
     if (savedTab && tabOptions.includes(savedTab)) {
-      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test';
+      return savedTab as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test' | 'diary';
     }
     return 'flashcards';
   });
@@ -74,9 +76,9 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/^\//, '');
-      const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary', 'test'];
+      const tabOptions = ['flashcards', 'quiz', 'translate', 'grammar', 'dialogue', 'reading', 'dictionary', 'test', 'diary'];
       if (path && tabOptions.includes(path)) {
-        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test');
+        setActiveTab(path as 'flashcards' | 'quiz' | 'translate' | 'grammar' | 'dialogue' | 'reading' | 'dictionary' | 'test' | 'diary');
       } else {
         setActiveTab('flashcards');
       }
@@ -604,6 +606,18 @@ export default function App() {
             </button>
 
             <button
+              id="tab-diary"
+              onClick={() => setActiveTab('diary')}
+              className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'diary'
+                ? 'bg-indigo-600 text-white shadow hover:bg-indigo-700'
+                : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100'
+                }`}
+            >
+              <Calendar size={14} />
+              <span>Nhật Ký</span>
+            </button>
+
+            <button
               id="tab-test"
               onClick={() => setActiveTab('test')}
               className={`flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-bold transition cursor-pointer ${activeTab === 'test'
@@ -707,6 +721,12 @@ export default function App() {
           {activeTab === 'test' && (
             <div className="py-4" id="test-tab-container">
               <Test />
+            </div>
+          )}
+
+          {activeTab === 'diary' && (
+            <div className="py-4" id="diary-tab-container">
+              <Diary />
             </div>
           )}
 
