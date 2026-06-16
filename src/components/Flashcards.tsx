@@ -120,7 +120,7 @@ export default function Flashcards({ words, onUpdateWordStatus, onToggleFavorite
   }, [currentIndex, filteredWords.length, activeWord, isFlipped]);
 
   return (
-    <div className="flex flex-col gap-6 w-full max-w-2xl mx-auto" id="flashcards-section">
+    <div className="flex flex-col gap-6 w-full mx-auto" id="flashcards-section">
       {/* Filter Tabs */}
       <div className="flex flex-wrap items-center justify-between gap-3 bg-white p-1.5 rounded-xl border border-slate-200 shadow-sm" id="flashcard-filters">
         <div className="flex items-center gap-1.5 flex-wrap">

@@ -410,11 +410,11 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500/20 selection:text-indigo-900 flex flex-col" id="main-application-canvas">
 
       {/* Decorative ambient top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-42 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[85em] h-42 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Main Structural Layout Header */}
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur" id="app-top-header">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="max-w-[85em] mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold tracking-tight shadow-md shadow-indigo-600/30 border border-indigo-500/20">
               漢
@@ -471,7 +471,7 @@ export default function App() {
       </header>
 
       {/* Main Container */}
-      <main className="max-w-7xl w-full mx-auto px-4 py-6 flex flex-col gap-6 flex-1" id="dashboard-container">
+      <main className="max-w-[85em] w-full mx-auto px-4 py-6 flex flex-col gap-6 flex-1" id="dashboard-container">
 
         {/* Statistics progress cards bento-grid */}
         <section className="grid grid-cols-2 md:grid-cols-5 gap-3" id="stats-banner-bento">
@@ -623,7 +623,7 @@ export default function App() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start" id="flashcards-tab-container">
 
               {/* Flashcard Slider deck (takes 7 columns in grid) */}
-              <div className="lg:col-span-7 flex flex-col gap-1.5">
+              <div className="lg:col-span-7 flex flex-col gap-2">
                 <div className="flex items-center justify-between px-1">
                   <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">Bộ học bính âm và nghĩa</span>
                   <button
@@ -1148,7 +1148,7 @@ export default function App() {
 
       {/* Styled Footer */}
       <footer className="border-t border-slate-200 bg-slate-50 text-slate-500 text-[11px] text-center py-7 mt-8" id="app-footer">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="max-w-[85em] mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <span>THIẾT KẾ ĐẶC QUYỀN THUỘC VỀ PVT</span>
           <span>© 2026 Học thuộc lòng Tiếng Trung. Bản quyền thuộc về Phan Văn Thành.</span>
         </div>
