@@ -35,9 +35,9 @@ async function gradeWithAI(answersToGrade: any[], checkTones: boolean) {
         Bạn là giáo viên tiếng Trung. Hãy chấm điểm các câu trả lời tự luận sau.
         
         Cấu hình chấm thi:
-        - "checkTones" (chấm thanh điệu): ${checkTones}. 
-          + Nếu checkTones là true: Câu trả lời tiếng Trung/Pinyin phải chính xác tuyệt đối cả về từ vựng lẫn dấu thanh điệu thì mới được điểm tối đa. Nếu sai thanh điệu hoặc thiếu dấu thanh điệu, hãy trừ điểm hoặc cho 0 điểm câu đó.
-          + Nếu checkTones là false: Chấp nhận Pinyin không có dấu thanh điệu hoặc có dấu thanh điệu sai. TUY NHIÊN, KHÔNG ĐƯỢC CHẤP NHẬN SAI TỪ VỰNG HOẶC SAI CHÍNH TẢ PHÁT ÂM (ví dụ: viết "shengban" thay vì "shangban", hoặc viết sai hẳn mặt chữ Hán). Nếu sai từ hoặc sai âm chính tả như vậy, câu đó lập tức nhận 0 điểm (không cho điểm thành phần).
+        - "checkTones" (chấm thanh điệu): ${checkTones}.
+          + NẾU checkTones LÀ true: Bạn phải chấm thanh điệu CỰC KỲ CHẶT CHẼ. Câu trả lời bằng Pinyin phải ghi đúng dấu thanh điệu (ví dụ: "nǐ hǎo", không được chấp nhận "ni hao" hay "ni3 hao3"). Nếu sai thanh điệu hoặc thiếu dấu thanh điệu, hãy trừ điểm hoặc cho 0 điểm câu đó.
+          + NẾU checkTones LÀ false: Bạn TUYỆT ĐỐI KHÔNG ĐƯỢC chấm thanh điệu, hãy hoàn toàn BỎ QUA dấu thanh điệu (chấp nhận cả Pinyin không có dấu như "ni hao", "shangban" hoặc Pinyin ghi sai dấu thanh điệu). Chỉ chấm đúng từ vựng, ngữ pháp và chính tả cơ bản. Tuy nhiên, nếu viết sai hẳn từ vựng (ví dụ: viết "shengban" thay vì "shangban") hoặc sai cấu trúc ngữ pháp thì mới bị trừ điểm hoặc cho 0 điểm.
         
         Dưới đây là danh sách câu trả lời của học sinh kèm theo đề bài và đáp án gợi ý:
         ${JSON.stringify(answersToGrade)}
@@ -606,8 +606,31 @@ const part4_de3 = [
   { id: 15, type: 'free-text', prompt: 'Bình thường tôi ăn thanh đạm, không ăn đồ nhiều dầu mỡ.', suggestions: ['平时我吃得很清淡，不吃油腻的。 (Píngshí wǒ chī de hěn qīngdàn, bù chī yóunì de.)'] }
 ];
 
+function shuffleOptions(questions: QuestionMultipleChoice[]): QuestionMultipleChoice[] {
+  return questions.map(q => {
+    const shuffled = [...q.options].sort(() => Math.random() - 0.5);
+    const labels = ['A', 'B', 'C', 'D'];
+    let correctOption = 'A';
+
+    const newOptions = shuffled.map((opt, idx) => {
+      const label = labels[idx];
+      if (opt.isCorrect) {
+        correctOption = label;
+      }
+      return { ...opt, label };
+    });
+
+    return {
+      ...q,
+      options: newOptions,
+      correctOption
+    };
+  });
+}
+
 export default function Test() {
   const [activeTest, setActiveTest] = useState<'de1' | 'de2' | 'de3' | null>(null);
+  const [randomizedPart1, setRandomizedPart1] = useState<QuestionMultipleChoice[]>([]);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
@@ -653,7 +676,7 @@ export default function Test() {
     return false;
   };
 
-  const part1 = activeTest === 'de2' ? part1_de2 : (activeTest === 'de3' ? part1_de3 : part1_de1);
+  const part1 = randomizedPart1;
   const part2 = activeTest === 'de2' ? part2_de2 : (activeTest === 'de3' ? part2_de3 : part2_de1);
   const part3 = activeTest === 'de2' ? part3_de2 : (activeTest === 'de3' ? part3_de3 : part3_de1);
   const part4 = activeTest === 'de2' ? part4_de2 : (activeTest === 'de3' ? part4_de3 : part4_de1);
@@ -662,6 +685,15 @@ export default function Test() {
   const p2Score = activeTest === 'de1' ? 3 : 2;
   const p3Score = 2;
   const p4Score = 2;
+
+  useEffect(() => {
+    if (!activeTest) {
+      setRandomizedPart1([]);
+      return;
+    }
+    const rawQuestions = activeTest === 'de2' ? part1_de2 : (activeTest === 'de3' ? part1_de3 : part1_de1);
+    setRandomizedPart1(shuffleOptions(rawQuestions));
+  }, [activeTest]);
 
   useEffect(() => {
     if (!activeTest || isSubmitted) return;
@@ -689,7 +721,7 @@ export default function Test() {
 
   const handleTextChange = (questionId: string, text: string) => {
     if (isSubmitted) return;
-    const converted = convertNumberedPinyin(text);
+    const converted = questionId.startsWith('p3_') ? text : convertNumberedPinyin(text);
     setAnswers(prev => ({ ...prev, [questionId]: converted }));
   };
 
@@ -798,6 +830,10 @@ export default function Test() {
     setScore(0);
     setAiResults({});
     setTimeLeft(testDuration * 60);
+    if (activeTest) {
+      const rawQuestions = activeTest === 'de2' ? part1_de2 : (activeTest === 'de3' ? part1_de3 : part1_de1);
+      setRandomizedPart1(shuffleOptions(rawQuestions));
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -933,10 +969,10 @@ export default function Test() {
                   <ArrowLeft size={16} />
                 </button>
                 <h2 className="text-xl font-bold text-slate-800">
-                  {activeTest === 'de1' 
-                    ? 'TEST GIAO TIẾP 1' 
-                    : activeTest === 'de2' 
-                      ? 'TEST KIẾN THỨC BÀI 0 - 6' 
+                  {activeTest === 'de1'
+                    ? 'TEST GIAO TIẾP 1'
+                    : activeTest === 'de2'
+                      ? 'TEST KIẾN THỨC BÀI 0 - 6'
                       : 'TEST KIẾN THỨC BÀI 7 - 12'}
                 </h2>
               </div>
@@ -1213,6 +1249,20 @@ export default function Test() {
                               <p className="text-xs italic text-slate-600 mt-1 font-sans">
                                 <strong>Nhận xét từ AI:</strong> {aiResults[qId].feedback}
                               </p>
+                            )}
+                          </div>
+                        )}
+                        {isSubmitted && (
+                          <div className="flex flex-col gap-2 mt-1">
+                            {q.suggestions && q.suggestions.length > 0 && (
+                              <div className="p-3 bg-amber-50 border border-amber-200 rounded-lg text-sm text-amber-800 flex flex-col gap-1.5 font-sans">
+                                <strong className="text-amber-900 text-xs uppercase tracking-wider flex items-center gap-1">Gợi ý cách trả lời:</strong>
+                                <ul className="list-disc pl-5 flex flex-col gap-1">
+                                  {q.suggestions.map((sugg, i) => (
+                                    <li key={i}>{sugg}</li>
+                                  ))}
+                                </ul>
+                              </div>
                             )}
                           </div>
                         )}
