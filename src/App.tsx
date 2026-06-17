@@ -437,7 +437,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-md shadow-indigo-500/20 transition cursor-pointer"
-              title="Học số đếm Tiếng Trung"
+              title="Học số đếm Tiếng Trung "
             >
               <Hash size={14} />
               <span>Học Số</span>
